@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://n3qm32x8j2yq"]
+
+[ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="2_0wfyh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8qym"]
+albedo_texture = ExtResource("1_o5qli")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="Main" type="Node3D" unique_id=2058142477]
+
+[node name="TestPlatforms" type="Node3D" parent="." unique_id=1599586604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5002382, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="TestPlatforms" unique_id=1801396770]
+use_collision = true
+size = Vector3(3, 0.1, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="TestPlatforms" unique_id=504415201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.746459, 0)
+use_collision = true
+size = Vector3(1, 0.1, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="TestPlatforms" unique_id=1878789348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6652386, 0)
+use_collision = true
+size = Vector3(0.5, 0.1, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="TestPlatforms" unique_id=1579115117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.746459, -3)
+use_collision = true
+size = Vector3(1, 0.1, 1)
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=751229420]
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.4841661, 1.0500007, -8.595509)

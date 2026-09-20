@@ -1,0 +1,496 @@
+[gd_scene format=3 uid="uid://ys53tl8s7xef"]
+
+[ext_resource type="Script" uid="uid://d3s8yxuvpmekm" path="res://player/player_scripts/state_machine/player_character_script.gd" id="1_joohb"]
+[ext_resource type="Script" uid="uid://sca7ypsol83f" path="res://player/player_scripts/state_machine/state_machine_script.gd" id="2_xbr1q"]
+[ext_resource type="Script" uid="uid://stil4xkf3tk0" path="res://player/player_scripts/state_machine/idle_state_script.gd" id="3_ifbnw"]
+[ext_resource type="Script" uid="uid://bhoqhv7escpyx" path="res://player/player_scripts/state_machine/crouch_state_script.gd" id="4_ys478"]
+[ext_resource type="Script" uid="uid://blt7dest23fk0" path="res://player/player_scripts/state_machine/walk_state_script.gd" id="5_moqa7"]
+[ext_resource type="Script" uid="uid://5gk47o641xgt" path="res://player/player_scripts/state_machine/run_state_script.gd" id="6_lkf86"]
+[ext_resource type="Script" uid="uid://dvu58wf01wils" path="res://player/player_scripts/state_machine/jump_state_script.gd" id="7_jv72m"]
+[ext_resource type="Script" uid="uid://bh3rdvokmrar1" path="res://player/player_scripts/state_machine/inair_state_script.gd" id="8_vd6ln"]
+[ext_resource type="Script" uid="uid://b0fbr48rbvn27" path="res://player/player_scripts/camera/camera_script.gd" id="9_xbmj8"]
+[ext_resource type="Script" uid="uid://dx02l6p6behb8" path="res://player/player_scripts/ui/hud_script.gd" id="10_aatle"]
+[ext_resource type="Texture2D" uid="uid://cxkb5w0m1ou8w" path="res://player/player_textures/Dot.png" id="11_gfgax"]
+[ext_resource type="StyleBox" uid="uid://c50syhy1a4dmh" path="res://player/resources/player_character_ui_theme.tres" id="11_qhy06"]
+[ext_resource type="Texture2D" uid="uid://yka7hibaf84x" path="res://player/player_textures/DotInteract_Big.png" id="12_gfgax"]
+[ext_resource type="LabelSettings" uid="uid://d1rg1oruwidf" path="res://player/resources/label_font_setting.tres" id="12_xim16"]
+[ext_resource type="Texture2D" uid="uid://bktcrid4opeo3" path="res://player/player_textures/under.png" id="13_bwn30"]
+[ext_resource type="Texture2D" uid="uid://vru0aqth4kki" path="res://player/player_textures/mouse_left_outline.png" id="13_ex07x"]
+[ext_resource type="Texture2D" uid="uid://b4emyttnbwuod" path="res://player/player_textures/progress.png" id="14_bqqjr"]
+
+[sub_resource type="Curve" id="Curve_2tsxa"]
+_limits = [0.0, 30.0, 0.0, 60.0]
+_data = [Vector2(0, 7.4157314), 0.0, 0.0, 0, 0, Vector2(60, 7.4157314), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_133uc"]
+_limits = [3.0, 8.0, 0.0, 15.0]
+_data = [Vector2(0, 3), 0.0, 0.0, 0, 0, Vector2(15, 3), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5yjma"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bkys"]
+albedo_color = Color(0.196078, 0.223529, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_p2iaj"]
+
+[node name="PlayerCharacter" type="Node3D" unique_id=2033525645]
+
+[node name="PlayerCharacter" type="CharacterBody3D" parent="." unique_id=307017552 groups=["PlayerCharacter"]]
+collision_layer = 2
+floor_constant_speed = true
+floor_block_on_wall = false
+floor_max_angle = 1.13446
+floor_snap_length = 0.0
+platform_floor_layers = 4278190081
+script = ExtResource("1_joohb")
+desired_move_speed_curve = SubResource("Curve_2tsxa")
+max_desired_move_speed = 7.0
+in_air_move_speed_curve = SubResource("Curve_133uc")
+bunny_hop_dms_incre = 0.0
+crouch_speed = 3.0
+walk_speed = 5.0
+max_stamina = 10.0
+run_speed = 7.0
+jump_height = 1.3
+jump_time_to_fall = 0.3
+jump_cooldown = 0.8
+nb_jumps_in_air_allowed = 0
+
+[node name="StateMachine" type="Node" parent="PlayerCharacter" unique_id=931857651 node_paths=PackedStringArray("initial_state")]
+unique_name_in_owner = true
+script = ExtResource("2_xbr1q")
+initial_state = NodePath("IdleState")
+
+[node name="IdleState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=394410750]
+script = ExtResource("3_ifbnw")
+metadata/_custom_type_script = "uid://stil4xkf3tk0"
+
+[node name="CrouchState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=476322435]
+script = ExtResource("4_ys478")
+metadata/_custom_type_script = "uid://bhoqhv7escpyx"
+
+[node name="WalkState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1592098153]
+script = ExtResource("5_moqa7")
+metadata/_custom_type_script = "uid://blt7dest23fk0"
+
+[node name="RunState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1366066256]
+script = ExtResource("6_lkf86")
+metadata/_custom_type_script = "uid://5gk47o641xgt"
+
+[node name="JumpState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1931624113]
+script = ExtResource("7_jv72m")
+metadata/_custom_type_script = "uid://dvu58wf01wils"
+
+[node name="InairState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=880216578]
+script = ExtResource("8_vd6ln")
+metadata/_custom_type_script = "uid://bh3rdvokmrar1"
+
+[node name="CameraHolder" type="Node3D" parent="PlayerCharacter" unique_id=1750117354]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.55, 0)
+script = ExtResource("9_xbmj8")
+enable_headbob = false
+bob_pitch = 0.058
+bob_roll = 0.045
+bob_height_divider = 249.0
+bob_frequency = 2.7
+cam_max_v_offset = 0.435
+
+[node name="Camera" type="Camera3D" parent="PlayerCharacter/CameraHolder" unique_id=713894208]
+unique_name_in_owner = true
+cull_mask = 3
+current = true
+fov = 90.0
+near = 0.01
+far = 1000.0
+
+[node name="InteractCheck" type="RayCast3D" parent="PlayerCharacter/CameraHolder/Camera" unique_id=2087324866]
+unique_name_in_owner = true
+exclude_parent = false
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 8
+debug_shape_custom_color = Color(0, 1, 0, 1)
+
+[node name="Hitbox" type="CollisionShape3D" parent="PlayerCharacter" unique_id=599971163]
+unique_name_in_owner = true
+shape = SubResource("CapsuleShape3D_5yjma")
+
+[node name="Model" type="MeshInstance3D" parent="PlayerCharacter" unique_id=2093114359]
+unique_name_in_owner = true
+layers = 2
+material_override = SubResource("StandardMaterial3D_6bkys")
+mesh = SubResource("CapsuleMesh_p2iaj")
+
+[node name="Raycasts" type="Node3D" parent="PlayerCharacter" unique_id=2079423533]
+
+[node name="CeilingCheck" type="RayCast3D" parent="PlayerCharacter/Raycasts" unique_id=815494865]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+exclude_parent = false
+target_position = Vector3(0, 2, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+
+[node name="FloorCheck" type="RayCast3D" parent="PlayerCharacter/Raycasts" unique_id=552044089]
+unique_name_in_owner = true
+exclude_parent = false
+target_position = Vector3(0, -3, 0)
+debug_shape_custom_color = Color(0, 0, 0.956863, 1)
+
+[node name="HoldPoint" type="Marker3D" parent="PlayerCharacter" unique_id=80265942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54936874, 0.21850634, -0.45462728)
+
+[node name="HUD" type="CanvasLayer" parent="PlayerCharacter" unique_id=382546849]
+unique_name_in_owner = true
+script = ExtResource("10_aatle")
+metadata/_edit_use_anchors_ = true
+
+[node name="Crosshair" type="CenterContainer" parent="PlayerCharacter/HUD" unique_id=1592966225]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.03, 0.03)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+use_top_left = true
+
+[node name="Dot" type="ColorRect" parent="PlayerCharacter/HUD/Crosshair" unique_id=334727996]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DotNormal" type="TextureRect" parent="PlayerCharacter/HUD/Crosshair" unique_id=1190647463]
+layout_mode = 2
+texture = ExtResource("11_gfgax")
+
+[node name="DotInteract" type="TextureRect" parent="PlayerCharacter/HUD/Crosshair" unique_id=1950155758]
+visible = false
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+texture = ExtResource("12_gfgax")
+
+[node name="MouseLeftOutline" type="Sprite2D" parent="PlayerCharacter/HUD/Crosshair" unique_id=1295549388]
+visible = false
+position = Vector2(-1366.666, -4.196167e-05)
+scale = Vector2(33.333332, 33.333332)
+texture = ExtResource("13_ex07x")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="PlayerCharacter/HUD" unique_id=532385506]
+texture_filter = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -189.0
+offset_top = 53.0
+offset_right = 571.0
+offset_bottom = 85.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 10.0
+step = 0.05
+value = 10.0
+texture_under = ExtResource("13_bwn30")
+texture_progress = ExtResource("14_bqqjr")
+
+[node name="Debug1" type="MarginContainer" parent="PlayerCharacter/HUD" unique_id=2004601024]
+offset_right = 248.0
+offset_bottom = 252.0
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="PlayerCharacter/HUD/Debug1" unique_id=231924140]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("11_qhy06")
+
+[node name="PlayCharInfos" type="HBoxContainer" parent="PlayerCharacter/HUD/Debug1/PanelContainer" unique_id=1526751208]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos" unique_id=1766402346]
+layout_mode = 2
+
+[node name="CurrentStateLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1164258073]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Current state : "
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="DesiredMoveSpeedLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=432599912]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Desired move speed : "
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="VelocityLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1496362109]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Velocity : "
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="VelocityVectorLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1377180890]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Velocity vector : "
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="IsOnFloorLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1868360357]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Is on floor :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CeilingCheckLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=708687620]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Ceiling raycast colliding :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="JumpBufferLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=643555198]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Jump buffering  on :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CoyoteTimeLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=99478503]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Coyote time :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="NbJumpsInAirAllowedLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=805513229]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Nb jumps in air allowed :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="JumpCooldownLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1163255745]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Time before can jump again :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=893219461]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CameraRotationLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1492738188]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Camera rotation :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CurrentFOVLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=603100890]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Current FOV :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CameraBobVerticalOffsetLabel" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer" unique_id=1706344582]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Camera bob vertical offset :"
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos" unique_id=1242408874]
+layout_mode = 2
+
+[node name="CurrentStateLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=644397935]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="DesiredMoveSpeedLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1370247928]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="VelocityLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=87827421]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="VelocityVectorLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=158882373]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="IsOnFloorLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=539885338]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CeilingCheckLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1269415198]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="JumpBufferLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=891390731]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CoyoteTimeLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1433869406]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="NbJumpsInAirAllowedLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1577784755]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="JumpCooldownLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1111413105]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1243663104]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="CameraRotationLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=1043366077]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CurrentFOVLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=2072016987]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="CameraBobVerticalOffsetLabelText" type="Label" parent="PlayerCharacter/HUD/Debug1/PanelContainer/PlayCharInfos/VBoxContainer2" unique_id=2114141219]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..................."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="Debug2" type="MarginContainer" parent="PlayerCharacter/HUD" unique_id=1807707837]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -153.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="PlayerCharacter/HUD/Debug2" unique_id=1574288976]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("11_qhy06")
+
+[node name="PlayCharInfos2" type="HBoxContainer" parent="PlayerCharacter/HUD/Debug2/PanelContainer" unique_id=1976881281]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerCharacter/HUD/Debug2/PanelContainer/PlayCharInfos2" unique_id=690970496]
+layout_mode = 2
+
+[node name="FramesPerSecondLabel" type="Label" parent="PlayerCharacter/HUD/Debug2/PanelContainer/PlayCharInfos2/VBoxContainer" unique_id=1338522606]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Frames per seconds : "
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PlayerCharacter/HUD/Debug2/PanelContainer/PlayCharInfos2" unique_id=87285712]
+layout_mode = 2
+
+[node name="FramesPerSecondLabelText" type="Label" parent="PlayerCharacter/HUD/Debug2/PanelContainer/PlayCharInfos2/VBoxContainer2" unique_id=1352782966]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "....."
+label_settings = ExtResource("12_xim16")
+vertical_alignment = 1

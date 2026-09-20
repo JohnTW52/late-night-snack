@@ -1,0 +1,66 @@
+{
+	"categories": [
+		{
+			"uuid": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "9c1601d6-f83d-456a-9086-b9c63836a7cf",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "86722e15-4b26-4453-a9da-42ff2588c6a0",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "fb8b5c1a-2b37-460f-bae6-7e512198b3bf",
+			"title": "Done",
+			"tasks": [
+				"b32977dc-99ec-4345-9029-2fed854af686",
+				"225414d9-f385-46cc-bf68-e95a73ed6f70",
+				"0b71c886-5696-445f-a978-eb49cac5bdef"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "b32977dc-99ec-4345-9029-2fed854af686",
+			"title": "Import and clean up player controller",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "225414d9-f385-46cc-bf68-e95a73ed6f70",
+			"title": "Setup Godot AI for MCP",
+			"description": "I have this setup for cursor since you get a free pro subscription as a student. But you can configure others as well.",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "0b71c886-5696-445f-a978-eb49cac5bdef",
+			"title": "Setup Git and Git LFS",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"9c1601d6-f83d-456a-9086-b9c63836a7cf"
+			],
+			[
+				"86722e15-4b26-4453-a9da-42ff2588c6a0"
+			],
+			[
+				"fb8b5c1a-2b37-460f-bae6-7e512198b3bf"
+			]
+		]
+	}
+}
