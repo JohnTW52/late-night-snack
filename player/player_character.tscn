@@ -51,6 +51,7 @@ in_air_move_speed_curve = SubResource("Curve_133uc")
 bunny_hop_dms_incre = 0.0
 crouch_speed = 3.0
 walk_speed = 5.0
+use_stamina = false
 max_stamina = 10.0
 run_speed = 7.0
 jump_height = 1.3
@@ -184,6 +185,7 @@ scale = Vector2(33.333332, 33.333332)
 texture = ExtResource("13_ex07x")
 
 [node name="StaminaBar" type="TextureProgressBar" parent="PlayerCharacter/HUD" unique_id=532385506]
+visible = false
 texture_filter = 2
 anchors_preset = 5
 anchor_left = 0.5
@@ -203,6 +205,7 @@ texture_under = ExtResource("13_bwn30")
 texture_progress = ExtResource("14_bqqjr")
 
 [node name="Debug1" type="MarginContainer" parent="PlayerCharacter/HUD" unique_id=2004601024]
+visible = false
 offset_right = 248.0
 offset_bottom = 252.0
 size_flags_horizontal = 0
@@ -455,6 +458,7 @@ label_settings = ExtResource("12_xim16")
 vertical_alignment = 1
 
 [node name="Debug2" type="MarginContainer" parent="PlayerCharacter/HUD" unique_id=1807707837]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0

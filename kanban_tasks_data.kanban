@@ -10,7 +10,10 @@
 		{
 			"uuid": "9c1601d6-f83d-456a-9086-b9c63836a7cf",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"f912acec-a3a2-4659-b1e8-1da525f92b14",
+				"e9e45887-c889-4fbd-8d52-b0e4cdcae9f7"
+			]
 		},
 		{
 			"uuid": "86722e15-4b26-4453-a9da-42ff2588c6a0",
@@ -48,6 +51,62 @@
 			"description": "",
 			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
 			"steps": []
+		},
+		{
+			"uuid": "e9e45887-c889-4fbd-8d52-b0e4cdcae9f7",
+			"title": "Add more levels each introducing a new mechanic",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": [
+				{
+					"details": "Moving platform",
+					"done": false
+				},
+				{
+					"details": "Spinning platforms",
+					"done": false
+				},
+				{
+					"details": "Multiple paths",
+					"done": false
+				},
+				{
+					"details": "Fake microwave",
+					"done": false
+				},
+				{
+					"details": "Projectiles",
+					"done": false
+				},
+				{
+					"details": "Lasers",
+					"done": false
+				},
+				{
+					"details": "Player upgrades?\nDouble jump\nSoft fall",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "f912acec-a3a2-4659-b1e8-1da525f92b14",
+			"title": "Add 1 level with core functionality",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": [
+				{
+					"details": "No obstacles for first level",
+					"done": false
+				},
+				{
+					"details": "Microwave as win condition",
+					"done": false
+				},
+				{
+					"details": "Timer done as lose condition",
+					"done": false
+				}
+			]
 		}
 	],
 	"layout": {

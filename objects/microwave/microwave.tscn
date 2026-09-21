@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://wfssdpry5qlx"]
+
+[ext_resource type="PackedScene" uid="uid://do0jmte4hql6a" path="res://objects/microwave/microwave_-_modern_furniture_game-ready.glb" id="1_qjekx"]
+[ext_resource type="Script" uid="uid://bg2wbrh3fl52n" path="res://objects/microwave/microwave.gd" id="2_epbbi"]
+
+[node name="Microwave" unique_id=313443865 instance=ExtResource("1_qjekx")]
+script = ExtResource("2_epbbi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=1913187162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066932, 0, 0.18433905)
+light_color = Color(1, 0.85490197, 0.5176471, 1)
+light_energy = 2.524
+light_volumetric_fog_energy = 0.746
+omni_range = 1.592

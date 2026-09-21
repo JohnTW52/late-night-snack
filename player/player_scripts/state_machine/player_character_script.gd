@@ -59,6 +59,7 @@ var hit_ground_cooldown_ref: float
 @export_group("Run variables")
 @export var can_run: bool = true
 @export var continuous_run: bool = false ## When true, running does not require holding the button.
+@export var use_stamina: bool = true
 @export var max_stamina: float = 8.0
 @export var stamina_drain_rate: float = 1.0 # max_stamina / drain_rate = sprint duration.
 @export var stamina_regen_rate: float = 1.5
@@ -306,6 +307,9 @@ func tween_model_height(state_model_height: float) -> void:
 # =========================================================================
 
 func _tick_stamina(delta: float) -> void:
+	if not use_stamina:
+		return
+	
 	if is_running or (not is_on_floor() and not is_falling):
 		_drain_stamina(delta)
 	else:
@@ -354,7 +358,6 @@ func _regen_stamina(delta: float) -> bool:
 	_draining_stamina = false
 	return true
 
-
 func _on_stamina_depleted() -> void:
 	current_stamina = 0.0
 	stamina_exhausted = true
@@ -364,7 +367,6 @@ func _on_stamina_depleted() -> void:
 	walk_or_run = "WalkState"
 	if state_machine.curr_state_name == "Run":
 		state_machine.transition_to("WalkState")
-
 
 func _update_can_run_and_jump() -> void:
 	if stamina_cooldown_timer > 0.0:
