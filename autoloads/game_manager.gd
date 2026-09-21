@@ -1,15 +1,15 @@
 extends Node
 
 var level_index: int
+var timer_vals: Dictionary = {
+	1: 10.0,
+	2: 30.0
+}
 
 @onready var levels: Array[String] = [
 	"res://levels/level01.tscn", 
 	"res://levels/level02.tscn"
 	]
-
-func _ready() -> void:
-	# Autoloads run before nodes are created so this ensure no runtime errors
-	call_deferred("sync_level_index")
 
 # This function will be useful if we add save and quit later
 # Will set level_index to whatever current level is
@@ -22,6 +22,7 @@ func sync_level_index() -> void:
 	var scene_path := current_scene.scene_file_path
 	var index := levels.find(scene_path)
 	if index >= 0:
+		print("level index: ", level_index)
 		level_index = index
 	else:
 		level_index = 0
@@ -34,4 +35,9 @@ func has_next_level() -> bool:
 	return false
 
 func increment_level_index() -> void:
+	sync_level_index()
 	level_index += 1
+
+func get_timer_val() -> float:
+	sync_level_index()
+	return timer_vals[level_index + 1]

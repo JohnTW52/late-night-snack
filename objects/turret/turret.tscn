@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://5s8p7clutrh2"]
+
+[ext_resource type="PackedScene" uid="uid://dtrx8863avb86" path="res://objects/turret/low-poly_browning_m2e2.glb" id="1_i6wv1"]
+
+[node name="Turret" unique_id=254010352 instance=ExtResource("1_i6wv1")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0, 0)

@@ -18,7 +18,7 @@
 			"uuid": "86722e15-4b26-4453-a9da-42ff2588c6a0",
 			"title": "Doing",
 			"tasks": [
-				"f912acec-a3a2-4659-b1e8-1da525f92b14"
+				"d206e897-ec97-4d34-83d1-dbe7c3b6636e"
 			]
 		},
 		{
@@ -27,7 +27,9 @@
 			"tasks": [
 				"b32977dc-99ec-4345-9029-2fed854af686",
 				"225414d9-f385-46cc-bf68-e95a73ed6f70",
-				"0b71c886-5696-445f-a978-eb49cac5bdef"
+				"0b71c886-5696-445f-a978-eb49cac5bdef",
+				"7bb18933-3b7f-41d4-b3e3-253cca03cc22",
+				"7d493db8-21a4-4e6a-be36-71e774a6ef0a"
 			]
 		}
 	],
@@ -84,30 +86,31 @@
 					"done": false
 				},
 				{
-					"details": "Player upgrades?\nDouble jump\nSoft fall",
+					"details": "Player upgrades?\nDouble jump\nSoft fall\nTimer extensions (+30 seconds)",
 					"done": false
 				}
 			]
 		},
 		{
-			"uuid": "f912acec-a3a2-4659-b1e8-1da525f92b14",
-			"title": "Add 1 level with core functionality",
+			"uuid": "7bb18933-3b7f-41d4-b3e3-253cca03cc22",
+			"title": "Add UI synced with timer by integer seconds",
 			"description": "",
 			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
-			"steps": [
-				{
-					"details": "No obstacles for first level",
-					"done": false
-				},
-				{
-					"details": "Microwave as win condition",
-					"done": true
-				},
-				{
-					"details": "Timer done as lose condition",
-					"done": false
-				}
-			]
+			"steps": []
+		},
+		{
+			"uuid": "7d493db8-21a4-4e6a-be36-71e774a6ef0a",
+			"title": "When timer < 0.01 -> show \"you lose\" UI and restart level",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "d206e897-ec97-4d34-83d1-dbe7c3b6636e",
+			"title": "When level successful -> show \"nice job\" type of UI",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
 		}
 	],
 	"layout": {
