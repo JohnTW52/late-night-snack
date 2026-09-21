@@ -11,14 +11,15 @@
 			"uuid": "9c1601d6-f83d-456a-9086-b9c63836a7cf",
 			"title": "Todo",
 			"tasks": [
-				"f912acec-a3a2-4659-b1e8-1da525f92b14",
 				"e9e45887-c889-4fbd-8d52-b0e4cdcae9f7"
 			]
 		},
 		{
 			"uuid": "86722e15-4b26-4453-a9da-42ff2588c6a0",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"f912acec-a3a2-4659-b1e8-1da525f92b14"
+			]
 		},
 		{
 			"uuid": "fb8b5c1a-2b37-460f-bae6-7e512198b3bf",
@@ -100,7 +101,7 @@
 				},
 				{
 					"details": "Microwave as win condition",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Timer done as lose condition",

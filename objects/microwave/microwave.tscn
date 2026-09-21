@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://do0jmte4hql6a" path="res://objects/microwave/microwave_-_modern_furniture_game-ready.glb" id="1_qjekx"]
 [ext_resource type="Script" uid="uid://bg2wbrh3fl52n" path="res://objects/microwave/microwave.gd" id="2_epbbi"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(2.5, 2, 3.5)
+
 [node name="Microwave" unique_id=313443865 instance=ExtResource("1_qjekx")]
 script = ExtResource("2_epbbi")
 
@@ -12,3 +15,9 @@ light_color = Color(1, 0.85490197, 0.5176471, 1)
 light_energy = 2.524
 light_volumetric_fog_energy = 0.746
 omni_range = 1.592
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=2112964758]
+collision_layer = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1030457089]
+shape = SubResource("BoxShape3D_x8qym")

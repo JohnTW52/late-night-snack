@@ -14,6 +14,11 @@ config/name="Late Night Snack"
 run/main_scene="uid://n3qm32x8j2yq"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+GameManager="*uid://btfng73pvduop"
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+
 [display]
 
 window/size/viewport_width=1280
@@ -23,7 +28,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg")
 
 [input]
 
@@ -77,6 +82,11 @@ play_char_interact={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Environment"
+3d_physics/layer_4="Interactable"
 
 [physics]
 

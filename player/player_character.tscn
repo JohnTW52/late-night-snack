@@ -56,7 +56,7 @@ max_stamina = 10.0
 run_speed = 7.0
 jump_height = 1.3
 jump_time_to_fall = 0.3
-jump_cooldown = 0.8
+jump_cooldown = 0.5
 nb_jumps_in_air_allowed = 0
 
 [node name="StateMachine" type="Node" parent="PlayerCharacter" unique_id=931857651 node_paths=PackedStringArray("initial_state")]
