@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b1o87l13y36j6"]
+
+[ext_resource type="PackedScene" uid="uid://jxneh24u2m0m" path="res://objects/fridge/refrigerator_low-poly.glb" id="1_w6313"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(2.0377197, 4.8911133, 2.2455444)
+
+[node name="Fridge" unique_id=1724268238 instance=ExtResource("1_w6313")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=238093311]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=319953527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019470215, 1.9455566, 0.0597229)
+shape = SubResource("BoxShape3D_x8qym")

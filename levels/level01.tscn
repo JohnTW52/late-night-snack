@@ -12,48 +12,16 @@ uv1_world_triplanar = true
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
 fog_enabled = true
-fog_light_energy = 0.65
+fog_light_energy = 0.22
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.03
+volumetric_fog_density = 0.01
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rruc7"]
 
 [node name="Level01" type="Node3D" unique_id=2058142477]
 
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_vsh7h")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.4841661, 1.0500007, -8.595509)
-
-[node name="TestPlatforms" type="Node3D" parent="." unique_id=1599586604]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5002382, 0)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="TestPlatforms" unique_id=1801396770]
-use_collision = true
-size = Vector3(3, 0.1, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="TestPlatforms" unique_id=504415201]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.746459, 0)
-use_collision = true
-size = Vector3(1, 0.1, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="TestPlatforms" unique_id=1878789348]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6652386, 0)
-use_collision = true
-size = Vector3(0.5, 0.1, 1)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="TestPlatforms" unique_id=1716688007]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0.6652386, 2)
-use_collision = true
-size = Vector3(0.5, 0.1, 1)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="TestPlatforms" unique_id=536324598]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 1.6652386, 3)
-use_collision = true
-size = Vector3(0.5, 0.1, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="TestPlatforms" unique_id=1579115117]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1.746459, -3)
-use_collision = true
-size = Vector3(1, 0.1, 1)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
 [node name="Structure" type="Node3D" parent="." unique_id=625879665]
 
@@ -454,9 +422,9 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
+[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_53p8g")]
+transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1417723939]
 environment = SubResource("Environment_x8qym")
 camera_attributes = SubResource("CameraAttributesPractical_rruc7")
-
-[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_53p8g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -4)

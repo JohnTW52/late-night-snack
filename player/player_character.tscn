@@ -110,7 +110,7 @@ far = 1000.0
 [node name="InteractCheck" type="RayCast3D" parent="PlayerCharacter/CameraHolder/Camera" unique_id=2087324866]
 unique_name_in_owner = true
 exclude_parent = false
-target_position = Vector3(0, 0, -2.5)
+target_position = Vector3(0, 0, -2)
 collision_mask = 8
 debug_shape_custom_color = Color(0, 1, 0, 1)
 
