@@ -10,7 +10,16 @@
 		{
 			"uuid": "9c1601d6-f83d-456a-9086-b9c63836a7cf",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"00358aa5-24d7-4cea-9da1-b4668d7daf1b",
+				"5a603bd8-ed4f-4640-a9a9-fe6aebb76921",
+				"63416053-4afa-41b0-a992-b1c691f1be60",
+				"c11f594d-535c-4343-8ee2-d4011ca9f199",
+				"9c663324-28bc-4d16-9bbe-302865034d98",
+				"b78a126b-2d38-4bab-91d1-19e3578133fc",
+				"5e47bb36-8930-4978-ad2b-69967281d7ed",
+				"470436f2-f420-4ad7-9bfb-1a2d5528fd4d"
+			]
 		},
 		{
 			"uuid": "86722e15-4b26-4453-a9da-42ff2588c6a0",
@@ -45,6 +54,62 @@
 		{
 			"uuid": "0b71c886-5696-445f-a978-eb49cac5bdef",
 			"title": "Setup Git and Git LFS",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "b78a126b-2d38-4bab-91d1-19e3578133fc",
+			"title": "make menu",
+			"description": "even if we only end up with one level, this could be good to have",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "00358aa5-24d7-4cea-9da1-b4668d7daf1b",
+			"title": "make microwave",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "5a603bd8-ed4f-4640-a9a9-fe6aebb76921",
+			"title": "make a win screen or scene",
+			"description": "activates when microwave is reached",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "9c663324-28bc-4d16-9bbe-302865034d98",
+			"title": "design course for level 1",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "c11f594d-535c-4343-8ee2-d4011ca9f199",
+			"title": "make a lose screen or scene",
+			"description": "activates when you run out of time",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "63416053-4afa-41b0-a992-b1c691f1be60",
+			"title": "implement timer mechanic",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "5e47bb36-8930-4978-ad2b-69967281d7ed",
+			"title": "add music",
+			"description": "out of time by the weeknd for sure, could play in the menu or during levels",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "470436f2-f420-4ad7-9bfb-1a2d5528fd4d",
+			"title": "add sound effects",
 			"description": "",
 			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
 			"steps": []
