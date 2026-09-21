@@ -154,6 +154,9 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if GameManager.game_over:
+		return
+		
 	if not event is InputEventMouseMotion:
 		return
 	
@@ -172,6 +175,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	)
 
 func _process(delta: float) -> void:
+	if GameManager.game_over:
+		return
+	
 	_tilt(delta)
 	_bob(delta)
 	_zoom()

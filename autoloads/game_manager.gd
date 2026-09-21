@@ -1,5 +1,6 @@
 extends Node
 
+var game_over: bool = false
 var level_index: int
 var timer_vals: Dictionary = {
 	1: 10.0,
@@ -41,3 +42,7 @@ func increment_level_index() -> void:
 func get_timer_val() -> float:
 	sync_level_index()
 	return timer_vals[level_index + 1]
+
+func on_game_over() -> void:
+	get_tree().change_scene_to_file(levels[level_index])
+	game_over = false

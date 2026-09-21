@@ -7,8 +7,18 @@
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="3_b4xcw"]
 [ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="4_orkke"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="6_orkke"]
-[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/lose.tscn" id="7_33ega"]
+[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="7_33ega"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
+[ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
+
+[sub_resource type="Environment" id="Environment_x8qym"]
+glow_intensity = 4.32
+fog_enabled = true
+fog_light_energy = 0.22
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rruc7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8qym"]
 albedo_texture = ExtResource("2_ji4nx")
@@ -20,16 +30,11 @@ albedo_texture = ExtResource("2_ji4nx")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
-[sub_resource type="Environment" id="Environment_x8qym"]
-glow_intensity = 4.32
-fog_enabled = true
-fog_light_energy = 0.22
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rruc7"]
-
 [node name="Level02" type="Node3D" unique_id=2058142477]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1417723939]
+environment = SubResource("Environment_x8qym")
+camera_attributes = SubResource("CameraAttributesPractical_rruc7")
 
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_t67hm")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
@@ -460,11 +465,9 @@ area_range = 11.538
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_b4xcw")]
 transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, 7.2584896, 8.421749, 7.3710194)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1417723939]
-environment = SubResource("Environment_x8qym")
-camera_attributes = SubResource("CameraAttributesPractical_rruc7")
-
-[node name="Lose" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
-
 [node name="Turret" parent="." unique_id=254010352 instance=ExtResource("7_n311a")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 9.034946, -0.80473423)
+
+[node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
+
+[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("10_xfmka")]

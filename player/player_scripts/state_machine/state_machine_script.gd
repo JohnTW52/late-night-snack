@@ -27,9 +27,15 @@ func _ready() -> void:
 		curr_state_name = curr_state.state_name
 		
 func _process(delta: float) -> void:
+	if GameManager.game_over:
+		return
+	
 	if curr_state: curr_state.update(delta)
 	
 func _physics_process(delta: float) -> void:
+	if GameManager.game_over:
+		return
+	
 	if play_char.movement_locked:
 		play_char.velocity = Vector3.ZERO
 		return

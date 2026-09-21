@@ -8,9 +8,6 @@ func _ready() -> void:
 	microwave.microwave_timer_done.connect(_on_microwave_timer_done)
 
 func _on_microwave_timer_done() -> void:
-	await get_tree().create_timer(5.0).timeout
 	show()
-	GameManager.game_over = true
-	await get_tree().create_timer(2.0).timeout
-	GameManager.on_game_over()
-	
+	await get_tree().create_timer(5.0).timeout
+	hide()

@@ -18,7 +18,9 @@
 			"uuid": "86722e15-4b26-4453-a9da-42ff2588c6a0",
 			"title": "Doing",
 			"tasks": [
-				"d206e897-ec97-4d34-83d1-dbe7c3b6636e"
+				"d206e897-ec97-4d34-83d1-dbe7c3b6636e",
+				"8f552e40-90e3-4abc-8f3d-44ba727e10bb",
+				"c0b96acd-da14-4b2f-b602-6239c2fe3146"
 			]
 		},
 		{
@@ -107,7 +109,21 @@
 		},
 		{
 			"uuid": "d206e897-ec97-4d34-83d1-dbe7c3b6636e",
-			"title": "When level successful -> show \"nice job\" type of UI",
+			"title": "When level successful -> show \"good job\" type of UI",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "8f552e40-90e3-4abc-8f3d-44ba727e10bb",
+			"title": "Add sound effects",
+			"description": "Microwave hum, microwave timer done, turret firing, player walking/running",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "c0b96acd-da14-4b2f-b602-6239c2fe3146",
+			"title": "Add main menu and pause menu",
 			"description": "",
 			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
 			"steps": []

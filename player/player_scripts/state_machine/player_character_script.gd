@@ -197,13 +197,16 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if GameManager.game_over:
+		return
+	
 	stamina_bar.value = current_stamina
 	focused_target = _find_interact_target_from_ray()
 	_try_interact()
 	_update_flash_tween()
 
 func _physics_process(delta: float) -> void:
-	if movement_locked:
+	if movement_locked or GameManager.game_over:
 		velocity = Vector3.ZERO
 		return
 	
