@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bnkuh8qdqe5il"]
+
+[ext_resource type="Script" uid="uid://cke1hpvxmbmt5" path="res://levels/menu.gd" id="1_cnlwo"]
+
+[node name="Menu" type="Node2D" unique_id=710684241]
+script = ExtResource("1_cnlwo")
+
+[node name="Container" type="Container" parent="." unique_id=1857929535]
+offset_left = 68.999985
+offset_top = -53.0
+offset_right = 540.515
+offset_bottom = 277.52
+scale = Vector2(2.29, 2.29)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" unique_id=588978442]
+layout_mode = 2
+
+[node name="startt" type="Button" parent="Container/VBoxContainer" unique_id=1682937905]
+layout_mode = 2
+text = "start gam :)"
+metadata/_edit_use_anchors_ = true
+
+[node name="leave" type="Button" parent="Container/VBoxContainer" unique_id=1038489468]
+layout_mode = 2
+text = "leave :(
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=373187356]
+
+[connection signal="pressed" from="Container/VBoxContainer/startt" to="." method="_on_startt_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/leave" to="." method="_on_leave_pressed"]

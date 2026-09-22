@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="7_33ega"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
+[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="11_tbqwf"]
 
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
@@ -471,3 +472,5 @@ transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
 
 [node name="Lose" parent="." unique_id=627476690 instance=ExtResource("10_xfmka")]
+
+[node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("11_tbqwf")]
