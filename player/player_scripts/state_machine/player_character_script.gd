@@ -87,13 +87,13 @@ var _draining_stamina: bool = false
 
 @export_group("Jump variables")
 @export var can_jump: bool = true
-@export var jump_height: float = 2.0
 @export var jump_time_to_peak: float = 0.3
 @export var jump_time_to_fall: float = 0.25
 @export var jump_cooldown: float = 0.25
 @export var nb_jumps_in_air_allowed: int = 1
 @export var coyote_jump_cooldown: float = 0.3
 
+var jump_height: float = 1.3
 var jump_cooldown_ref: float
 var nb_jumps_in_air_allowed_ref: int
 var jump_buff_on: bool = false
@@ -171,7 +171,7 @@ const CEILING_CLEARANCE := 0.2
 func _ready() -> void:
 	add_to_group("player")
 	# Derived physics constants
-	jump_velocity = (2.0 * jump_height) / jump_time_to_peak
+	#jump_velocity = (2.0 * jump_height) / jump_time_to_peak
 	jump_gravity = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
 	fall_gravity = (-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)
 
@@ -209,6 +209,9 @@ func _process(_delta: float) -> void:
 	focused_target = _find_interact_target_from_ray()
 	_try_interact()
 	_update_flash_tween()
+	
+	jump_velocity = (2.0 * jump_height) / jump_time_to_peak
+	print(jump_velocity)
 
 func _physics_process(delta: float) -> void:
 	if movement_locked or GameManager.game_over:

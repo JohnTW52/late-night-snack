@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="11_tbqwf"]
+[ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost_arrow/jump_boost.tscn" id="12_hf8j7"]
 
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
@@ -43,7 +44,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.0
 [node name="Obstacles" type="Node3D" parent="." unique_id=2082665891]
 
 [node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("2_oig5u")]
-transform = Transform3D(0.0002107691, -0.00041818543, 0.0019444017, -8.1027654e-05, 0.0019518607, 0.00042857282, -0.0019872119, -0.0001239401, 0.00018875359, 3.580837, 6, 7.2751484)
+transform = Transform3D(0.0002107691, -0.00041818543, 0.0019444017, -8.1027654e-05, 0.0019518607, 0.00042857282, -0.0019872119, -0.0001239401, 0.00018875359, 3.3235595, 6, 7.2751484)
 
 [node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_33ega")]
 transform = Transform3D(-0.58562267, 0.30428785, -0.23335613, -0.16226846, 0.18931684, 0.65408564, 0.3474407, 0.6013055, -0.08784562, -4.420203, 3.7113612, 2.9422898)
@@ -464,10 +465,13 @@ light_specular = 2.101
 area_range = 11.538
 
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_b4xcw")]
-transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, 7.2584896, 8.421749, 7.3710194)
+transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, 7.001212, 8.421749, 7.3710194)
 
 [node name="Turret" parent="." unique_id=254010352 instance=ExtResource("7_n311a")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 9.034946, -0.80473423)
+
+[node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("12_hf8j7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 1, -4)
 
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
 visible = false

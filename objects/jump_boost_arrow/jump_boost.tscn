@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dkhqbouluth84"]
+
+[ext_resource type="Script" uid="uid://ex2p2tqgjlqa" path="res://objects/jump_boost_arrow/jump_boost.gd" id="1_dpy1y"]
+[ext_resource type="PackedScene" uid="uid://c65nv13na6gaf" path="res://objects/jump_boost_arrow/jumpboost_arrow.glb" id="1_ohgd2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(1, 2.487732, 1.6141357)
+
+[node name="JumpBoost" type="Node3D" unique_id=120868238]
+script = ExtResource("1_dpy1y")
+
+[node name="JumpBoostObject" parent="." unique_id=5567034 instance=ExtResource("1_ohgd2")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1009451589]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=548195249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37417603, -0.014709473)
+shape = SubResource("BoxShape3D_x8qym")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
