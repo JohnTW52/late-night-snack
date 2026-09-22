@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c65nv13na6gaf"
-path="res://.godot/imported/jumpboost_arrow.glb-3dd6379f437f0e6879b08cd2485315fa.scn"
+uid="uid://c65mmbmusjm8i"
+path="res://.godot/imported/day_1._feather.glb-bf6e82a36d55aab21778fd92ab7d0c11.scn"
 
 [deps]
 
-source_file="res://objects/jump_boost_arrow/jumpboost_arrow.glb"
-dest_files=["res://.godot/imported/jumpboost_arrow.glb-3dd6379f437f0e6879b08cd2485315fa.scn"]
+source_file="res://objects/feather_fall/day_1._feather.glb"
+dest_files=["res://.godot/imported/day_1._feather.glb-bf6e82a36d55aab21778fd92ab7d0c11.scn"]
 
 [params]
 

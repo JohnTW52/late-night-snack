@@ -1,34 +1,33 @@
-class_name JumpBoost extends Node3D
+extends Node3D
 
 var _player: PlayerCharacter
-var _boost_time := 10.0
-var _boost_timer: float
-var _boost_mult := 1.5
-var _time := 0.0
+var _player_entered := false
+var _used := false
 var _amplitude := 0.005
 var _frequency := 3.0
 var _rotation_speed := 2.0
-var _default_jump_height: float
-var _player_entered := false
-var _used := false
+var _time := 0.0
+var _fall_timer: float
+var _fall_time := 10.0
+var _fall_mult := 1.5
+var _default_fall_time: float
 
 func _ready() -> void:
 	visible = true
-	_used = false
+	_fall_timer = _fall_time
 	_player = null
-	_boost_timer = _boost_time
-	
+
 func _process(delta: float) -> void:
-	if _player and _boost_timer < 0.01:
-		_player.jump_height = _default_jump_height
-		_stop_boost_timer()
+	if _player and _fall_timer < 0.01:
+		_stop_fall_timer()
 	
 	if _player_entered:
-		_tick_boost_timer(delta)
+		_tick_fall_timer(delta)
 	
 	_time += delta
 	position.y += sin(_time * _frequency) * _amplitude
 	rotate(Vector3.UP, _rotation_speed * delta)
+
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if not _used:
@@ -37,18 +36,17 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 		if _player:
 			_player_entered = true
-			_default_jump_height = _player.jump_height
-			_player.jump_height *= _boost_mult
-			print(_player)
+			_default_fall_time = _player.jump_time_to_fall
+			_player.jump_time_to_fall *= _fall_mult
 		else:
 			print("could not find player")
 		
 		visible = false
 		_used = true
 
-func _tick_boost_timer(delta: float) -> void:
-	_boost_timer -= delta
+func _tick_fall_timer(delta: float) -> void:
+	_fall_timer -= delta
 
-func _stop_boost_timer() -> void: 
-	_player = null
+func _stop_fall_timer() -> void:
+	_fall_timer = _fall_time
 	_player_entered = false

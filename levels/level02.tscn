@@ -11,7 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="11_tbqwf"]
-[ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost_arrow/jump_boost.tscn" id="12_hf8j7"]
+[ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost/jump_boost.tscn" id="12_hf8j7"]
+[ext_resource type="PackedScene" uid="uid://uw48p44klomk" path="res://objects/feather_fall/feather_fall.tscn" id="13_12q5m"]
 
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
@@ -470,9 +471,6 @@ transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226
 [node name="Turret" parent="." unique_id=254010352 instance=ExtResource("7_n311a")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 9.034946, -0.80473423)
 
-[node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("12_hf8j7")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 1, -4)
-
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
 visible = false
 
@@ -480,3 +478,9 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("11_tbqwf")]
+
+[node name="FeatherFall" parent="." unique_id=2133828143 instance=ExtResource("13_12q5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.6995194, -4)
+
+[node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("12_hf8j7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0.6716813, -4)

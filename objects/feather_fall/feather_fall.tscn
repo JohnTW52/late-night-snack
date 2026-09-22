@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://uw48p44klomk"]
+
+[ext_resource type="Script" uid="uid://n0ammhlqjsx7" path="res://feather_fall.gd" id="1_ee7rx"]
+[ext_resource type="PackedScene" uid="uid://c65mmbmusjm8i" path="res://objects/feather_fall/day_1._feather.glb" id="2_mlo27"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(0.27368164, 1.4125977, 0.4472046)
+
+[node name="FeatherFall" type="Node3D" unique_id=2133828143]
+script = ExtResource("1_ee7rx")
+
+[node name="FeatherObject" parent="." unique_id=1950495060 instance=ExtResource("2_mlo27")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=79466391]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=487083736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0015869141, 0.20629883, -0.0039978027)
+shape = SubResource("BoxShape3D_x8qym")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

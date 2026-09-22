@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkhqbouluth84"]
 
-[ext_resource type="Script" uid="uid://ex2p2tqgjlqa" path="res://objects/jump_boost_arrow/jump_boost.gd" id="1_dpy1y"]
-[ext_resource type="PackedScene" uid="uid://c65nv13na6gaf" path="res://objects/jump_boost_arrow/jumpboost_arrow.glb" id="1_ohgd2"]
+[ext_resource type="Script" uid="uid://ex2p2tqgjlqa" path="res://objects/jump_boost/jump_boost.gd" id="1_dpy1y"]
+[ext_resource type="PackedScene" uid="uid://c65nv13na6gaf" path="res://objects/jump_boost/jumpboost_arrow.glb" id="1_ohgd2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
 size = Vector3(1, 2.487732, 1.6141357)

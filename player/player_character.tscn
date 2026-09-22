@@ -54,7 +54,6 @@ walk_speed = 5.0
 use_stamina = false
 max_stamina = 10.0
 run_speed = 7.0
-jump_time_to_fall = 0.3
 jump_cooldown = 0.5
 nb_jumps_in_air_allowed = 0
 
