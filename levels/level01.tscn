@@ -452,7 +452,7 @@ transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("4_emax3")]
 visible = false
 
-[node name="Lose2" parent="." unique_id=627476690 instance=ExtResource("7_kxijb")]
+[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("7_kxijb")]
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("8_ed0h8")]

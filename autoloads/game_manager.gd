@@ -1,5 +1,6 @@
 extends Node
 
+var just_changed_level := false
 var game_over: bool = false
 var level_index: int
 var timer_vals: Dictionary = {
@@ -23,7 +24,6 @@ func sync_level_index() -> void:
 	var scene_path := current_scene.scene_file_path
 	var index := levels.find(scene_path)
 	if index >= 0:
-		print("level index: ", level_index)
 		level_index = index
 	else:
 		level_index = 0

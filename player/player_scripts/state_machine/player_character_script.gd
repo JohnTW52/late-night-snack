@@ -200,6 +200,11 @@ func _process(_delta: float) -> void:
 	if GameManager.game_over:
 		return
 	
+	if GameManager.just_changed_level:
+		hud.hide()
+	elif not GameManager.just_changed_level:
+		hud.show()
+	
 	stamina_bar.value = current_stamina
 	focused_target = _find_interact_target_from_ray()
 	_try_interact()
