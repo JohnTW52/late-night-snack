@@ -35,9 +35,9 @@ albedo_color = Color(0.196078, 0.223529, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_p2iaj"]
 
-[node name="PlayerCharacter" type="Node3D" unique_id=2033525645]
+[node name="PlayerCharacter" type="Node3D" unique_id=2033525645 groups=["pause me"]]
 
-[node name="PlayerCharacter" type="CharacterBody3D" parent="." unique_id=307017552 groups=["PlayerCharacter"]]
+[node name="PlayerCharacter" type="CharacterBody3D" parent="." unique_id=307017552 groups=["PlayerCharacter", "pause me"]]
 collision_layer = 2
 floor_constant_speed = true
 floor_block_on_wall = false
@@ -88,7 +88,7 @@ metadata/_custom_type_script = "uid://dvu58wf01wils"
 script = ExtResource("8_vd6ln")
 metadata/_custom_type_script = "uid://bh3rdvokmrar1"
 
-[node name="CameraHolder" type="Node3D" parent="PlayerCharacter" unique_id=1750117354]
+[node name="CameraHolder" type="Node3D" parent="PlayerCharacter" unique_id=1750117354 groups=["pause me"]]
 unique_name_in_owner = true
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.55, 0)
 script = ExtResource("9_xbmj8")
@@ -99,7 +99,7 @@ bob_height_divider = 249.0
 bob_frequency = 2.7
 cam_max_v_offset = 0.435
 
-[node name="Camera" type="Camera3D" parent="PlayerCharacter/CameraHolder" unique_id=713894208]
+[node name="Camera" type="Camera3D" parent="PlayerCharacter/CameraHolder" unique_id=713894208 groups=["pause me"]]
 unique_name_in_owner = true
 cull_mask = 3
 current = true
@@ -107,7 +107,7 @@ fov = 90.0
 near = 0.01
 far = 1000.0
 
-[node name="InteractCheck" type="RayCast3D" parent="PlayerCharacter/CameraHolder/Camera" unique_id=2087324866]
+[node name="InteractCheck" type="RayCast3D" parent="PlayerCharacter/CameraHolder/Camera" unique_id=2087324866 groups=["pause me"]]
 unique_name_in_owner = true
 exclude_parent = false
 target_position = Vector3(0, 0, -2)
@@ -139,7 +139,7 @@ exclude_parent = false
 target_position = Vector3(0, -3, 0)
 debug_shape_custom_color = Color(0, 0, 0.956863, 1)
 
-[node name="HoldPoint" type="Marker3D" parent="PlayerCharacter" unique_id=80265942]
+[node name="HoldPoint" type="Marker3D" parent="PlayerCharacter" unique_id=80265942 groups=["pause me"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54936874, 0.21850634, -0.45462728)
 
 [node name="HUD" type="CanvasLayer" parent="PlayerCharacter" unique_id=382546849]

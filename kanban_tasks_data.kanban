@@ -11,7 +11,8 @@
 			"uuid": "9c1601d6-f83d-456a-9086-b9c63836a7cf",
 			"title": "Todo",
 			"tasks": [
-				"e9e45887-c889-4fbd-8d52-b0e4cdcae9f7"
+				"e9e45887-c889-4fbd-8d52-b0e4cdcae9f7",
+				"d069ffcb-ecf9-4d83-a9ec-4977637ceb56"
 			]
 		},
 		{
@@ -19,8 +20,7 @@
 			"title": "Doing",
 			"tasks": [
 				"d206e897-ec97-4d34-83d1-dbe7c3b6636e",
-				"8f552e40-90e3-4abc-8f3d-44ba727e10bb",
-				"c0b96acd-da14-4b2f-b602-6239c2fe3146"
+				"8f552e40-90e3-4abc-8f3d-44ba727e10bb"
 			]
 		},
 		{
@@ -31,7 +31,8 @@
 				"225414d9-f385-46cc-bf68-e95a73ed6f70",
 				"0b71c886-5696-445f-a978-eb49cac5bdef",
 				"7bb18933-3b7f-41d4-b3e3-253cca03cc22",
-				"7d493db8-21a4-4e6a-be36-71e774a6ef0a"
+				"7d493db8-21a4-4e6a-be36-71e774a6ef0a",
+				"c0b96acd-da14-4b2f-b602-6239c2fe3146"
 			]
 		}
 	],
@@ -88,7 +89,7 @@
 					"done": false
 				},
 				{
-					"details": "Player upgrades?\nDouble jump\nSoft fall\nTimer extensions (+30 seconds)",
+					"details": "Player upgrades?\nDouble jump\nSoft fall\nTimer extensions (+30 seconds)\ninstant win everything and permanantly disable wifi on computer simultaneously",
 					"done": false
 				}
 			]
@@ -124,6 +125,13 @@
 		{
 			"uuid": "c0b96acd-da14-4b2f-b602-6239c2fe3146",
 			"title": "Add main menu and pause menu",
+			"description": "",
+			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
+			"steps": []
+		},
+		{
+			"uuid": "d069ffcb-ecf9-4d83-a9ec-4977637ceb56",
+			"title": "make pause work for camera too",
 			"description": "",
 			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
 			"steps": []

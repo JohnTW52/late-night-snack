@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_vxcwb"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="4_emax3"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_kxijb"]
+[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_ed0h8"]
 
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
@@ -453,3 +454,5 @@ visible = false
 
 [node name="Lose2" parent="." unique_id=627476690 instance=ExtResource("7_kxijb")]
 visible = false
+
+[node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("8_ed0h8")]

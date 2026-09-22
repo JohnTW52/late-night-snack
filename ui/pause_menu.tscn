@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://7kdkxrhl2fc"]
+
+[ext_resource type="Script" uid="uid://dp8v0yoffylns" path="res://ui/pause_menu.gd" id="1_50142"]
+
+[node name="PauseMenu" type="Node2D" unique_id=308028238]
+script = ExtResource("1_50142")
+
+[node name="Panel" type="Panel" parent="." unique_id=152500918]
+modulate = Color(0, 0, 0, 0.29411766)
+offset_left = -48.0
+offset_top = -36.0
+offset_right = 1298.0
+offset_bottom = 737.0
+
+[node name="Label" type="Label" parent="." unique_id=1170228314]
+offset_left = 316.0
+offset_top = 225.0
+offset_right = 501.0
+offset_bottom = 248.0
+text = "puasd"

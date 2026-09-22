@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
 size = Vector3(2.5, 2, 3.5)
 
-[node name="Microwave" unique_id=313443865 instance=ExtResource("1_qjekx")]
+[node name="Microwave" unique_id=313443865 groups=["pause me"] instance=ExtResource("1_qjekx")]
 script = ExtResource("2_epbbi")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2112964758]
