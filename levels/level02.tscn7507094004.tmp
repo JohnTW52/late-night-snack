@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="2_oig5u"]
 [ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="3_33ega"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="3_b4xcw"]
-[ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="4_icky8"]
 [ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="4_orkke"]
 [ext_resource type="PackedScene" uid="uid://cejlqgj6motxy" path="res://objects/dining_scene/individual_scenes/moving_chair.tscn" id="4_wucbw"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="6_orkke"]
@@ -52,10 +51,7 @@ transform = Transform3D(0.0002107691, -0.00041818543, 0.0019444017, -8.1027654e-
 [node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_33ega")]
 transform = Transform3D(-0.58562267, 0.30428785, -0.23335613, -0.16226846, 0.18931684, 0.65408564, 0.3474407, 0.6013055, -0.08784562, -4.420203, 3.7113612, 2.9422898)
 
-[node name="MovingFridge" parent="Obstacles" unique_id=346364558 instance=ExtResource("4_icky8")]
-transform = Transform3D(0.7, 0, 0, 0, -3.0597977e-08, 0.7, 0, -0.70000017, -3.059797e-08, 3.5797968, 3.7113612, 2.9422898)
-
-[node name="MovingChair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("4_wucbw")]
+[node name="Chair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("4_wucbw")]
 transform = Transform3D(0.0058432766, -0.14988616, -2.2649374e-08, -0.14988616, -0.0058432766, 2.1772442e-08, -2.2638226e-08, 2.1784032e-08, -0.15000002, 3, 1, -4)
 
 [node name="Chair2" parent="Obstacles" unique_id=1123001349 instance=ExtResource("4_orkke")]
