@@ -344,8 +344,8 @@ func _zoom() -> void:
 # =========================================================================
 
 func _mouse_mode() -> void:
-	if Input.is_action_just_pressed(mouse_mode_action):
-		mouse_free = not mouse_free
+	#if Input.is_action_just_pressed("play_char_pause"):
+		#mouse_free = not mouse_free
 	if not mouse_free:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:

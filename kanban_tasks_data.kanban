@@ -11,8 +11,7 @@
 			"uuid": "9c1601d6-f83d-456a-9086-b9c63836a7cf",
 			"title": "Todo",
 			"tasks": [
-				"e9e45887-c889-4fbd-8d52-b0e4cdcae9f7",
-				"f99fbfda-e924-4267-b6bb-0d5deaebaf2b"
+				"e9e45887-c889-4fbd-8d52-b0e4cdcae9f7"
 			]
 		},
 		{
@@ -130,8 +129,8 @@
 			"steps": []
 		},
 		{
-			"uuid": "f99fbfda-e924-4267-b6bb-0d5deaebaf2b",
-			"title": "make pause work for camera too",
+			"uuid": "9e5fa08a-eac3-429f-9b55-b7b43b71c963",
+			"title": "New task",
 			"description": "",
 			"category": "0cb93ae5-bc4a-40f2-a328-d5c513847574",
 			"steps": []

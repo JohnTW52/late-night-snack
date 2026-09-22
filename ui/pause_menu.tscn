@@ -2,19 +2,51 @@
 
 [ext_resource type="Script" uid="uid://dp8v0yoffylns" path="res://ui/pause_menu.gd" id="1_50142"]
 
-[node name="PauseMenu" type="Node2D" unique_id=308028238]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1835050114]
 script = ExtResource("1_50142")
 
 [node name="Panel" type="Panel" parent="." unique_id=152500918]
 modulate = Color(0, 0, 0, 0.29411766)
-offset_left = -48.0
-offset_top = -36.0
-offset_right = 1298.0
-offset_bottom = 737.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -673.0
+offset_top = -386.5
+offset_right = 673.0
+offset_bottom = 386.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=1170228314]
-offset_left = 316.0
-offset_top = 225.0
-offset_right = 501.0
-offset_bottom = 248.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -74.0
+offset_right = 92.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "puasd"
+
+[node name="Button" type="Button" parent="." unique_id=501794773]
+custom_minimum_size = Vector2(250, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "resume"
+alignment = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

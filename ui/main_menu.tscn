@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b1fckvvw3h4ta"]
+
+[ext_resource type="Script" uid="uid://cullgmlhaf2aj" path="res://ui/main_menu.gd" id="1_t7e0r"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1727256392]
+script = ExtResource("1_t7e0r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=380314100]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34509805, 0.41568628, 0.45490196, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1065621555]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1989738815]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "START :)"
+
+[node name="Leave" type="Button" parent="VBoxContainer" unique_id=1182957767]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "LEAVE :("
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Leave" to="." method="_on_leave_pressed"]

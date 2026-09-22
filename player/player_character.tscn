@@ -59,7 +59,7 @@ jump_time_to_fall = 0.3
 jump_cooldown = 0.5
 nb_jumps_in_air_allowed = 0
 
-[node name="StateMachine" type="Node" parent="PlayerCharacter" unique_id=931857651 node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="PlayerCharacter" unique_id=931857651 node_paths=PackedStringArray("initial_state") groups=["pause me"]]
 unique_name_in_owner = true
 script = ExtResource("2_xbr1q")
 initial_state = NodePath("IdleState")
