@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nwnqqr7dbe5"
+path="res://.godot/imported/hum wet.mp3-02a2d8ba9ced5aa3a524ada916426328.mp3str"
+
+[deps]
+
+source_file="res://sfx/hum wet.mp3"
+dest_files=["res://.godot/imported/hum wet.mp3-02a2d8ba9ced5aa3a524ada916426328.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

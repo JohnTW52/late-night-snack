@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vi0chd1vcra5"
+path="res://.godot/imported/just gun.mp3-f3cc42a244e6a84c385fb88a82156f7e.mp3str"
+
+[deps]
+
+source_file="res://sfx/just gun.mp3"
+dest_files=["res://.godot/imported/just gun.mp3-f3cc42a244e6a84c385fb88a82156f7e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

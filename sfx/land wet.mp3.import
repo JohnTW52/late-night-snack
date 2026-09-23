@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sm7va2f4kka"
+path="res://.godot/imported/land wet.mp3-dd70deb42cda613bd9494a7198556a1c.mp3str"
+
+[deps]
+
+source_file="res://sfx/land wet.mp3"
+dest_files=["res://.godot/imported/land wet.mp3-dd70deb42cda613bd9494a7198556a1c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
