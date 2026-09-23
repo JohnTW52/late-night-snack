@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bwy5wrvw662lo"]
+
+[ext_resource type="PackedScene" uid="uid://btvtqto0rbmka" path="res://objects/add_30/clock_low_poly.glb" id="1_jov8w"]
+[ext_resource type="Script" uid="uid://cnvam4x070qe6" path="res://objects/add_30/add_time.gd" id="1_voy5p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rruc7"]
+size = Vector3(0.66986084, 0.79107666, 0.76464844)
+
+[node name="AddTime" type="Node3D" unique_id=1548117864]
+script = ExtResource("1_voy5p")
+
+[node name="ClockObject" parent="." unique_id=115182930 instance=ExtResource("1_jov8w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1357672734]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1913829071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0069274902, 0.04598999, 0.0053710938)
+shape = SubResource("BoxShape3D_rruc7")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

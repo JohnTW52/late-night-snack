@@ -44,6 +44,9 @@ func change_level() -> void:
 func tick_timer(delta: float) -> void:
 	timer -= delta
 
+func add_time(amt: float) -> void:
+	timer += amt
+
 func update_timer_ui(time: float) -> void:
 	timer_ui.text = "%d" % int(time)
 
