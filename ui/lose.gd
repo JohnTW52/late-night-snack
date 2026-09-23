@@ -4,13 +4,22 @@ extends CanvasLayer
 
 func _ready() -> void:
 	hide()
+	self.add_to_group("pause me")
 	microwave = get_parent().get_node("Microwave")
-	microwave.microwave_timer_done.connect(_on_microwave_timer_done)
+	microwave.after_last_chance.connect(_after_last_chance)
 
-func _on_microwave_timer_done() -> void:
-	await get_tree().create_timer(5.0).timeout
+func _after_last_chance() -> void:
 	show()
 	GameManager.game_over = true
-	await get_tree().create_timer(2.0).timeout
-	GameManager.on_game_over()
+	$gun.play()
 	
+	var t = Timer.new()
+	t.add_to_group("pause me")
+	t.wait_time = 2.0
+	t.one_shot = true
+	add_child(t)
+	t.timeout.connect(func():
+		GameManager.on_game_over()
+		t.queue_free()
+	)
+	t.start()

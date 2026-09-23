@@ -6,10 +6,12 @@
 [ext_resource type="Script" uid="uid://bhoqhv7escpyx" path="res://player/player_scripts/state_machine/crouch_state_script.gd" id="4_ys478"]
 [ext_resource type="Script" uid="uid://blt7dest23fk0" path="res://player/player_scripts/state_machine/walk_state_script.gd" id="5_moqa7"]
 [ext_resource type="Script" uid="uid://5gk47o641xgt" path="res://player/player_scripts/state_machine/run_state_script.gd" id="6_lkf86"]
+[ext_resource type="AudioStream" uid="uid://b2i0tmi8go6di" path="res://sfx/walk wet.ogg" id="6_xubi7"]
 [ext_resource type="Script" uid="uid://dvu58wf01wils" path="res://player/player_scripts/state_machine/jump_state_script.gd" id="7_jv72m"]
 [ext_resource type="Script" uid="uid://bh3rdvokmrar1" path="res://player/player_scripts/state_machine/inair_state_script.gd" id="8_vd6ln"]
 [ext_resource type="Script" uid="uid://b0fbr48rbvn27" path="res://player/player_scripts/camera/camera_script.gd" id="9_xbmj8"]
 [ext_resource type="Script" uid="uid://dx02l6p6behb8" path="res://player/player_scripts/ui/hud_script.gd" id="10_aatle"]
+[ext_resource type="AudioStream" uid="uid://sm7va2f4kka" path="res://sfx/land wet.mp3" id="10_ilatc"]
 [ext_resource type="Texture2D" uid="uid://cxkb5w0m1ou8w" path="res://player/player_textures/Dot.png" id="11_gfgax"]
 [ext_resource type="StyleBox" uid="uid://c50syhy1a4dmh" path="res://player/resources/player_character_ui_theme.tres" id="11_qhy06"]
 [ext_resource type="Texture2D" uid="uid://yka7hibaf84x" path="res://player/player_textures/DotInteract_Big.png" id="12_gfgax"]
@@ -74,9 +76,22 @@ metadata/_custom_type_script = "uid://bhoqhv7escpyx"
 script = ExtResource("5_moqa7")
 metadata/_custom_type_script = "uid://blt7dest23fk0"
 
+[node name="walk" type="AudioStreamPlayer3D" parent="PlayerCharacter/StateMachine/WalkState" unique_id=1388844289]
+stream = ExtResource("6_xubi7")
+volume_db = -8.0
+unit_size = 87.73
+max_distance = 4096.0
+
 [node name="RunState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1366066256]
 script = ExtResource("6_lkf86")
 metadata/_custom_type_script = "uid://5gk47o641xgt"
+
+[node name="run" type="AudioStreamPlayer3D" parent="PlayerCharacter/StateMachine/RunState" unique_id=822267770]
+stream = ExtResource("6_xubi7")
+volume_db = -8.0
+unit_size = 73.15
+max_db = 6.0
+max_distance = 4096.0
 
 [node name="JumpState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1931624113]
 script = ExtResource("7_jv72m")
@@ -85,6 +100,12 @@ metadata/_custom_type_script = "uid://dvu58wf01wils"
 [node name="InairState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=880216578]
 script = ExtResource("8_vd6ln")
 metadata/_custom_type_script = "uid://bh3rdvokmrar1"
+
+[node name="land" type="AudioStreamPlayer3D" parent="PlayerCharacter/StateMachine/InairState" unique_id=945055711]
+stream = ExtResource("10_ilatc")
+volume_db = -8.0
+unit_size = 93.15
+max_distance = 4121.0
 
 [node name="CameraHolder" type="Node3D" parent="PlayerCharacter" unique_id=1750117354 groups=["pause me"]]
 unique_name_in_owner = true

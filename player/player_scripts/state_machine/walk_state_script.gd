@@ -8,14 +8,18 @@ var play_char : CharacterBody3D
 
 func enter(play_char_ref : CharacterBody3D) -> void:
 	play_char = play_char_ref
-	
+	$walk.finished.connect(_on_walk_finished)
+	$walk.play()
 	verifications()
+	
+func _on_walk_finished() -> void:
+	$walk.play()
 	
 func verifications() -> void:
 	play_char.move_speed = play_char.walk_speed
 	play_char.move_accel = play_char.walk_accel
 	play_char.move_deccel = play_char.walk_deccel
-	 
+	
 	play_char.floor_snap_length = 1.0
 	#if play_char.jump_cooldown > 0.0: play_char.jump_cooldown = -1.0
 	if play_char.nb_jumps_in_air_allowed < play_char.nb_jumps_in_air_allowed_ref: play_char.nb_jumps_in_air_allowed = play_char.nb_jumps_in_air_allowed_ref
@@ -38,27 +42,33 @@ func applies(delta : float) -> void:
 	
 	if !play_char.is_on_floor():
 		if play_char.velocity.y < 0.0:
+			$walk.stop()
 			transitioned.emit(self, "InairState")
 			
 	if play_char.is_on_floor():
 		#check if can auto bunny hop
 		if play_char.can_jump and play_char.auto_bunny_hop and play_char.hit_ground_cooldown > 0.0 and play_char.input_direction != Vector2.ZERO and play_char.jump_cooldown <= 0.0:
+			$walk.stop()
 			transitioned.emit(self, "JumpState")
 		if play_char.can_jump and play_char.jump_buff_on and play_char.jump_cooldown <= 0.0:
 			#apply jump buffering
 			play_char.buffered_jump = true
 			play_char.jump_buff_on = false
+			$walk.stop()
 			transitioned.emit(self, "JumpState")
 	
 func input_management() -> void:
 	if play_char.can_jump and Input.is_action_just_pressed(play_char.jump_action):
 		if play_char.jump_cooldown <= 0.0:
+			$walk.stop()
 			transitioned.emit(self, "JumpState")
 		
 	if Input.is_action_just_pressed(play_char.crouch_action) and play_char.can_crouch:
+		$walk.stop()
 		transitioned.emit(self, "CrouchState")
 		
 	if Input.is_action_just_pressed(play_char.run_action) and play_char.can_run:
+		$walk.stop()
 		play_char.walk_or_run = "RunState"
 		transitioned.emit(self, "RunState")
 		
@@ -76,4 +86,5 @@ func move(delta : float) -> void:
 		if play_char.hit_ground_cooldown <= 0: play_char.desired_move_speed = play_char.velocity.length()
 		
 	else:
+		$walk.stop()
 		transitioned.emit(self, "IdleState")

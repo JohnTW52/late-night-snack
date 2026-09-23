@@ -19,21 +19,33 @@ func _on_button_pressed() -> void:
 func _pause_game() -> void:
 	visible = true
 	currently_paused = true;
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	for node in get_tree().get_nodes_in_group("pause me"):
-		node.set_process(false)
-		node.set_process_input(false)
-		node.set_process_internal(false)
-		node.set_physics_process(false)
-		node.set_process_unhandled_input(false)
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		if node is Timer:
+			node.paused = true
+		elif node is AudioStreamPlayer3D:
+			node.stream_paused = true
+		else:
+			node.set_process(false)
+			node.set_process_input(false)
+			node.set_process_internal(false)
+			node.set_physics_process(false)
+			node.set_process_unhandled_input(false)
+		
 
 func _resume_game() -> void:
-		visible = false
-		currently_paused = false;
-		for node in get_tree().get_nodes_in_group("pause me"):
+	visible = false
+	currently_paused = false;
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	for node in get_tree().get_nodes_in_group("pause me"):
+		if node is Timer:
+			node.paused = false
+		elif node is AudioStreamPlayer3D:
+			node.stream_paused = false
+		else:
 			node.set_process(true)
 			node.set_process_input(true)
 			node.set_process_internal(true)
 			node.set_physics_process(true)
 			node.set_process_unhandled_input(true)
-			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+

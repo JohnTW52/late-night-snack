@@ -1,6 +1,9 @@
 class_name Microwave extends Node3D
 
 signal microwave_timer_done
+signal after_last_chance
+
+var timer_done_not_already_emitted: bool = true;
 
 var timer: float 
 
@@ -17,7 +20,9 @@ func _process(delta: float) -> void:
 	if timer > 0.01:
 		tick_timer(delta)
 		update_timer_ui(timer)
-	else:
+	elif timer_done_not_already_emitted:
+		$hum.stop()
+		timer_done_not_already_emitted = false
 		microwave_timer_done.emit()
 
 func can_interact(_player: PlayerCharacter) -> bool:

@@ -8,12 +8,16 @@ var play_char : CharacterBody3D
 
 func enter(play_char_ref : CharacterBody3D) -> void:
 	play_char = play_char_ref
-	
 	if !play_char.can_run:
 		play_char.state_machine.transition_to("WalkState")
 		return
-	
+	$run.finished.connect(_on_run_finished)
+	$run.pitch_scale = 1.5
+	$run.play()
 	verifications()
+	
+func _on_run_finished() -> void:
+	$run.play()
 	
 func verifications() -> void:
 	play_char.move_speed = play_char.run_speed
@@ -42,32 +46,39 @@ func applies(delta : float) -> void:
 		
 	if !play_char.is_on_floor():
 		if play_char.velocity.y < 0.0:
+			$run.stop()
 			transitioned.emit(self, "InairState")
 			
 	if play_char.is_on_floor():
 		if play_char.can_jump and play_char.auto_bunny_hop and play_char.hit_ground_cooldown > 0.0 and play_char.input_direction != Vector2.ZERO and play_char.jump_cooldown <= 0.0:
+			$run.stop()
 			transitioned.emit(self, "JumpState")
 		if play_char.can_jump and play_char.jump_buff_on and play_char.jump_cooldown <= 0.0:
 			play_char.buffered_jump = true
 			play_char.jump_buff_on = false
+			$run.stop()
 			transitioned.emit(self, "JumpState")
 	
 func input_management() -> void:
 	if play_char.can_jump and Input.is_action_just_pressed(play_char.jump_action):
 		if play_char.jump_cooldown <= 0.0:
+			$run.stop()
 			transitioned.emit(self, "JumpState")
 		
 	if Input.is_action_just_pressed(play_char.crouch_action) and play_char.can_crouch:
+		$run.stop()
 		transitioned.emit(self, "CrouchState")
 		
 	if play_char.continuous_run:
 		#has to press run button once to run
 		if Input.is_action_just_pressed(play_char.run_action):
+			$run.stop()
 			play_char.walk_or_run = "WalkState"
 			transitioned.emit(self, "WalkState")
 	else:
 		#has to continuously press run button to run
 		if !Input.is_action_pressed(play_char.run_action):
+			$run.stop()
 			play_char.walk_or_run = "WalkState"
 			transitioned.emit(self, "WalkState")
 			
@@ -83,6 +94,8 @@ func move(delta : float) -> void:
 		
 		if play_char.hit_ground_cooldown <= 0: play_char.desired_move_speed = play_char.velocity.length()
 	elif play_char.move_direction and play_char.is_on_floor():
+		$run.stop()
 		transitioned.emit(self, "WalkState")
 	else:
+		$run.stop()
 		transitioned.emit(self, "IdleState")

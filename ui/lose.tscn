@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blyxf1mcpgbxp"]
 
 [ext_resource type="Script" uid="uid://bbxiw6124bldx" path="res://ui/lose.gd" id="1_0tccf"]
+[ext_resource type="AudioStream" uid="uid://bta7srntmoony" path="res://sfx/gun & ouch.mp3" id="2_jo0se"]
 
 [node name="Lose" type="CanvasLayer" unique_id=627476690]
 script = ExtResource("1_0tccf")
@@ -19,3 +20,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 36
 text = "You were shot."
+
+[node name="gun" type="AudioStreamPlayer3D" parent="." unique_id=1107166137]
+stream = ExtResource("2_jo0se")
+volume_db = 14.0
+max_db = 6.0
