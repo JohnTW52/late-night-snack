@@ -3,7 +3,7 @@ class_name JumpBoost extends Node3D
 var _player: PlayerCharacter
 var _boost_time := 10.0
 var _boost_timer: float
-var _boost_mult := 2.0
+var _boost_mult := 3.0 ## Higher number means higher jump
 var _time := 0.0
 var _amplitude := 0.005
 var _frequency := 3.0

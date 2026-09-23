@@ -9,7 +9,7 @@ var _rotation_speed := 2.0
 var _time := 0.0
 var _fall_timer: float
 var _fall_time := 10.0
-var _fall_mult := 1.5
+var _fall_mult := 2.0 ## Higher number means slower fall
 var _default_fall_time: float
 
 func _ready() -> void:

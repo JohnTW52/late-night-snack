@@ -48,4 +48,3 @@ func _resume_game() -> void:
 			node.set_process_internal(true)
 			node.set_physics_process(true)
 			node.set_process_unhandled_input(true)
-
