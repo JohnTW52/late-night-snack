@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="4_orkke"]
 [ext_resource type="PackedScene" uid="uid://cejlqgj6motxy" path="res://objects/dining_scene/individual_scenes/moving_chair.tscn" id="4_wucbw"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="6_orkke"]
+[ext_resource type="PackedScene" uid="uid://cywaj5tj7ag0f" path="res://objects/dining_scene/individual_scenes/spinning_chair.tscn" id="7_1cnpy"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="7_33ega"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
+[ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="8_go703"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="11_tbqwf"]
 [ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost/jump_boost.tscn" id="12_hf8j7"]
@@ -61,8 +63,8 @@ transform = Transform3D(0.0058432766, -0.14988616, -2.2649374e-08, -0.14988616, 
 [node name="Chair2" parent="Obstacles" unique_id=1123001349 instance=ExtResource("4_orkke")]
 transform = Transform3D(-0.026272936, -0.073523715, 0.12807807, -0.14142404, -0.024939544, -0.04332727, 0.042531937, -0.12834437, -0.06495191, 1.9652534, 2.5224848, -1.3588493)
 
-[node name="Chair3" parent="Obstacles" unique_id=9863288 instance=ExtResource("4_orkke")]
-transform = Transform3D(-0.020607548, 0.1485762, -0.0006627589, -0.007152804, -0.00032375008, 0.14982903, 0.14840537, 0.020615658, 0.0071294038, -2.3690853, 3.0321064, -1.3588493)
+[node name="SpinningChair" parent="Obstacles" unique_id=148115116 instance=ExtResource("7_1cnpy")]
+transform = Transform3D(-0.020607548, 0.1485762, -0.0006627602, -0.0071528396, -0.000323752, 0.14982903, 0.14840537, 0.020615663, 0.007129426, -2.3690853, 3.0321064, -1.3588493)
 
 [node name="Structure" type="Node3D" parent="." unique_id=625879665]
 
@@ -489,3 +491,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.6995194, -4)
 
 [node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("12_hf8j7")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0.6716813, -4)
+
+[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("8_go703")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7, 1, -4)
