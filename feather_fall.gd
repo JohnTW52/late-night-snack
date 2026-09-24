@@ -38,6 +38,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			_player_entered = true
 			_default_fall_time = _player.jump_time_to_fall
 			_player.jump_time_to_fall *= _fall_mult
+			$bling.play()
 		else:
 			print("could not find player")
 		

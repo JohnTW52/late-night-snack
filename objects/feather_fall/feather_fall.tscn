@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://n0ammhlqjsx7" path="res://feather_fall.gd" id="1_ee7rx"]
 [ext_resource type="PackedScene" uid="uid://c65mmbmusjm8i" path="res://objects/feather_fall/day_1._feather.glb" id="2_mlo27"]
+[ext_resource type="AudioStream" uid="uid://ki1u3q6xwl2o" path="res://sfx/bling.mp3" id="3_mlo27"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
 size = Vector3(0.27368164, 1.4125977, 0.4472046)
@@ -18,5 +19,8 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=487083736]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0015869141, 0.20629883, -0.0039978027)
 shape = SubResource("BoxShape3D_x8qym")
+
+[node name="bling" type="AudioStreamPlayer3D" parent="." unique_id=2048197273 groups=["pause me"]]
+stream = ExtResource("3_mlo27")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
