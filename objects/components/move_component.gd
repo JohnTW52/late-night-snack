@@ -24,6 +24,7 @@ func _set_root() -> void:
 		print("Could not find position markers")
 
 func _start_movement() -> void:
+	# might need to make this more accessable to call tween.pause() or something
 	var tween := create_tween()
 	tween.set_loops()
 

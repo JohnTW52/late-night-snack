@@ -23,7 +23,7 @@ func _pause_game() -> void:
 	for node in get_tree().get_nodes_in_group("pause me"):
 		if node is Timer:
 			node.paused = true
-		elif node is AudioStreamPlayer3D:
+		elif node is AudioStreamPlayer3D or node is AudioStreamPlayer:
 			node.stream_paused = true
 		else:
 			node.set_process(false)
@@ -40,7 +40,7 @@ func _resume_game() -> void:
 	for node in get_tree().get_nodes_in_group("pause me"):
 		if node is Timer:
 			node.paused = false
-		elif node is AudioStreamPlayer3D:
+		elif node is AudioStreamPlayer3D or node is AudioStreamPlayer:
 			node.stream_paused = false
 		else:
 			node.set_process(true)

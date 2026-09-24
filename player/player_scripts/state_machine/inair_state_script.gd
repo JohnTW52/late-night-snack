@@ -49,11 +49,10 @@ func applies(delta : float) -> void:
 			play_char.jump_buff_on = false
 			transitioned.emit(self, "JumpState")
 		else:
+			$land.play()
 			if play_char.move_direction:
-				$land.play()
 				transitioned.emit(self, play_char.resolve_move_state())
 			else:
-				$land.play()
 				transitioned.emit(self, "IdleState")
 		
 func input_management() -> void:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ex2p2tqgjlqa" path="res://objects/jump_boost/jump_boost.gd" id="1_dpy1y"]
 [ext_resource type="PackedScene" uid="uid://c65nv13na6gaf" path="res://objects/jump_boost/jumpboost_arrow.glb" id="1_ohgd2"]
+[ext_resource type="AudioStream" uid="uid://ki1u3q6xwl2o" path="res://sfx/bling.mp3" id="3_sqpne"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
 size = Vector3(1, 2.487732, 1.6141357)
@@ -19,5 +20,8 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=548195249]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37417603, -0.014709473)
 shape = SubResource("BoxShape3D_x8qym")
+
+[node name="bling" type="AudioStreamPlayer3D" parent="." unique_id=1228475891 groups=["pause me"]]
+stream = ExtResource("3_sqpne")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -39,6 +39,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			_player_entered = true
 			_default_jump_height = _player.jump_height
 			_player.jump_height *= _boost_mult
+			$bling.play()
 		else:
 			print("could not find player")
 		

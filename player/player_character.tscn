@@ -76,22 +76,18 @@ metadata/_custom_type_script = "uid://bhoqhv7escpyx"
 script = ExtResource("5_moqa7")
 metadata/_custom_type_script = "uid://blt7dest23fk0"
 
-[node name="walk" type="AudioStreamPlayer3D" parent="PlayerCharacter/StateMachine/WalkState" unique_id=1388844289]
+[node name="walk" type="AudioStreamPlayer" parent="PlayerCharacter/StateMachine/WalkState" unique_id=85884332 groups=["pause me"]]
 stream = ExtResource("6_xubi7")
 volume_db = -8.0
-unit_size = 87.73
-max_distance = 4096.0
 
 [node name="RunState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1366066256]
 script = ExtResource("6_lkf86")
 metadata/_custom_type_script = "uid://5gk47o641xgt"
 
-[node name="run" type="AudioStreamPlayer3D" parent="PlayerCharacter/StateMachine/RunState" unique_id=822267770]
+[node name="run" type="AudioStreamPlayer" parent="PlayerCharacter/StateMachine/RunState" unique_id=1399523185 groups=["pause me"]]
 stream = ExtResource("6_xubi7")
 volume_db = -8.0
-unit_size = 73.15
-max_db = 6.0
-max_distance = 4096.0
+pitch_scale = 1.5
 
 [node name="JumpState" type="Node" parent="PlayerCharacter/StateMachine" unique_id=1931624113]
 script = ExtResource("7_jv72m")
@@ -101,11 +97,9 @@ metadata/_custom_type_script = "uid://dvu58wf01wils"
 script = ExtResource("8_vd6ln")
 metadata/_custom_type_script = "uid://bh3rdvokmrar1"
 
-[node name="land" type="AudioStreamPlayer3D" parent="PlayerCharacter/StateMachine/InairState" unique_id=945055711]
+[node name="land" type="AudioStreamPlayer" parent="PlayerCharacter/StateMachine/InairState" unique_id=47347826 groups=["pause me"]]
 stream = ExtResource("10_ilatc")
-volume_db = -8.0
-unit_size = 93.15
-max_distance = 4121.0
+volume_db = -25.0
 
 [node name="CameraHolder" type="Node3D" parent="PlayerCharacter" unique_id=1750117354 groups=["pause me"]]
 unique_name_in_owner = true
