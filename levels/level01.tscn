@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="4_emax3"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_kxijb"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_ed0h8"]
+[ext_resource type="PackedScene" uid="uid://dsxv3xxfru1hj" path="res://ui/options_menu.tscn" id="9_x5epe"]
 
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
@@ -443,6 +444,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00084269047, 1.7926872, -0.
 light_color = Color(0.9647059, 0.6392157, 0, 1)
 light_energy = 0.5
 
+[node name="LightmapGI" type="LightmapGI" parent="Lighting" unique_id=830179574]
+
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_53p8g")]
 transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
 
@@ -456,3 +459,7 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("8_ed0h8")]
+visible = false
+
+[node name="OptionsMenu" parent="." unique_id=145317465 instance=ExtResource("9_x5epe")]
+visible = false

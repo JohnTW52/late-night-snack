@@ -1,6 +1,7 @@
 extends CanvasLayer
 
-var currently_paused := false;
+var currently_paused := false
+var currently_in_options := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("play_char_pause") and not currently_paused):
 		_pause_game()
-	elif (Input.is_action_just_pressed("play_char_pause") and currently_paused):
+	elif (Input.is_action_just_pressed("play_char_pause") and currently_paused and not currently_in_options):
 		_resume_game()
 
 func _on_button_pressed() -> void:
@@ -31,7 +32,6 @@ func _pause_game() -> void:
 			node.set_process_internal(false)
 			node.set_physics_process(false)
 			node.set_process_unhandled_input(false)
-		
 
 func _resume_game() -> void:
 	visible = false
@@ -48,3 +48,12 @@ func _resume_game() -> void:
 			node.set_process_internal(true)
 			node.set_physics_process(true)
 			node.set_process_unhandled_input(true)
+
+func _on_options_button_pressed() -> void:
+	currently_in_options = true
+	visible = false
+	owner.get_node("OptionsMenu").visible = true
+
+func _on_menu_button_pressed() -> void:
+	await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://ui/main_menu.tscn")
