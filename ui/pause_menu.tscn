@@ -48,6 +48,7 @@ theme_override_font_sizes/font_size = 36
 text = "resume"
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=442116189]
+visible = false
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
