@@ -5,13 +5,34 @@ var game_over: bool = false
 var level_index: int
 var timer_vals: Dictionary = {
 	1: 10.0,
-	2: 30.0
+	2: 15.0,
+	3: 20.0,
+	4: 30.0,
+	5: 45.0,
+	6: 10.0,
+	7: 10.0,
+	8: 10.0,
+	9: 10.0,
+	10: 10.0,
+	11: 10.0
 }
 
 @onready var levels: Array[String] = [
 	"res://levels/level01.tscn", 
-	"res://levels/level02.tscn"
+	"res://levels/level02.tscn",
+	"res://levels/level03.tscn",
+	"res://levels/level04.tscn",
+	"res://levels/level05.tscn",
+	"res://levels/level06.tscn",
+	"res://levels/level07.tscn",
+	"res://levels/level08.tscn",
+	"res://levels/level09.tscn",
+	"res://levels/level010.tscn",
+	"res://levels/level011.tscn"
 	]
+
+func _ready() -> void:
+	just_changed_level = false
 
 # This function will be useful if we add save and quit later
 # Will set level_index to whatever current level is

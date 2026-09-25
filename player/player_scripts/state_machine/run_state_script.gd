@@ -6,12 +6,14 @@ var state_name : String = "Run"
 
 var play_char : CharacterBody3D
 
+func _ready() -> void:
+	$run.finished.connect(_on_run_finished)
+
 func enter(play_char_ref : CharacterBody3D) -> void:
 	play_char = play_char_ref
 	if !play_char.can_run:
 		play_char.state_machine.transition_to("WalkState")
 		return
-	$run.finished.connect(_on_run_finished)
 	$run.pitch_scale = 1.5
 	$run.play()
 	verifications()

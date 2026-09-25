@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://do0jmte4hql6a" path="res://objects/microwave/microwave_-_modern_furniture_game-ready.glb" id="1_qjekx"]
 [ext_resource type="Script" uid="uid://bg2wbrh3fl52n" path="res://objects/microwave/microwave.gd" id="2_epbbi"]
 [ext_resource type="PackedScene" uid="uid://be1s8kohc77ct" path="res://ui/timer.tscn" id="3_gmmco"]
-[ext_resource type="PackedScene" uid="uid://cu4qnvlvt115u" path="res://ui/success.tscn" id="4_h4m2r"]
 [ext_resource type="AudioStream" uid="uid://nwnqqr7dbe5" path="res://sfx/hum wet.mp3" id="5_fs7ny"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
@@ -20,10 +19,7 @@ shape = SubResource("BoxShape3D_x8qym")
 
 [node name="Timer" parent="." index="2" unique_id=954962050 instance=ExtResource("3_gmmco")]
 
-[node name="Success" parent="." index="3" unique_id=331028200 instance=ExtResource("4_h4m2r")]
-visible = false
-
-[node name="hum" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1495257874 groups=["pause me"]]
+[node name="hum" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1495257874 groups=["pause me"]]
 stream = ExtResource("5_fs7ny")
 volume_db = -12.0
 autoplay = true

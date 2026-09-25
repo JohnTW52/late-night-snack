@@ -1,5 +1,6 @@
 extends Node3D
 
+@export var _fall_mult := 3.0 ## Higher number means slower fall
 var _player: PlayerCharacter
 var _player_entered := false
 var _used := false
@@ -9,7 +10,6 @@ var _rotation_speed := 2.0
 var _time := 0.0
 var _fall_timer: float
 var _fall_time := 10.0
-var _fall_mult := 2.0 ## Higher number means slower fall
 var _default_fall_time: float
 
 func _ready() -> void:
@@ -20,6 +20,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if _player and _fall_timer < 0.01:
 		_stop_fall_timer()
+		_player.jump_time_to_fall = _default_fall_time
 	
 	if _player_entered:
 		_tick_fall_timer(delta)

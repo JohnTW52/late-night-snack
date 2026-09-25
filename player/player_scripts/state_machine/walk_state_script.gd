@@ -6,9 +6,11 @@ var state_name : String = "Walk"
 
 var play_char : CharacterBody3D
 
+func _ready() -> void:
+	$walk.finished.connect(_on_walk_finished)
+
 func enter(play_char_ref : CharacterBody3D) -> void:
 	play_char = play_char_ref
-	$walk.finished.connect(_on_walk_finished)
 	$walk.play()
 	verifications()
 	

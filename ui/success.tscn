@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cu4qnvlvt115u"]
 
+[ext_resource type="Script" uid="uid://d2uyje3n30gki" path="res://ui/success.gd" id="1_o8cif"]
+
 [node name="Success" type="CanvasLayer" unique_id=331028200]
+script = ExtResource("1_o8cif")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1151023864]
 anchors_preset = 15
@@ -23,6 +26,6 @@ offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 36
-text = "Good Job."
+text = "Not enough. Need more snack."
 horizontal_alignment = 1
 vertical_alignment = 1

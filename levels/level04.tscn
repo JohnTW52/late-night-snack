@@ -1,108 +1,108 @@
-[gd_scene format=3 uid="uid://s5c3dkljgtct"]
+[gd_scene format=3 uid="uid://cof30ifdwiceq"]
 
-[ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_t67hm"]
-[ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_ji4nx"]
-[ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="3_b4xcw"]
-[ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="6_orkke"]
-[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="7_33ega"]
-[ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
-[ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
-[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="11_tbqwf"]
+[ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_8ye52"]
+[ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_fvdud"]
+[ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_qkyi5"]
+[ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_jdr1m"]
+[ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_858d1"]
+[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_rp6xw"]
+[ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_ho4s2"]
+[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_1gfio"]
 
-[sub_resource type="Environment" id="Environment_orkke"]
+[sub_resource type="Environment" id="Environment_lpcka"]
 glow_intensity = 4.32
 fog_enabled = true
 fog_light_energy = 0.22
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_n311a"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_gkbmy"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfmka"]
-albedo_texture = ExtResource("2_ji4nx")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ma3h5"]
+albedo_texture = ExtResource("2_fvdud")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [node name="Level02" type="Node3D" unique_id=421491462]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1915375501]
-environment = SubResource("Environment_orkke")
-camera_attributes = SubResource("CameraAttributesPractical_n311a")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=617912294]
+environment = SubResource("Environment_lpcka")
+camera_attributes = SubResource("CameraAttributesPractical_gkbmy")
 
-[node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_t67hm")]
+[node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_8ye52")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
-[node name="Structure" type="Node3D" parent="." unique_id=1784533578]
+[node name="Structure" type="Node3D" parent="." unique_id=481325484]
 
-[node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1649115966]
+[node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1902593475]
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=483054235]
+[node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=1342673593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=1767095916]
+[node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=739772113]
 transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=15597120]
+[node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=456804555]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall2" type="CSGBox3D" parent="Structure" unique_id=1611405329]
+[node name="Wall2" type="CSGBox3D" parent="Structure" unique_id=1470983959]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 10, -10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall3" type="CSGBox3D" parent="Structure" unique_id=1665295848]
+[node name="Wall3" type="CSGBox3D" parent="Structure" unique_id=361663485]
 transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 10, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=913850165]
+[node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=774857448]
 transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 10, 10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall5" type="CSGBox3D" parent="Structure" unique_id=1709687163]
+[node name="Wall5" type="CSGBox3D" parent="Structure" unique_id=1816370228]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 30, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall6" type="CSGBox3D" parent="Structure" unique_id=178220934]
+[node name="Wall6" type="CSGBox3D" parent="Structure" unique_id=501299429]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 30, -10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall7" type="CSGBox3D" parent="Structure" unique_id=1460341589]
+[node name="Wall7" type="CSGBox3D" parent="Structure" unique_id=464449342]
 transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 30, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Wall8" type="CSGBox3D" parent="Structure" unique_id=124356818]
+[node name="Wall8" type="CSGBox3D" parent="Structure" unique_id=1284614082]
 transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 30, 10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xfmka")
+material = SubResource("StandardMaterial3D_ma3h5")
 
-[node name="Lighting" type="Node3D" parent="." unique_id=578485900]
-script = ExtResource("6_orkke")
+[node name="Lighting" type="Node3D" parent="." unique_id=1016091640]
+script = ExtResource("3_qkyi5")
 
-[node name="AreaLight3D" type="AreaLight3D" parent="Lighting" unique_id=210437521]
+[node name="AreaLight3D" type="AreaLight3D" parent="Lighting" unique_id=70299506]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -112,7 +112,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D2" type="AreaLight3D" parent="Lighting" unique_id=631587148]
+[node name="AreaLight3D2" type="AreaLight3D" parent="Lighting" unique_id=809155028]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -122,7 +122,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D3" type="AreaLight3D" parent="Lighting" unique_id=670398076]
+[node name="AreaLight3D3" type="AreaLight3D" parent="Lighting" unique_id=1916745535]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -132,7 +132,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D4" type="AreaLight3D" parent="Lighting" unique_id=1591660174]
+[node name="AreaLight3D4" type="AreaLight3D" parent="Lighting" unique_id=524267530]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 10, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -142,7 +142,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D5" type="AreaLight3D" parent="Lighting" unique_id=368002312]
+[node name="AreaLight3D5" type="AreaLight3D" parent="Lighting" unique_id=866719893]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 10, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -152,7 +152,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D6" type="AreaLight3D" parent="Lighting" unique_id=149331838]
+[node name="AreaLight3D6" type="AreaLight3D" parent="Lighting" unique_id=1485066315]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 10, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -162,7 +162,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D7" type="AreaLight3D" parent="Lighting" unique_id=1081425978]
+[node name="AreaLight3D7" type="AreaLight3D" parent="Lighting" unique_id=1847445776]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 10, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -172,7 +172,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D8" type="AreaLight3D" parent="Lighting" unique_id=1547436817]
+[node name="AreaLight3D8" type="AreaLight3D" parent="Lighting" unique_id=1036033090]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 10, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -182,7 +182,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D9" type="AreaLight3D" parent="Lighting" unique_id=731095632]
+[node name="AreaLight3D9" type="AreaLight3D" parent="Lighting" unique_id=2007972039]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 10, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -192,7 +192,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D10" type="AreaLight3D" parent="Lighting" unique_id=1062723330]
+[node name="AreaLight3D10" type="AreaLight3D" parent="Lighting" unique_id=1724968405]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -202,7 +202,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D11" type="AreaLight3D" parent="Lighting" unique_id=628928944]
+[node name="AreaLight3D11" type="AreaLight3D" parent="Lighting" unique_id=1818219259]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -212,7 +212,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D12" type="AreaLight3D" parent="Lighting" unique_id=1443570300]
+[node name="AreaLight3D12" type="AreaLight3D" parent="Lighting" unique_id=675035228]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -222,7 +222,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D25" type="AreaLight3D" parent="Lighting" unique_id=956460730]
+[node name="AreaLight3D25" type="AreaLight3D" parent="Lighting" unique_id=1211321804]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -232,7 +232,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D26" type="AreaLight3D" parent="Lighting" unique_id=2043542188]
+[node name="AreaLight3D26" type="AreaLight3D" parent="Lighting" unique_id=246484383]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -242,7 +242,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D27" type="AreaLight3D" parent="Lighting" unique_id=27042529]
+[node name="AreaLight3D27" type="AreaLight3D" parent="Lighting" unique_id=862117169]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -252,7 +252,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D28" type="AreaLight3D" parent="Lighting" unique_id=44208026]
+[node name="AreaLight3D28" type="AreaLight3D" parent="Lighting" unique_id=2774836]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 15, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -262,7 +262,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D29" type="AreaLight3D" parent="Lighting" unique_id=538448]
+[node name="AreaLight3D29" type="AreaLight3D" parent="Lighting" unique_id=2072468147]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 15, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -272,7 +272,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D30" type="AreaLight3D" parent="Lighting" unique_id=1375546038]
+[node name="AreaLight3D30" type="AreaLight3D" parent="Lighting" unique_id=1866237082]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 15, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -282,7 +282,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D31" type="AreaLight3D" parent="Lighting" unique_id=1156549378]
+[node name="AreaLight3D31" type="AreaLight3D" parent="Lighting" unique_id=1543245244]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 15, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -292,7 +292,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D32" type="AreaLight3D" parent="Lighting" unique_id=1697556617]
+[node name="AreaLight3D32" type="AreaLight3D" parent="Lighting" unique_id=872780379]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 15, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -302,7 +302,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D33" type="AreaLight3D" parent="Lighting" unique_id=93007940]
+[node name="AreaLight3D33" type="AreaLight3D" parent="Lighting" unique_id=2036876946]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 15, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -312,7 +312,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D34" type="AreaLight3D" parent="Lighting" unique_id=703209325]
+[node name="AreaLight3D34" type="AreaLight3D" parent="Lighting" unique_id=1429795983]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -322,7 +322,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D35" type="AreaLight3D" parent="Lighting" unique_id=108025868]
+[node name="AreaLight3D35" type="AreaLight3D" parent="Lighting" unique_id=1090423437]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -332,7 +332,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D36" type="AreaLight3D" parent="Lighting" unique_id=1129275203]
+[node name="AreaLight3D36" type="AreaLight3D" parent="Lighting" unique_id=1208707013]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -342,7 +342,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D13" type="AreaLight3D" parent="Lighting" unique_id=1525025685]
+[node name="AreaLight3D13" type="AreaLight3D" parent="Lighting" unique_id=1622713616]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -352,7 +352,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D14" type="AreaLight3D" parent="Lighting" unique_id=1562856134]
+[node name="AreaLight3D14" type="AreaLight3D" parent="Lighting" unique_id=1203692136]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -362,7 +362,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D15" type="AreaLight3D" parent="Lighting" unique_id=247786412]
+[node name="AreaLight3D15" type="AreaLight3D" parent="Lighting" unique_id=345571291]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -372,7 +372,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D16" type="AreaLight3D" parent="Lighting" unique_id=1983330970]
+[node name="AreaLight3D16" type="AreaLight3D" parent="Lighting" unique_id=997106561]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 5, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -382,7 +382,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D17" type="AreaLight3D" parent="Lighting" unique_id=583118208]
+[node name="AreaLight3D17" type="AreaLight3D" parent="Lighting" unique_id=1647666399]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 5, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -392,7 +392,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D18" type="AreaLight3D" parent="Lighting" unique_id=297854008]
+[node name="AreaLight3D18" type="AreaLight3D" parent="Lighting" unique_id=1604996284]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 5, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -402,7 +402,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D19" type="AreaLight3D" parent="Lighting" unique_id=1049481376]
+[node name="AreaLight3D19" type="AreaLight3D" parent="Lighting" unique_id=531198069]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 5, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -412,7 +412,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D20" type="AreaLight3D" parent="Lighting" unique_id=676173137]
+[node name="AreaLight3D20" type="AreaLight3D" parent="Lighting" unique_id=130073840]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 5, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -422,7 +422,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D21" type="AreaLight3D" parent="Lighting" unique_id=1457937660]
+[node name="AreaLight3D21" type="AreaLight3D" parent="Lighting" unique_id=850583919]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 5, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -432,7 +432,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D22" type="AreaLight3D" parent="Lighting" unique_id=332692101]
+[node name="AreaLight3D22" type="AreaLight3D" parent="Lighting" unique_id=387938362]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -442,7 +442,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D23" type="AreaLight3D" parent="Lighting" unique_id=377985300]
+[node name="AreaLight3D23" type="AreaLight3D" parent="Lighting" unique_id=1785729843]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -452,7 +452,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D24" type="AreaLight3D" parent="Lighting" unique_id=353199311]
+[node name="AreaLight3D24" type="AreaLight3D" parent="Lighting" unique_id=1650700780]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -462,7 +462,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D37" type="AreaLight3D" parent="Lighting" unique_id=1947894966]
+[node name="AreaLight3D37" type="AreaLight3D" parent="Lighting" unique_id=1021721128]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 30, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -472,7 +472,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D38" type="AreaLight3D" parent="Lighting" unique_id=937244982]
+[node name="AreaLight3D38" type="AreaLight3D" parent="Lighting" unique_id=27533149]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 30, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -482,7 +482,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D39" type="AreaLight3D" parent="Lighting" unique_id=1616976760]
+[node name="AreaLight3D39" type="AreaLight3D" parent="Lighting" unique_id=1555245813]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 30, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -492,7 +492,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D40" type="AreaLight3D" parent="Lighting" unique_id=219427826]
+[node name="AreaLight3D40" type="AreaLight3D" parent="Lighting" unique_id=1687719708]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 30, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -502,7 +502,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D41" type="AreaLight3D" parent="Lighting" unique_id=563402884]
+[node name="AreaLight3D41" type="AreaLight3D" parent="Lighting" unique_id=1953778472]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 30, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -512,7 +512,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D42" type="AreaLight3D" parent="Lighting" unique_id=994587750]
+[node name="AreaLight3D42" type="AreaLight3D" parent="Lighting" unique_id=803410838]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 30, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -522,7 +522,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D43" type="AreaLight3D" parent="Lighting" unique_id=1356795928]
+[node name="AreaLight3D43" type="AreaLight3D" parent="Lighting" unique_id=1073901581]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 30, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -532,7 +532,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D44" type="AreaLight3D" parent="Lighting" unique_id=1133968906]
+[node name="AreaLight3D44" type="AreaLight3D" parent="Lighting" unique_id=1254634104]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 30, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -542,7 +542,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D45" type="AreaLight3D" parent="Lighting" unique_id=882578438]
+[node name="AreaLight3D45" type="AreaLight3D" parent="Lighting" unique_id=572816050]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 30, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -552,7 +552,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D46" type="AreaLight3D" parent="Lighting" unique_id=1807678435]
+[node name="AreaLight3D46" type="AreaLight3D" parent="Lighting" unique_id=1608827618]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 30, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -562,7 +562,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D47" type="AreaLight3D" parent="Lighting" unique_id=1985858951]
+[node name="AreaLight3D47" type="AreaLight3D" parent="Lighting" unique_id=1335647819]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 30, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -572,7 +572,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D48" type="AreaLight3D" parent="Lighting" unique_id=193203313]
+[node name="AreaLight3D48" type="AreaLight3D" parent="Lighting" unique_id=121969883]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 30, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -582,7 +582,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D49" type="AreaLight3D" parent="Lighting" unique_id=546554127]
+[node name="AreaLight3D49" type="AreaLight3D" parent="Lighting" unique_id=1001145711]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 35, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -592,7 +592,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D50" type="AreaLight3D" parent="Lighting" unique_id=256501750]
+[node name="AreaLight3D50" type="AreaLight3D" parent="Lighting" unique_id=1138197094]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 35, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -602,7 +602,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D51" type="AreaLight3D" parent="Lighting" unique_id=1241305798]
+[node name="AreaLight3D51" type="AreaLight3D" parent="Lighting" unique_id=2140844059]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 35, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -612,7 +612,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D52" type="AreaLight3D" parent="Lighting" unique_id=346744525]
+[node name="AreaLight3D52" type="AreaLight3D" parent="Lighting" unique_id=1014054336]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 35, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -622,7 +622,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D53" type="AreaLight3D" parent="Lighting" unique_id=2046347047]
+[node name="AreaLight3D53" type="AreaLight3D" parent="Lighting" unique_id=844441974]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 35, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -632,7 +632,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D54" type="AreaLight3D" parent="Lighting" unique_id=593388119]
+[node name="AreaLight3D54" type="AreaLight3D" parent="Lighting" unique_id=1507168310]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 35, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -642,7 +642,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D55" type="AreaLight3D" parent="Lighting" unique_id=943110445]
+[node name="AreaLight3D55" type="AreaLight3D" parent="Lighting" unique_id=1827471777]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 35, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -652,7 +652,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D56" type="AreaLight3D" parent="Lighting" unique_id=1180736366]
+[node name="AreaLight3D56" type="AreaLight3D" parent="Lighting" unique_id=158155230]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 35, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -662,7 +662,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D57" type="AreaLight3D" parent="Lighting" unique_id=1718892074]
+[node name="AreaLight3D57" type="AreaLight3D" parent="Lighting" unique_id=1140507925]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 35, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -672,7 +672,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D58" type="AreaLight3D" parent="Lighting" unique_id=1911133711]
+[node name="AreaLight3D58" type="AreaLight3D" parent="Lighting" unique_id=599320391]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 35, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -682,7 +682,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D59" type="AreaLight3D" parent="Lighting" unique_id=294583567]
+[node name="AreaLight3D59" type="AreaLight3D" parent="Lighting" unique_id=1255709862]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 35, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -692,7 +692,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D60" type="AreaLight3D" parent="Lighting" unique_id=90062332]
+[node name="AreaLight3D60" type="AreaLight3D" parent="Lighting" unique_id=2133890028]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 35, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -702,7 +702,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D61" type="AreaLight3D" parent="Lighting" unique_id=39396194]
+[node name="AreaLight3D61" type="AreaLight3D" parent="Lighting" unique_id=1553088468]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -712,7 +712,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D62" type="AreaLight3D" parent="Lighting" unique_id=1033433986]
+[node name="AreaLight3D62" type="AreaLight3D" parent="Lighting" unique_id=83278360]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -722,7 +722,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D63" type="AreaLight3D" parent="Lighting" unique_id=1697551686]
+[node name="AreaLight3D63" type="AreaLight3D" parent="Lighting" unique_id=68479323]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -732,7 +732,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D64" type="AreaLight3D" parent="Lighting" unique_id=2037256185]
+[node name="AreaLight3D64" type="AreaLight3D" parent="Lighting" unique_id=190214090]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 25, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -742,7 +742,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D65" type="AreaLight3D" parent="Lighting" unique_id=1119881360]
+[node name="AreaLight3D65" type="AreaLight3D" parent="Lighting" unique_id=2105834575]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 25, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -752,7 +752,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D66" type="AreaLight3D" parent="Lighting" unique_id=204005356]
+[node name="AreaLight3D66" type="AreaLight3D" parent="Lighting" unique_id=1062383779]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 25, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -762,7 +762,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D67" type="AreaLight3D" parent="Lighting" unique_id=867718516]
+[node name="AreaLight3D67" type="AreaLight3D" parent="Lighting" unique_id=363149389]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 25, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -772,7 +772,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D68" type="AreaLight3D" parent="Lighting" unique_id=904817802]
+[node name="AreaLight3D68" type="AreaLight3D" parent="Lighting" unique_id=2115683195]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 25, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -782,7 +782,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D69" type="AreaLight3D" parent="Lighting" unique_id=622394460]
+[node name="AreaLight3D69" type="AreaLight3D" parent="Lighting" unique_id=960481676]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 25, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -792,7 +792,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D70" type="AreaLight3D" parent="Lighting" unique_id=1284422095]
+[node name="AreaLight3D70" type="AreaLight3D" parent="Lighting" unique_id=236266377]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -802,7 +802,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D71" type="AreaLight3D" parent="Lighting" unique_id=1680477192]
+[node name="AreaLight3D71" type="AreaLight3D" parent="Lighting" unique_id=1466215625]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -812,7 +812,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D72" type="AreaLight3D" parent="Lighting" unique_id=1251460007]
+[node name="AreaLight3D72" type="AreaLight3D" parent="Lighting" unique_id=531968501]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -822,21 +822,21 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" unique_id=558972363]
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" unique_id=1115200759]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00084269047, 1.7926872, -0.104669094)
 light_color = Color(0.9647059, 0.6392157, 0, 1)
 light_energy = 0.5
 
-[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_b4xcw")]
+[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_jdr1m")]
 transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
 
-[node name="TurretMount" parent="." unique_id=254010352 instance=ExtResource("7_n311a")]
+[node name="TurretMount" parent="." unique_id=254010352 instance=ExtResource("5_858d1")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
 
-[node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
+[node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("6_rp6xw")]
 visible = false
 
-[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("10_xfmka")]
+[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("7_ho4s2")]
 visible = false
 
-[node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("11_tbqwf")]
+[node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_1gfio")]

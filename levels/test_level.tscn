@@ -1,0 +1,496 @@
+[gd_scene format=3 uid="uid://chu28hs7tmvqg"]
+
+[ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_wjuib"]
+[ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="2_xag4j"]
+[ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="3_pgbyh"]
+[ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="4_68kkm"]
+[ext_resource type="PackedScene" uid="uid://cejlqgj6motxy" path="res://objects/dining_scene/individual_scenes/moving_chair.tscn" id="5_n4g7x"]
+[ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="6_atrxo"]
+[ext_resource type="PackedScene" uid="uid://cywaj5tj7ag0f" path="res://objects/dining_scene/individual_scenes/spinning_chair.tscn" id="7_vr6yy"]
+[ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="8_ra35m"]
+[ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="9_x7oem"]
+[ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="10_ec2iw"]
+[ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="11_ulql8"]
+[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="12_3i7yh"]
+[ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="13_5y2bn"]
+[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="14_kbjoq"]
+[ext_resource type="PackedScene" uid="uid://uw48p44klomk" path="res://objects/feather_fall/feather_fall.tscn" id="15_m2xr1"]
+[ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost/jump_boost.tscn" id="16_hj2pq"]
+[ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="17_04rbu"]
+
+[sub_resource type="Environment" id="Environment_x8qym"]
+glow_intensity = 4.32
+fog_enabled = true
+fog_light_energy = 0.22
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rruc7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8qym"]
+albedo_texture = ExtResource("8_ra35m")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfmka"]
+albedo_texture = ExtResource("8_ra35m")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="TestLevel" type="Node3D" unique_id=2058142477]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1417723939]
+environment = SubResource("Environment_x8qym")
+camera_attributes = SubResource("CameraAttributesPractical_rruc7")
+
+[node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_wjuib")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
+
+[node name="Obstacles" type="Node3D" parent="." unique_id=2082665891]
+
+[node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("2_xag4j")]
+transform = Transform3D(0.0002107691, -0.00041818543, 0.0019444017, -8.1027654e-05, 0.0019518607, 0.00042857282, -0.0019872119, -0.0001239401, 0.00018875359, 3.3235595, 6, 7.2751484)
+
+[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_pgbyh")]
+transform = Transform3D(-0.58562267, 0.30428785, -0.23335613, -0.16226846, 0.18931684, 0.65408564, 0.3474407, 0.6013055, -0.08784562, -4.420203, 3.7113612, 2.9422898)
+
+[node name="MovingFridge" parent="Obstacles" unique_id=346364558 instance=ExtResource("4_68kkm")]
+transform = Transform3D(0.7, 0, 0, 0, -3.0597977e-08, 0.7, 0, -0.70000017, -3.059797e-08, 3.5797968, 3.7113612, 2.9422898)
+
+[node name="MovingChair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("5_n4g7x")]
+transform = Transform3D(0.0058432766, -0.14988616, -2.2649374e-08, -0.14988616, -0.0058432766, 2.1772442e-08, -2.2638226e-08, 2.1784032e-08, -0.15000002, 3, 1, -4)
+
+[node name="Chair2" parent="Obstacles" unique_id=1123001349 instance=ExtResource("6_atrxo")]
+transform = Transform3D(-0.026272936, -0.073523715, 0.12807807, -0.14142404, -0.024939544, -0.04332727, 0.042531937, -0.12834437, -0.06495191, 1.9652534, 2.5224848, -1.3588493)
+
+[node name="SpinningChair" parent="Obstacles" unique_id=148115116 instance=ExtResource("7_vr6yy")]
+transform = Transform3D(-0.020607548, 0.1485762, -0.0006627602, -0.0071528396, -0.000323752, 0.14982903, 0.14840537, 0.020615663, 0.007129426, -2.3690853, 3.0321064, -1.3588493)
+
+[node name="Structure" type="Node3D" parent="." unique_id=625879665]
+
+[node name="Ground" type="CSGBox3D" parent="Structure" unique_id=751229420]
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=536434327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=279799204]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="Wall2" type="CSGBox3D" parent="Structure" unique_id=1487185108]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 10, -10)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="Wall3" type="CSGBox3D" parent="Structure" unique_id=1399190837]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 10, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=578426983]
+transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 10, 10)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_x8qym")
+
+[node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=206015247]
+transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 10.581312, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_xfmka")
+
+[node name="Lighting" type="Node3D" parent="." unique_id=870142447]
+script = ExtResource("9_x7oem")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="Lighting" unique_id=982922869]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, 0)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="Lighting" unique_id=2138020619]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, 6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D3" type="AreaLight3D" parent="Lighting" unique_id=374434017]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, -6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D4" type="AreaLight3D" parent="Lighting" unique_id=1973004442]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 10, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D5" type="AreaLight3D" parent="Lighting" unique_id=1326273103]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 10, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D6" type="AreaLight3D" parent="Lighting" unique_id=694221772]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 10, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D7" type="AreaLight3D" parent="Lighting" unique_id=795660661]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 10, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D8" type="AreaLight3D" parent="Lighting" unique_id=245548105]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 10, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D9" type="AreaLight3D" parent="Lighting" unique_id=2069818915]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 10, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D10" type="AreaLight3D" parent="Lighting" unique_id=398270747]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, 0)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D11" type="AreaLight3D" parent="Lighting" unique_id=822681145]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, -6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D12" type="AreaLight3D" parent="Lighting" unique_id=648381253]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, 6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D25" type="AreaLight3D" parent="Lighting" unique_id=382483564]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, 0)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D26" type="AreaLight3D" parent="Lighting" unique_id=587015003]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, 6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D27" type="AreaLight3D" parent="Lighting" unique_id=874830021]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, -6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D28" type="AreaLight3D" parent="Lighting" unique_id=62236084]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 15, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D29" type="AreaLight3D" parent="Lighting" unique_id=659510411]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 15, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D30" type="AreaLight3D" parent="Lighting" unique_id=1335827958]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 15, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D31" type="AreaLight3D" parent="Lighting" unique_id=738446994]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 15, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D32" type="AreaLight3D" parent="Lighting" unique_id=1231329203]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 15, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D33" type="AreaLight3D" parent="Lighting" unique_id=882637132]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 15, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D34" type="AreaLight3D" parent="Lighting" unique_id=1627179000]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, 0)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D35" type="AreaLight3D" parent="Lighting" unique_id=810469891]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, -6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D36" type="AreaLight3D" parent="Lighting" unique_id=611946693]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, 6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D13" type="AreaLight3D" parent="Lighting" unique_id=953418829]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 0)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D14" type="AreaLight3D" parent="Lighting" unique_id=1255625427]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D15" type="AreaLight3D" parent="Lighting" unique_id=549250939]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, -6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D16" type="AreaLight3D" parent="Lighting" unique_id=694555783]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 5, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D17" type="AreaLight3D" parent="Lighting" unique_id=1499151416]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 5, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D18" type="AreaLight3D" parent="Lighting" unique_id=1017854900]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 5, 10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D19" type="AreaLight3D" parent="Lighting" unique_id=724210920]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 5, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D20" type="AreaLight3D" parent="Lighting" unique_id=218727538]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 5, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D21" type="AreaLight3D" parent="Lighting" unique_id=1178454397]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 5, -10)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D22" type="AreaLight3D" parent="Lighting" unique_id=1742797540]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 0)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D23" type="AreaLight3D" parent="Lighting" unique_id=384952332]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, -6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="AreaLight3D24" type="AreaLight3D" parent="Lighting" unique_id=1469913934]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 6)
+light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
+light_energy = 4.0
+light_indirect_energy = 8.958
+light_volumetric_fog_energy = 1.254
+light_size = 0.696
+light_specular = 2.101
+area_range = 11.538
+
+[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("10_ec2iw")]
+transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, 7.001212, 8.421749, 7.3710194)
+
+[node name="Turret" parent="." unique_id=254010352 instance=ExtResource("11_ulql8")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 9.034946, -0.80473423)
+
+[node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("12_3i7yh")]
+visible = false
+
+[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("13_5y2bn")]
+visible = false
+
+[node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("14_kbjoq")]
+
+[node name="FeatherFall" parent="." unique_id=2133828143 instance=ExtResource("15_m2xr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.6995194, -4)
+
+[node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("16_hj2pq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0.6716813, -4)
+
+[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("17_04rbu")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7, 1, -4)
