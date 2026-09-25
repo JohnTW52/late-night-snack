@@ -2,7 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cullgmlhaf2aj" path="res://ui/main_menu.gd" id="1_t7e0r"]
 [ext_resource type="Texture2D" uid="uid://del3515muijcg" path="res://objects/microwave/microwave_-_modern_furniture_game-ready_3.png" id="2_0dkrt"]
+[ext_resource type="Script" uid="uid://c7t58gjfs5jcf" path="res://ui/bouncing_image.gd" id="3_rmr83"]
 [ext_resource type="Texture2D" uid="uid://c1q6nq58qfd0c" path="res://objects/food/textures/popcorn-red-white-striped-container-260nw-2435205663.webp" id="3_wk0pr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x8qym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8qym"]
+size = Vector2(255, 128)
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1727256392]
 script = ExtResource("1_t7e0r")
@@ -56,13 +62,40 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Late Night Snack"
 
-[node name="MicrowaveImage" type="Sprite2D" parent="." unique_id=1263170687]
-position = Vector2(241, 538)
-texture = ExtResource("2_0dkrt")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1510558464]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=732248420]
+position = Vector2(0, 720)
+shape = SubResource("WorldBoundaryShape2D_x8qym")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1806389943]
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_x8qym")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=378769523]
+position = Vector2(0, 342)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_x8qym")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=306389437]
+position = Vector2(1280, 342)
+rotation = 4.712389
+shape = SubResource("WorldBoundaryShape2D_x8qym")
 
 [node name="PopcornImage" type="Sprite2D" parent="." unique_id=523457614]
+visible = false
 position = Vector2(1046, 424)
 texture = ExtResource("3_wk0pr")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=513252415]
+position = Vector2(990, 306)
+script = ExtResource("3_rmr83")
+
+[node name="Image" type="Sprite2D" parent="CharacterBody2D" unique_id=1263170687]
+texture = ExtResource("2_0dkrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=414564709]
+shape = SubResource("RectangleShape2D_x8qym")
 
 [connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
