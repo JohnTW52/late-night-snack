@@ -17,9 +17,9 @@ func _get_success_text() -> String:
 		2:
 			return "Still not enough. Need more snack."
 		3:
-			return "No no no. Need MORE."
+			return "Need more. MORE."
 		4:
-			return "More. More. More. More."
+			return "More more more more more..."
 		5:
 			return "Mmmm mmm m mM MOOROEEE"
 		6:

@@ -53,8 +53,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hj0b6")
 
-[node name="Plate_001" type="Node3D" unique_id=2014087753]
-transform = Transform3D(0.14848301, 0.021279002, 9.3013475e-10, 0, -6.5567085e-09, 0.15, 0.021279002, -0.14848301, -6.4903984e-09, 0, 0, 0)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wfdtc"]
+height = 0.12390137
+radius = 1.3198242
 
-[node name="Plate_001_PlateAndCutlery_0" type="MeshInstance3D" parent="." unique_id=954770935]
+[node name="Plate" type="Node3D" unique_id=2014087753]
+transform = Transform3D(0.14999999, 0, 0, 0, -6.556708e-09, 0.15, 0, -0.14999999, -6.5567085e-09, 0, 0, 0)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=386691065]
+
+[node name="PlateObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=954770935]
+transform = Transform3D(0.99999994, 0, 4.440892e-16, 0, 0.99999994, -3.5527137e-15, 4.440892e-16, 3.5527137e-15, 0.9999999, 0, 0, 0)
 mesh = SubResource("ArrayMesh_e8ksf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1716451557]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.3711395e-08, 0, 2.2143752e-10, -0.005065926)
+shape = SubResource("CylinderShape3D_wfdtc")

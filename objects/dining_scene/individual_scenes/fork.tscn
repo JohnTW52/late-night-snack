@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bw8mkx32hulxt" path="res://objects/dining_scene/textures/dining_scene_7.png" id="2_68kr3"]
 [ext_resource type="Texture2D" uid="uid://df56x07wv6uis" path="res://objects/dining_scene/textures/dining_scene_8.png" id="3_yiuif"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(0.09210205, 1.8155518, 0.05847168)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lhy4b"]
 resource_name = "PlateAndCutlery"
 cull_mode = 2
@@ -53,8 +56,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_b4hwq")
 
-[node name="Fork_001" type="Node3D" unique_id=1049968083]
+[sub_resource type="BoxShape3D" id="BoxShape3D_jf26v"]
+size = Vector3(0.30020142, 0.89624023, 0.040252686)
+
+[node name="Fork" type="Node3D" unique_id=1049968083]
 transform = Transform3D(0.14999917, 0.0005024849, 2.1964312e-11, 0, -6.5567085e-09, 0.15, 0.0005024849, -0.14999917, -6.5566717e-09, 0, 0, 0)
 
-[node name="Fork_001_PlateAndCutlery_0" type="MeshInstance3D" parent="." unique_id=2146520813]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=562330897]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1711072525]
+transform = Transform3D(0.99999976, 4.656613e-10, 0, -4.656613e-10, 0.99999976, 3.5527137e-15, 8.770762e-15, -7.1054274e-15, 1, -0.008514401, -0.9037472, -0.03113992)
+shape = SubResource("BoxShape3D_x8qym")
+
+[node name="ForkObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=2146520813]
+transform = Transform3D(0.99999994, 2.3283064e-10, 0, -2.3283064e-10, 0.99999994, 3.5527137e-15, 1.3877788e-17, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_rc416")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=246528433]
+transform = Transform3D(0.99999774, 3.291713e-05, 0.00046845677, 3.291457e-05, 0.9901734, -0.13984154, -0.00046845776, 0.13984165, 0.9901737, 0.0017256812, 0.44992942, 0.029623298)
+shape = SubResource("BoxShape3D_jf26v")

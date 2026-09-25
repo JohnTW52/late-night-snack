@@ -2,11 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_t67hm"]
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_ji4nx"]
+[ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="2_oig5u"]
+[ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="3_33ega"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="3_b4xcw"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="6_orkke"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="7_33ega"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="10_xfmka"]
+[ext_resource type="PackedScene" uid="uid://cg4x2truj2sc4" path="res://objects/dining_scene/individual_scenes/fork.tscn" id="11_hf8j7"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="11_tbqwf"]
 
 [sub_resource type="Environment" id="Environment_orkke"]
@@ -32,6 +35,21 @@ camera_attributes = SubResource("CameraAttributesPractical_n311a")
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_t67hm")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
+[node name="Obstacles" type="Node3D" parent="." unique_id=854985096]
+transform = Transform3D(-1, 0, -8.742278e-08, -7.5710346e-08, 0.49999997, 0.86602545, 4.3711385e-08, 0.86602545, -0.49999997, 0, 0.90986824, -3.2546544)
+
+[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_33ega")]
+transform = Transform3D(1, 3.5527137e-15, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("2_oig5u")]
+transform = Transform3D(0.001425284, -2.5244311e-05, 0.0014028291, 0.001367913, 0.00046975724, -0.0013813553, -0.00031205887, 0.0019438857, 0.00035203452, -3.7196348, 8.042915, -0.7238655)
+
+[node name="Fork1" parent="Obstacles" unique_id=1049968083 instance=ExtResource("11_hf8j7")]
+transform = Transform3D(-0.0032357555, 0.9659204, -0.25881907, -0.8664541, 0.1265077, 0.48296288, 0.49924633, 0.22581759, 0.8365163, -1.9999998, 13.195156, -1.6546273)
+
+[node name="Fork2" parent="Obstacles" unique_id=876997093 instance=ExtResource("11_hf8j7")]
+transform = Transform3D(-0.6711426, 0.71591777, -0.19243097, -0.6424424, -0.43215734, 0.632857, 0.36991307, 0.548363, 0.7499751, 3.746574, 12.2127075, -0.05035281)
+
 [node name="Structure" type="Node3D" parent="." unique_id=1784533578]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1649115966]
@@ -40,16 +58,19 @@ size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_xfmka")
 
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=483054235]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_xfmka")
 
 [node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=1767095916]
-transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
+transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 9.64077, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_xfmka")
+
+[node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("7_n311a")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 8.094404, -0.80473423)
 
 [node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=15597120]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
@@ -822,16 +843,13 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" unique_id=558972363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00084269047, 1.7926872, -0.104669094)
+[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_b4xcw")]
+transform = Transform3D(0.29999998, 0, -1.3113416e-08, 0, 0.29999998, 0, 1.3113416e-08, 0, 0.29999998, -6.2793355, 7.846384, 6.715372)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=558972363]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.211998, 0.079618454, 0.25809488)
 light_color = Color(0.9647059, 0.6392157, 0, 1)
 light_energy = 0.5
-
-[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_b4xcw")]
-transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
-
-[node name="TurretMount" parent="." unique_id=254010352 instance=ExtResource("7_n311a")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
 
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("7_33ega")]
 visible = false

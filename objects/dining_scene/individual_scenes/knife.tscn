@@ -53,8 +53,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ben66")
 
-[node name="Knife_001" type="Node3D" unique_id=1485426572]
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(0.22387695, 3.171753, 0.14212036)
+
+[node name="Knife" type="Node3D" unique_id=1485426572]
 transform = Transform3D(0.1498044, -0.007657942, -3.3473924e-10, 0, -6.5567085e-09, 0.15, -0.007657942, -0.1498044, -6.5481585e-09, 0, 0, 0)
 
-[node name="Knife_001_PlateAndCutlery_0" type="MeshInstance3D" parent="." unique_id=1605016036]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=287421599]
+
+[node name="KnifeObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1605016036]
+transform = Transform3D(1, -3.7252903e-09, -2.220446e-16, 3.7252903e-09, 1, -3.5527137e-15, 0, 3.5527137e-15, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_rhynu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=965513763]
+transform = Transform3D(1, -5.699694e-07, -6.328271e-14, 5.699694e-07, 1, -1.2647661e-12, -7.771561e-15, 1.6520119e-12, 0.99999976, -0.011840912, 0.08587644, -0.004074075)
+shape = SubResource("BoxShape3D_x8qym")

@@ -4,10 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_bsp3h"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_gfovl"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_dqrp8"]
+[ext_resource type="PackedScene" uid="uid://cthddd5p1chx2" path="res://objects/dining_scene/individual_scenes/knife.tscn" id="4_i155e"]
+[ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="5_0j27q"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_i155e"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_nlg5r"]
+[ext_resource type="PackedScene" uid="uid://dk1wax506w1r6" path="res://objects/food/sandwich_toast.tscn" id="6_osxv8"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_2fkce"]
+[ext_resource type="PackedScene" uid="uid://cg4x2truj2sc4" path="res://objects/dining_scene/individual_scenes/fork.tscn" id="7_873k1"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_rqdcb"]
+[ext_resource type="PackedScene" uid="uid://b5fa5gtdrquyt" path="res://objects/dining_scene/individual_scenes/plate.tscn" id="9_gfovl"]
+[ext_resource type="PackedScene" uid="uid://cejlqgj6motxy" path="res://objects/dining_scene/individual_scenes/moving_chair.tscn" id="10_dqrp8"]
+[ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="12_i155e"]
+[ext_resource type="PackedScene" uid="uid://no8hbx3i7864" path="res://objects/food/chicken_leg.tscn" id="13_2fkce"]
+[ext_resource type="PackedScene" uid="uid://b5kk1b6hu045o" path="res://objects/food/popcorn.tscn" id="14_rqdcb"]
+[ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="17_osxv8"]
+[ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="17_tdng2"]
 
 [sub_resource type="Environment" id="Environment_0j27q"]
 glow_intensity = 4.32
@@ -32,6 +43,58 @@ camera_attributes = SubResource("CameraAttributesPractical_tdng2")
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_ri3il")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
+[node name="Upgrades" type="Node3D" parent="." unique_id=2046558736]
+
+[node name="Obstacles" type="Node3D" parent="." unique_id=2057828465]
+
+[node name="Plate1" parent="Obstacles" unique_id=2014087753 instance=ExtResource("9_gfovl")]
+transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 5, 1, -5)
+
+[node name="Plate2" parent="Obstacles" unique_id=347129625 instance=ExtResource("9_gfovl")]
+transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 7, 1.746006, -3)
+
+[node name="Plate3" parent="Obstacles" unique_id=1234702622 instance=ExtResource("9_gfovl")]
+transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 4.728446, 2.913979, -0.6708102)
+
+[node name="Plate4" parent="Obstacles" unique_id=1868426124 instance=ExtResource("9_gfovl")]
+transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 6.783132, 4.3170166, 1.7717276)
+
+[node name="Plate6" parent="Obstacles" unique_id=1036570207 instance=ExtResource("9_gfovl")]
+transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 3.161155, 5.629191, 3.832625)
+
+[node name="Plate5" parent="Obstacles" unique_id=260392177 instance=ExtResource("9_gfovl")]
+transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 8.71932, 2.5067813, 8.889471)
+
+[node name="Chair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("10_dqrp8")]
+transform = Transform3D(2.1657897e-08, -9.2442995e-09, 0.15, -0.14999689, 0.0009668325, 2.9802315e-08, -0.00096683064, -0.14999689, -1.0141421e-08, -9, 10, 0)
+
+[node name="Knife_001" parent="Obstacles" unique_id=1485426572 instance=ExtResource("4_i155e")]
+transform = Transform3D(0.29756317, -0.7131556, 0.20703791, -0.032944888, 0.21014346, 0.77120334, -0.74186957, -0.295378, 0.048795186, 4.287088, 3.193059, 7.4496455)
+
+[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("5_0j27q")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -2, 0, 5)
+
+[node name="Sandwich_Toast" parent="Obstacles" unique_id=548936730 instance=ExtResource("6_osxv8")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.1623602, 5.740596, 3.7214067)
+
+[node name="Fork" parent="Obstacles" unique_id=1049968083 instance=ExtResource("7_873k1")]
+transform = Transform3D(0.2519796, 0.16280751, 7.1165416e-09, 8.326627e-18, -1.3113417e-08, 0.3, 0.16280751, -0.2519796, -1.1014378e-08, 7, 1.7973558, -3.1221256)
+
+[node name="Chair2" parent="Obstacles" unique_id=120038101 instance=ExtResource("17_tdng2")]
+transform = Transform3D(-0.005843275, -1.3082172e-08, 0.14988615, 0, -0.15, -1.3113417e-08, 0.14988615, -4.656613e-10, 0.0058432757, -9.348975, 7.4500003, 6.9474106)
+
+[node name="Chair3" parent="Obstacles" unique_id=1730127617 instance=ExtResource("17_tdng2")]
+transform = Transform3D(0.0029216267, 0.0050604315, 0.14988615, -0.12990381, 0.075, -1.2572855e-08, -0.07494308, -0.1298052, 0.005843275, -9.276434, 8.943556, 5.235583)
+
+[node name="ChickenLeg" parent="Obstacles" unique_id=546279883 instance=ExtResource("13_2fkce")]
+transform = Transform3D(-1.6622832, -1.0477773, 0.37279662, 7.1994553e-09, 0.67042416, 1.8842853, -1.1121216, 1.5661082, -0.5572175, -2.8307338, 9.124382, -2.8821805)
+
+[node name="ChickenLeg2" parent="Obstacles" unique_id=139960285 instance=ExtResource("13_2fkce")]
+transform = Transform3D(-0.8494227, 1.7645202, -0.4061395, -0.9623886, -0.059980102, 1.7522018, 1.5337174, 0.9396119, 0.8745513, 0.6799192, 10.397487, -5.992517)
+
+[node name="ChickenLeg3" parent="Obstacles" unique_id=68596548 instance=ExtResource("13_2fkce")]
+transform = Transform3D(1.9139479, 0.48594436, 0.3172698, -0.3877119, 0.25707588, 1.9451458, 0.4318354, -1.9229589, 0.3402181, -3.8728251, 11.559215, -8.3673)
+
 [node name="Structure" type="Node3D" parent="." unique_id=1005893555]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1527392474]
@@ -40,16 +103,19 @@ size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_osxv8")
 
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=2019730558]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_osxv8")
 
 [node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=1374320813]
-transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
+transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 14.64077, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_osxv8")
+
+[node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("5_i155e")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 13.094404, -0.80473423)
 
 [node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=2142747500]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
@@ -822,16 +888,13 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" unique_id=173396926]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00084269047, 1.7926872, -0.104669094)
+[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_dqrp8")]
+transform = Transform3D(0.212132, 0, -0.21213204, 0, 0.29999998, 0, 0.21213204, 0, 0.212132, -6.0346656, 13.089975, -9.17725)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=173396926]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2151473, -0.04159212, 0.25809488)
 light_color = Color(0.9647059, 0.6392157, 0, 1)
 light_energy = 0.5
-
-[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_dqrp8")]
-transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
-
-[node name="TurretMount" parent="." unique_id=254010352 instance=ExtResource("5_i155e")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
 
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("6_nlg5r")]
 visible = false
@@ -840,3 +903,19 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_rqdcb")]
+
+[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("12_i155e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.691022, 3.01388, 8.845265)
+_time_to_add = 15.0
+
+[node name="ChickenLeg" parent="." unique_id=560659050 instance=ExtResource("13_2fkce")]
+transform = Transform3D(0.5, 0, 0, 0, 0.16760604, 0.47107136, 0, -0.47107136, 0.16760604, 4.5704308, 3.10569, -0.7323486)
+
+[node name="PopCorn" parent="." unique_id=419641044 instance=ExtResource("14_rqdcb")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 6.608187, 4.594044, 1.720047)
+
+[node name="Chair" parent="." unique_id=338263409 instance=ExtResource("17_tdng2")]
+transform = Transform3D(-0.05449807, 0.13974966, 6.108652e-09, 2.370615e-16, -6.556709e-09, 0.15000002, 0.13974966, 0.05449807, 2.3821864e-09, -2.5675197, 4.9584208, 4.8018465)
+
+[node name="Table" parent="." unique_id=1071800340 instance=ExtResource("17_osxv8")]
+transform = Transform3D(-8.742278e-11, 0, 0.002, -0.002, -8.742278e-11, -8.742278e-11, 8.742278e-11, -0.002, 3.821371e-18, -3, 6, 9.857434)

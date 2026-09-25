@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b1fckvvw3h4ta"]
 
 [ext_resource type="Script" uid="uid://cullgmlhaf2aj" path="res://ui/main_menu.gd" id="1_t7e0r"]
+[ext_resource type="Texture2D" uid="uid://del3515muijcg" path="res://objects/microwave/microwave_-_modern_furniture_game-ready_3.png" id="2_0dkrt"]
+[ext_resource type="Texture2D" uid="uid://c1q6nq58qfd0c" path="res://objects/food/textures/popcorn-red-white-striped-container-260nw-2435205663.webp" id="3_wk0pr"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1727256392]
 script = ExtResource("1_t7e0r")
@@ -46,13 +48,21 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -259.0
 offset_right = 259.0
-offset_bottom = 322.0
+offset_bottom = 372.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="Title" unique_id=1476008114]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Late Night Snack"
+
+[node name="MicrowaveImage" type="Sprite2D" parent="." unique_id=1263170687]
+position = Vector2(241, 538)
+texture = ExtResource("2_0dkrt")
+
+[node name="PopcornImage" type="Sprite2D" parent="." unique_id=523457614]
+position = Vector2(1046, 424)
+texture = ExtResource("3_wk0pr")
 
 [connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Leave" to="." method="_on_leave_pressed"]

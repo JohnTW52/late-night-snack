@@ -32,6 +32,9 @@ camera_attributes = SubResource("CameraAttributesPractical_lrssp")
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_8wf0e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
+[node name="Obstacles" type="Node3D" parent="." unique_id=938053813]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
+
 [node name="Structure" type="Node3D" parent="." unique_id=1447639636]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=372368147]
@@ -50,6 +53,9 @@ transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_jil8c")
+
+[node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("5_mtxv3")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
 
 [node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=1122311946]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
@@ -822,16 +828,13 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" unique_id=790218305]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00084269047, 1.7926872, -0.104669094)
-light_color = Color(0.9647059, 0.6392157, 0, 1)
-light_energy = 0.5
-
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_33nf7")]
 transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
 
-[node name="TurretMount" parent="." unique_id=254010352 instance=ExtResource("5_mtxv3")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
+[node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=790218305]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2151473, -0.04159212, 0.25809488)
+light_color = Color(0.9647059, 0.6392157, 0, 1)
+light_energy = 0.5
 
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("6_gmx38")]
 visible = false
