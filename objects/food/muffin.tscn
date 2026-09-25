@@ -45,7 +45,25 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w8a6k")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_3idal"]
+radius = 0.64323485
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x8qym"]
+height = 0.53578186
+radius = 0.40771484
+
 [node name="Muffin" type="Node3D" unique_id=1526772604]
 
-[node name="Muffin_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1704465977]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1037533931]
+
+[node name="MuffinObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1704465977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5304383, 0.078944564, 2.519416)
 mesh = SubResource("ArrayMesh_qetgy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=2001688223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024803162, 0.20252025, -0.13174438)
+shape = SubResource("SphereShape3D_3idal")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1068714920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058508962, -0.35230255, -0.13735673)
+shape = SubResource("CylinderShape3D_x8qym")

@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://ctd7nya736b8" path="res://objects/food/textures/free_low_poly_food_asset_pack_0.png" id="1_gar33"]
 [ext_resource type="Texture2D" uid="uid://bmpt1cs442j24" path="res://objects/food/textures/free_low_poly_food_asset_pack_1.png" id="2_lmlmb"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(1.2660522, 0.3515625, 2.1258545)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btda8"]
 resource_name = "Foodback_Materials_10_20"
 cull_mode = 2
@@ -46,6 +49,14 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wr7wm")
 
 [node name="Meat" type="Node3D" unique_id=243654385]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="Meat_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1173643390]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=72788930]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=508748636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00064086914, -0.013671875, -0.14471436)
+shape = SubResource("BoxShape3D_x8qym")
+
+[node name="MeatObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1173643390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3893831, 0, 1.9661435)
 mesh = SubResource("ArrayMesh_n1uuf")

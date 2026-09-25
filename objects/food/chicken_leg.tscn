@@ -45,8 +45,33 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cx3ap")
 
-[node name="ChickenLeg" type="Node3D" unique_id=546279883]
-transform = Transform3D(1, 0, 0, 0, 0.33521208, 0.94214267, 0, -0.94214267, 0.33521208, 0, 0, 0)
+[sub_resource type="SphereShape3D" id="SphereShape3D_x8qym"]
+radius = 0.45871183
 
-[node name="ChickenLeg_Food_Pack_Materials_1_10_0" type="MeshInstance3D" parent="." unique_id=1636293426]
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(0.30529785, 0.5830002, 0.30962372)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x8qym"]
+height = 0.59716797
+radius = 0.15771484
+
+[node name="ChickenLeg" type="Node3D" unique_id=546279883]
+transform = Transform3D(0.5, 0, 0, 0, 0.16760604, 0.47107136, 0, -0.47107136, 0.16760604, 0, 0, 0)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=922692897]
+
+[node name="ChickenLegObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1636293426]
+transform = Transform3D(1, 0, 0, 0, 1.0000006, -2.9802322e-08, 0, 2.9802322e-08, 1.0000006, 7.5102005, -0.0102187395, 6.0085144)
 mesh = SubResource("ArrayMesh_gdd4d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=299546884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09055402, 0.038306445, 0.107663766)
+shape = SubResource("SphereShape3D_x8qym")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1042466764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0319782, -0.1932108, 0.15491107)
+shape = SubResource("BoxShape3D_x8qym")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=687854986]
+transform = Transform3D(0.09767522, -0.9952167, -0.001779601, 0.9027137, 0.08784341, 0.42117965, -0.4190083, -0.042745274, 0.90697676, 0.571461, -0.16809978, 0.16692933)
+shape = SubResource("CylinderShape3D_x8qym")

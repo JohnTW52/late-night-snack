@@ -3,6 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://ctd7nya736b8" path="res://objects/food/textures/free_low_poly_food_asset_pack_0.png" id="1_2yq1j"]
 [ext_resource type="Texture2D" uid="uid://bmpt1cs442j24" path="res://objects/food/textures/free_low_poly_food_asset_pack_1.png" id="2_41pls"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x8qym"]
+height = 0.85217285
+radius = 0.91845703
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rruc7"]
+height = 0.13072205
+radius = 1.203125
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btda8"]
 resource_name = "Foodback_Materials_10_20"
 cull_mode = 2
@@ -46,6 +54,18 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7hfk0")
 
 [node name="Pancake_Big" type="Node3D" unique_id=287193136]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="Pancake_Big_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1640095694]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=486629543]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1071007461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07476807, 0)
+shape = SubResource("CylinderShape3D_x8qym")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=2081039541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32387543, 0)
+shape = SubResource("CylinderShape3D_rruc7")
+
+[node name="PankcakeObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1640095694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7404966, 0.4935131, -0.35211802)
 mesh = SubResource("ArrayMesh_dqrt0")

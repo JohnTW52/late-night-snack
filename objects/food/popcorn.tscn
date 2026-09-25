@@ -45,9 +45,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7yibc")
 
-[node name="PopCorn" type="Node3D" unique_id=419641044]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(180.93692, 196.76532, 161.12433)
 
-[node name="PopCorn_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1537668409]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.792465, 46.282303, -92.80751)
+[node name="PopCorn" type="Node3D" unique_id=419641044]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, 0)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1038186486]
+
+[node name="PopcornObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1537668409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.792465, 46.2823, -92.80751)
 mesh = SubResource("ArrayMesh_ygicw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1620436081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.830577, 7.253202, -0.26931763)
+shape = SubResource("BoxShape3D_x8qym")

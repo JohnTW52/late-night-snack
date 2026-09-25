@@ -21,7 +21,7 @@ func _set_root() -> void:
 	if markers:
 		_start_movement()
 	else:
-		print("Could not find position markers")
+		print("Could not find position markers. Please add two Marker3D nodes at the desired tween end points.")
 
 func _start_movement() -> void:
 	# might need to make this more accessable to call tween.pause() or something

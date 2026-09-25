@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dc5g3t4efjhs7" path="res://objects/food/textures/free_low_poly_food_asset_pack_2.png" id="1_mvo6g"]
 [ext_resource type="Texture2D" uid="uid://rcg0ktvr2dri" path="res://objects/food/textures/free_low_poly_food_asset_pack_3.png" id="2_u4uvq"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x8qym"]
+height = 0.19641113
+radius = 0.95996094
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntkge"]
 resource_name = "Food_Pack_Materials_1_10"
 cull_mode = 2
@@ -46,6 +50,14 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_alwb6")
 
 [node name="Pizza" type="Node3D" unique_id=1812960298]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="Pizza_Food_Pack_Materials_1_10_0" type="MeshInstance3D" parent="." unique_id=1593608831]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=258080070]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=812879750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015930176, 0)
+shape = SubResource("CylinderShape3D_x8qym")
+
+[node name="PizzaObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1593608831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6502085, 0, 5.50307)
 mesh = SubResource("ArrayMesh_gijx1")

@@ -46,26 +46,6 @@ camera_attributes = SubResource("CameraAttributesPractical_rruc7")
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_wjuib")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
-[node name="Obstacles" type="Node3D" parent="." unique_id=2082665891]
-
-[node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("2_xag4j")]
-transform = Transform3D(0.0002107691, -0.00041818543, 0.0019444017, -8.1027654e-05, 0.0019518607, 0.00042857282, -0.0019872119, -0.0001239401, 0.00018875359, 3.3235595, 6, 7.2751484)
-
-[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_pgbyh")]
-transform = Transform3D(-0.58562267, 0.30428785, -0.23335613, -0.16226846, 0.18931684, 0.65408564, 0.3474407, 0.6013055, -0.08784562, -4.420203, 3.7113612, 2.9422898)
-
-[node name="MovingFridge" parent="Obstacles" unique_id=346364558 instance=ExtResource("4_68kkm")]
-transform = Transform3D(0.7, 0, 0, 0, -3.0597977e-08, 0.7, 0, -0.70000017, -3.059797e-08, 3.5797968, 3.7113612, 2.9422898)
-
-[node name="MovingChair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("5_n4g7x")]
-transform = Transform3D(0.0058432766, -0.14988616, -2.2649374e-08, -0.14988616, -0.0058432766, 2.1772442e-08, -2.2638226e-08, 2.1784032e-08, -0.15000002, 3, 1, -4)
-
-[node name="Chair2" parent="Obstacles" unique_id=1123001349 instance=ExtResource("6_atrxo")]
-transform = Transform3D(-0.026272936, -0.073523715, 0.12807807, -0.14142404, -0.024939544, -0.04332727, 0.042531937, -0.12834437, -0.06495191, 1.9652534, 2.5224848, -1.3588493)
-
-[node name="SpinningChair" parent="Obstacles" unique_id=148115116 instance=ExtResource("7_vr6yy")]
-transform = Transform3D(-0.020607548, 0.1485762, -0.0006627602, -0.0071528396, -0.000323752, 0.14982903, 0.14840537, 0.020615663, 0.007129426, -2.3690853, 3.0321064, -1.3588493)
-
 [node name="Structure" type="Node3D" parent="." unique_id=625879665]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=751229420]
@@ -472,11 +452,43 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
+[node name="Upgrades" type="Node3D" parent="." unique_id=1902320651]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, -4, 0.717088, -7)
+
+[node name="FeatherFall" parent="Upgrades" unique_id=2133828143 instance=ExtResource("15_m2xr1")]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, -200, -3.5137177, 600)
+
+[node name="JumpBoost" parent="Upgrades" unique_id=120868238 instance=ExtResource("16_hj2pq")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 600, -9.081345, 600)
+
+[node name="AddTime" parent="Upgrades" unique_id=1548117864 instance=ExtResource("17_04rbu")]
+transform = Transform3D(-200, 0, 1.7484555e-05, 0, 200, 0, -1.7484555e-05, 0, -200, -600, 56.582397, 600)
+
+[node name="Obstacles" type="Node3D" parent="." unique_id=2082665891]
+
+[node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("2_xag4j")]
+transform = Transform3D(0.0002107691, -0.00041818543, 0.0019444017, -8.1027654e-05, 0.0019518607, 0.00042857282, -0.0019872119, -0.0001239401, 0.00018875359, 3.3235595, 6, 7.2751484)
+
+[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_pgbyh")]
+transform = Transform3D(-0.58562267, 0.30428785, -0.23335613, -0.16226846, 0.18931684, 0.65408564, 0.3474407, 0.6013055, -0.08784562, -4.420203, 3.7113612, 2.9422898)
+
+[node name="MovingFridge" parent="Obstacles" unique_id=346364558 instance=ExtResource("4_68kkm")]
+transform = Transform3D(0.7, 0, 0, 0, -3.0597977e-08, 0.7, 0, -0.70000017, -3.059797e-08, 3.5797968, 3.7113612, 2.9422898)
+
+[node name="MovingChair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("5_n4g7x")]
+transform = Transform3D(0.0058432766, -0.14988616, -2.2649374e-08, -0.14988616, -0.0058432766, 2.1772442e-08, -2.2638226e-08, 2.1784032e-08, -0.15000002, 3, 1, -4)
+
+[node name="Chair2" parent="Obstacles" unique_id=1123001349 instance=ExtResource("6_atrxo")]
+transform = Transform3D(-0.026272936, -0.073523715, 0.12807807, -0.14142404, -0.024939544, -0.04332727, 0.042531937, -0.12834437, -0.06495191, 1.9652534, 2.5224848, -1.3588493)
+
+[node name="SpinningChair" parent="Obstacles" unique_id=148115116 instance=ExtResource("7_vr6yy")]
+transform = Transform3D(-0.020607548, 0.1485762, -0.0006627602, -0.0071528396, -0.000323752, 0.14982903, 0.14840537, 0.020615663, 0.007129426, -2.3690853, 3.0321064, -1.3588493)
+
+[node name="Turret" parent="Obstacles" unique_id=254010352 instance=ExtResource("11_ulql8")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 9.034946, -0.80473423)
+
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("10_ec2iw")]
 transform = Transform3D(-0.29999998, 0, -2.6226832e-08, 0, 0.29999998, 0, 2.6226832e-08, 0, -0.29999998, 7.001212, 8.421749, 7.3710194)
-
-[node name="Turret" parent="." unique_id=254010352 instance=ExtResource("11_ulql8")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 9.034946, -0.80473423)
 
 [node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("12_3i7yh")]
 visible = false
@@ -485,12 +497,3 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("14_kbjoq")]
-
-[node name="FeatherFall" parent="." unique_id=2133828143 instance=ExtResource("15_m2xr1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.6995194, -4)
-
-[node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("16_hj2pq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0.6716813, -4)
-
-[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("17_04rbu")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7, 1, -4)

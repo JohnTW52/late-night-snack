@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dc5g3t4efjhs7" path="res://objects/food/textures/free_low_poly_food_asset_pack_2.png" id="1_jm6bm"]
 [ext_resource type="Texture2D" uid="uid://rcg0ktvr2dri" path="res://objects/food/textures/free_low_poly_food_asset_pack_3.png" id="2_s4y4s"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x8qym"]
+height = 0.18349457
+radius = 1.0317383
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntkge"]
 resource_name = "Food_Pack_Materials_1_10"
 cull_mode = 2
@@ -45,5 +49,12 @@ shadow_mesh = SubResource("ArrayMesh_g0utg")
 
 [node name="Waffle" type="Node3D" unique_id=176388250]
 
-[node name="Waffle_Food_Pack_Materials_1_10_0" type="MeshInstance3D" parent="." unique_id=764295001]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1536078007]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=194896816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.040463984, 0.00045394897, 0)
+shape = SubResource("CylinderShape3D_x8qym")
+
+[node name="WaffleObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=764295001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.917886, 0, 5.4010534)
 mesh = SubResource("ArrayMesh_llikb")

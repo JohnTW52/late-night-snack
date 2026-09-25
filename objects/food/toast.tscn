@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://ctd7nya736b8" path="res://objects/food/textures/free_low_poly_food_asset_pack_0.png" id="1_lcom7"]
 [ext_resource type="Texture2D" uid="uid://bmpt1cs442j24" path="res://objects/food/textures/free_low_poly_food_asset_pack_1.png" id="2_cammk"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(1.4550171, 0.3005371, 0.95336914)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btda8"]
 resource_name = "Foodback_Materials_10_20"
 cull_mode = 2
@@ -47,5 +50,12 @@ shadow_mesh = SubResource("ArrayMesh_xirgj")
 
 [node name="Toast" type="Node3D" unique_id=264165907]
 
-[node name="Toast_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1212260724]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1781561831]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=818615125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0020446777, 0.00012207031, 0.04748851)
+shape = SubResource("BoxShape3D_x8qym")
+
+[node name="ToastObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1212260724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2804111)
 mesh = SubResource("ArrayMesh_y61nn")

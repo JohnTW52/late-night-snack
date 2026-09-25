@@ -45,8 +45,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s30mu")
 
-[node name="BreakFastPlate" type="Node3D" unique_id=364237826]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rruc7"]
+height = 0.29968262
+radius = 1.1552734
 
-[node name="BreakFastPlate_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1657915531]
+[node name="BreakfastPlate" type="Node3D" unique_id=364237826]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1286920761]
+
+[node name="BreakfastPlateObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1657915531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.219861, 0.106567144, -0.183743)
 mesh = SubResource("ArrayMesh_6ewy1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1711860112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.006652832, 0)
+shape = SubResource("CylinderShape3D_rruc7")

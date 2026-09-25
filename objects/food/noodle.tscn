@@ -77,14 +77,34 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gr478")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x8qym"]
+height = 0.80441284
+radius = 0.9482422
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(0.34088135, 0.12614441, 1.4632568)
+
 [node name="Noodle" type="Node3D" unique_id=1768071791]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="Noodle2" type="Node3D" parent="." unique_id=231050181]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1645184953]
 
-[node name="Noodle_Food_Pack_Materials_1_10_0" type="MeshInstance3D" parent="Noodle2" unique_id=842040435]
+[node name="Noodle2" type="Node3D" parent="AnimatableBody3D" unique_id=231050181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5130033, -0.06391835, 8.079174)
+
+[node name="NoodleObject" type="MeshInstance3D" parent="AnimatableBody3D/Noodle2" unique_id=842040435]
 mesh = SubResource("ArrayMesh_eapuw")
 
-[node name="NoodleStick" type="Node3D" parent="." unique_id=467647058]
+[node name="NoodleStick" type="Node3D" parent="AnimatableBody3D" unique_id=467647058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5130033, -0.06391835, 8.079174)
 
-[node name="NoodleStick_Food_Pack_Materials_1_10_0" type="MeshInstance3D" parent="NoodleStick" unique_id=1967259636]
+[node name="NoodleStickObject" type="MeshInstance3D" parent="AnimatableBody3D/NoodleStick" unique_id=1967259636]
 mesh = SubResource("ArrayMesh_hdps8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=641952472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.063866615, -0.1563263, 0)
+shape = SubResource("CylinderShape3D_x8qym")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1764143365]
+transform = Transform3D(0.17384408, 0.013716213, -0.9846778, 0.13656114, 0.9899064, 0.037898805, 0.9752586, -0.14105724, 0.17021632, 0.10762509, 0.9518796, 0.254316)
+shape = SubResource("BoxShape3D_x8qym")

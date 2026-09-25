@@ -45,7 +45,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_82a1h")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+size = Vector3(1.4747314, 0.88427734, 1.0308228)
+
 [node name="Sandwich_Toast" type="Node3D" unique_id=548936730]
 
-[node name="Sandwich_Toast_Foodback_Materials_10_20_0" type="MeshInstance3D" parent="." unique_id=1978569479]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=934522580]
+
+[node name="SandwichObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=1978569479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6607206, -0.096229434, 2.392762)
 mesh = SubResource("ArrayMesh_f3ouq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1355585025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003967285, -0.0034647584, -0.020853281)
+shape = SubResource("BoxShape3D_x8qym")
