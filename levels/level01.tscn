@@ -108,7 +108,6 @@ script = ExtResource("3_vxcwb")
 
 [node name="AreaLight3D13" type="AreaLight3D" parent="Lighting" unique_id=953418829]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -120,7 +119,6 @@ area_range = 11.538
 
 [node name="AreaLight3D14" type="AreaLight3D" parent="Lighting" unique_id=1255625427]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -132,7 +130,6 @@ area_range = 11.538
 
 [node name="AreaLight3D15" type="AreaLight3D" parent="Lighting" unique_id=549250939]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -144,7 +141,6 @@ area_range = 11.538
 
 [node name="AreaLight3D16" type="AreaLight3D" parent="Lighting" unique_id=694555783]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 5, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -156,7 +152,6 @@ area_range = 11.538
 
 [node name="AreaLight3D17" type="AreaLight3D" parent="Lighting" unique_id=1499151416]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 5, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -168,7 +163,6 @@ area_range = 11.538
 
 [node name="AreaLight3D18" type="AreaLight3D" parent="Lighting" unique_id=1017854900]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 5, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -180,7 +174,6 @@ area_range = 11.538
 
 [node name="AreaLight3D19" type="AreaLight3D" parent="Lighting" unique_id=724210920]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 5, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -192,7 +185,6 @@ area_range = 11.538
 
 [node name="AreaLight3D20" type="AreaLight3D" parent="Lighting" unique_id=218727538]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 5, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -204,7 +196,6 @@ area_range = 11.538
 
 [node name="AreaLight3D21" type="AreaLight3D" parent="Lighting" unique_id=1178454397]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 5, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -216,7 +207,6 @@ area_range = 11.538
 
 [node name="AreaLight3D22" type="AreaLight3D" parent="Lighting" unique_id=1742797540]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -228,7 +218,6 @@ area_range = 11.538
 
 [node name="AreaLight3D23" type="AreaLight3D" parent="Lighting" unique_id=384952332]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -240,7 +229,6 @@ area_range = 11.538
 
 [node name="AreaLight3D24" type="AreaLight3D" parent="Lighting" unique_id=1469913934]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -263,6 +251,7 @@ data = ExtResource("4_xq8ic")
 
 [node name="this is just a test" parent="Lighting" unique_id=1238897794 instance=ExtResource("5_w7224")]
 transform = Transform3D(-4.371139e-08, 0.00828118, -0.9999657, 1, 3.6198186e-10, -4.370989e-08, 0, -0.9999657, -0.00828118, -9.964262, 1.1104915, 7.0476036)
+visible = false
 light_color = Color(0.8509804, 1, 1, 1)
 light_energy = 10.674
 light_bake_mode = 1

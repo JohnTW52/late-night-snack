@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b7kqemnl54kfi"]
 
 [ext_resource type="Texture2D" uid="uid://dp73o78gctfo3" path="res://objects/fridge/refrigerator_low-poly_0.png" id="1_8a4re"]
+[ext_resource type="Script" uid="uid://vf4wgwdy1qrt" path="res://objects/fridge/moving_fridge.gd" id="1_pmap5"]
 [ext_resource type="Texture2D" uid="uid://be2hl5efigr5f" path="res://objects/fridge/refrigerator_low-poly_1.png" id="2_khaor"]
 [ext_resource type="Texture2D" uid="uid://bolsrrtxbuu2r" path="res://objects/fridge/refrigerator_low-poly_2.png" id="3_pmap5"]
 [ext_resource type="Script" uid="uid://bq4nws8a4h8sn" path="res://objects/components/move_component.gd" id="4_khaor"]
@@ -55,8 +56,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ocnrl")
 
-[node name="Fridge2" type="Node3D" unique_id=346364558]
+[node name="MovingFridge" type="Node3D" unique_id=346364558]
 transform = Transform3D(0.7, 0, 0, 0, 8.347419e-09, 0.7, 0, -0.70000017, 8.347416e-09, 0, 0, 0)
+script = ExtResource("1_pmap5")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1683567670]
 
