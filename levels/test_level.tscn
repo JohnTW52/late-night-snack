@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://uw48p44klomk" path="res://objects/feather_fall/feather_fall.tscn" id="15_m2xr1"]
 [ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost/jump_boost.tscn" id="16_hj2pq"]
 [ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="17_04rbu"]
+[ext_resource type="PackedScene" uid="uid://62a0p7cmfmlk" path="res://objects/laser/laser.tscn" id="18_xag4j"]
 
 [sub_resource type="Environment" id="Environment_x8qym"]
 glow_intensity = 4.32
@@ -497,3 +498,6 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=308028238 instance=ExtResource("14_kbjoq")]
+
+[node name="Laser" parent="." unique_id=1459055399 instance=ExtResource("18_xag4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.06315291, -1.759826)

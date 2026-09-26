@@ -21,8 +21,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_time += delta
-	position.y += sin(_time * _frequency) * _amplitude
-	rotate(Vector3.UP, _rotation_speed * delta)
+	global_position.y += sin(_time * _frequency) * _amplitude
+	global_rotate(Vector3.UP, _rotation_speed * delta)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if not _used:

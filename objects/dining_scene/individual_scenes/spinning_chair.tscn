@@ -64,6 +64,10 @@ size = Vector3(0.8269043, 5.310669, 8.331482)
 transform = Transform3D(-0.020607548, 0.1485762, -0.0006627589, -0.007152804, -0.00032375008, 0.14982903, 0.14840537, 0.020615658, 0.0071294038, 0, 0, 0)
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1987427009]
+sync_to_physics = false
+
+[node name="SpinComponent" parent="AnimatableBody3D" unique_id=1733262393 instance=ExtResource("4_4h2d0")]
+transform = Transform3D(-0.9158912, -0.31790316, 6.595798, 6.6033874, -0.014388907, 0.9162519, -0.029455867, 6.6590667, 0.31686175, 0, 0, 0)
 
 [node name="Chair_Chair_0" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=180585995]
 transform = Transform3D(0.9865666, -0.16335651, -0.0009942837, 0.1633593, 0.986536, 0.0077696433, -0.00028832257, -0.007827698, 0.99996936, 0, 0, 0)
@@ -76,6 +80,3 @@ shape = SubResource("BoxShape3D_a82f3")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1414415106]
 transform = Transform3D(1.0000001, 3.7252903e-09, -1.2212453e-15, -3.7252903e-09, 1.0000001, 1.4725582e-12, 0, -4.3715032e-16, 1.0000002, 2.7091084, -0.0072631985, 3.6657445)
 shape = SubResource("BoxShape3D_x8qym")
-
-[node name="SpinComponent" parent="." unique_id=1733262393 instance=ExtResource("4_4h2d0")]
-transform = Transform3D(-0.9158912, -0.31790316, 6.595798, 6.6033874, -0.014388907, 0.9162519, -0.029455863, 6.6590667, 0.31686175, 0, 0, 0)

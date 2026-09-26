@@ -77,12 +77,12 @@ shape = SubResource("BoxShape3D_x8qym")
 transform = Transform3D(0.99999994, -3.72531e-09, 1.4210855e-14, -1.5422202e-14, 0.99999994, 0, 0, 7.1054274e-15, 0.9999999, 0, 0, 0)
 mesh = SubResource("ArrayMesh_3qrd2")
 
-[node name="MoveComponent" parent="." unique_id=1513568656 instance=ExtResource("4_kv2vh")]
-transform = Transform3D(0.2597007, -6.6616054, -1.352452e-06, -6.6616054, -0.25970072, 6.8997764e-07, -6.7978897e-07, 9.676637e-07, -6.666665, 0, 0, 0)
-move_duration = 4.0
-
 [node name="PointA" type="Marker3D" parent="." unique_id=887553608]
 transform = Transform3D(0.9999995, -7.4506e-09, 2.842171e-14, -3.725306e-09, 0.9999995, -7.1054274e-15, -1.4210855e-14, 0, 0.9999995, 1.0388026, -26.64642, -4.3086125e-06)
 
 [node name="PointB" type="Marker3D" parent="." unique_id=385005260]
 transform = Transform3D(0.99999964, -7.4506e-09, 2.842171e-14, -1.5422197e-14, 0.99999964, -1.4210855e-14, -1.4210855e-14, 0, 0.9999996, -1.0388027, 26.646421, 4.3086125e-06)
+
+[node name="MoveComponent" parent="." unique_id=1513568656 instance=ExtResource("4_kv2vh")]
+transform = Transform3D(0.2597007, -6.6616044, -1.3524522e-06, -6.6616044, -0.2597007, 6.8997764e-07, -6.797888e-07, 9.676636e-07, -6.6666636, 0, 0, 0)
+move_duration = 4.0

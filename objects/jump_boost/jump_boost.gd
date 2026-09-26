@@ -5,12 +5,12 @@ var _player: PlayerCharacter
 var _default_fall_time: float
 var _default_peak_time: float
 var _boost_time := 10.0
-var _boost_timer: float
+var _boost_timer := 0.0
 var _time := 0.0
 var _amplitude := 0.005
 var _frequency := 3.0
 var _rotation_speed := 2.0
-var _default_jump_height: float
+var _default_jump_height := 1.3
 var _player_entered := false
 var _used := false
 
@@ -18,28 +18,36 @@ func _ready() -> void:
 	visible = true
 	_used = false
 	_player = null
-	_boost_timer = _boost_time
 	
 func _process(delta: float) -> void:
 	if _player and _boost_timer < 0.01:
 		_set_player_default_stats()
 		_stop_boost_timer()
+		_player = null
+	
+	if _boost_timer > 0.01 and _player.jump_height == _default_jump_height:
+		_set_player_boost_stats()
 	
 	if _player_entered:
 		_tick_boost_timer(delta)
 	
 	_time += delta
-	position.y += sin(_time * _frequency) * _amplitude
-	rotate(Vector3.UP, _rotation_speed * delta)
+	global_position.y += sin(_time * _frequency) * _amplitude
+	global_rotate(Vector3.UP, _rotation_speed * delta)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.name != "PlayerCharacter":
+		return
 	if not _used:
-		if body.name == "PlayerCharacter":
+		if body is PlayerCharacter:
 			_player = body
 		
 		if _player:
 			_player_entered = true
-			_set_player_boost_stats()
+			_boost_timer += _boost_time
+			if _player.jump_height == _default_jump_height:
+				print("Setting jump boost")
+				_set_player_boost_stats()
 			$bling.play()
 		else:
 			print("could not find player")
@@ -51,7 +59,7 @@ func _tick_boost_timer(delta: float) -> void:
 	_boost_timer -= delta
 
 func _stop_boost_timer() -> void: 
-	_boost_timer = _boost_time
+	_boost_timer = 0.0
 	_player_entered = false
 
 func _set_player_boost_stats() -> void:
