@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c0wt4tj4rypym"]
+
+[ext_resource type="Script" uid="uid://b61384gxr4ack" path="res://ui/rules.gd" id="1_axe5r"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=645101504]
+script = ExtResource("1_axe5r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1735388000]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1097638753]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You're hungry. But it's late.
+You decide to heat up a snack in the microwave.
+Just don't wake up your parents... or else..."
+
+[node name="Label2" type="Label" parent="." unique_id=1748249479]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.5
+offset_top = -212.0
+offset_right = 61.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "SHIFT - sprint
+R - quick restart
+ESC - pause"
+
+[node name="Label3" type="Label" parent="." unique_id=257231826]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -56.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "LMB to continue"

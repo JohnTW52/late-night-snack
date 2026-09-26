@@ -230,6 +230,12 @@ func _physics_process(delta: float) -> void:
 				stamina_regen_delay_timer = stamina_regen_delay
 
 	was_running = is_running
+	
+	if is_on_floor():
+		var platform_ang_vel = get_platform_angular_velocity()
+		
+		if platform_ang_vel.y != 0:
+			rotate_y(platform_ang_vel.y * delta)
 
 	_tick_jump_cooldown(delta)
 	_modify_physics_properties()

@@ -61,6 +61,7 @@ radius = 1.3198242
 transform = Transform3D(0.14999999, 0, 0, 0, -6.556708e-09, 0.15, 0, -0.14999999, -6.5567085e-09, 0, 0, 0)
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=386691065]
+sync_to_physics = false
 
 [node name="PlateObject" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=954770935]
 transform = Transform3D(0.99999994, 0, 4.440892e-16, 0, 0.99999994, -3.5527137e-15, 4.440892e-16, 3.5527137e-15, 0.9999999, 0, 0, 0)
