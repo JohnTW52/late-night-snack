@@ -10,7 +10,6 @@ var _frequency := 3.0
 var _rotation_speed := 2.0
 var _time := 0.0
 var _microwave: Node3D
-@onready var _audio := $AudioStreamPlayer3D
 
 func _ready() -> void:
 	visible = true
@@ -38,8 +37,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 		if _player:
 			_player_entered = true
+			$AudioStreamPlayer.play()
 			_microwave.add_time(_time_to_add)
-			_audio.play()
 		else:
 			print("could not find player")
 		

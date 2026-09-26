@@ -6,7 +6,7 @@ class_name SpinComponent extends Node3D
 var _not_ready: bool
 
 func _ready() -> void:
-	if get_parent().name != "AnimatableBody3D":
+	if get_parent() is not AnimatableBody3D:
 		_not_ready = true
 	else:
 		_not_ready = false
