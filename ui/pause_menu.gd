@@ -57,3 +57,11 @@ func _on_options_button_pressed() -> void:
 func _on_menu_button_pressed() -> void:
 	await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://ui/main_menu.tscn")
+
+# teehee
+func _on_exit_button_pressed() -> void:
+	var index = randi_range(0, 2);
+	var current_index = $VBoxContainer/Button4.get_index();
+	while index == current_index:
+		index = randi_range(0, 2);
+	$VBoxContainer.move_child($VBoxContainer/Button4, index)

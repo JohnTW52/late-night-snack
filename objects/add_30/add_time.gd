@@ -33,6 +33,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 		if _player:
 			_player_entered = true
+			$AudioStreamPlayer.play()
 			_microwave.add_time(_time_to_add)
 		else:
 			print("could not find player")

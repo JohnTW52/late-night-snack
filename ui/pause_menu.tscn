@@ -47,20 +47,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "resume"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=442116189]
-visible = false
-custom_minimum_size = Vector2(250, 100)
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "options
-"
-
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=1181493648]
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "main menu"
 
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1243061542]
+layout_mode = 2
+text = "Exit :("
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_exit_button_pressed"]

@@ -8,7 +8,7 @@ var timer_vals: Dictionary = {
 	2: 15.0,
 	3: 20.0,
 	4: 20.0,
-	5: 45.0,
+	5: 7.0,
 	6: 10.0,
 	7: 60.0,
 	8: 10.0,
@@ -38,6 +38,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("restart level"):
 		get_tree().reload_current_scene();
+		game_over = false
 	
 	# temp for debugging
 	if Input.is_action_just_pressed("1"):

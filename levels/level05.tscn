@@ -2,12 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_ua7kj"]
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_feb7w"]
+[ext_resource type="PackedScene" uid="uid://ccxkj8n7gy6el" path="res://objects/components/spin_component.tscn" id="3_cj3ca"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_m4wrk"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_cj3ca"]
+[ext_resource type="PackedScene" uid="uid://cg4x2truj2sc4" path="res://objects/dining_scene/individual_scenes/fork.tscn" id="4_feb7w"]
+[ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="4_vqd15"]
+[ext_resource type="PackedScene" uid="uid://damq3lemb6828" path="res://objects/food/pizza.tscn" id="5_6wav4"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_vqd15"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_io7ik"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_mf48c"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_338c1"]
+[ext_resource type="PackedScene" uid="uid://62a0p7cmfmlk" path="res://objects/laser/laser.tscn" id="10_m4wrk"]
+[ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="13_mf48c"]
+[ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="14_338c1"]
+[ext_resource type="PackedScene" uid="uid://dkhqbouluth84" path="res://objects/jump_boost/jump_boost.tscn" id="15_338c1"]
 
 [sub_resource type="Environment" id="Environment_6wav4"]
 glow_intensity = 4.32
@@ -30,10 +38,78 @@ environment = SubResource("Environment_6wav4")
 camera_attributes = SubResource("CameraAttributesPractical_apk45")
 
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_ua7kj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.9464874, 32.226807, -18.14612)
 
 [node name="Obstacles" type="Node3D" parent="." unique_id=1130856503]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles" unique_id=983939229]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -8.912119, 31.54175, 0.097747356)
+sync_to_physics = false
+
+[node name="Laser" parent="Obstacles/AnimatableBody3D" unique_id=1459055399 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(6.483832, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SpinComponent" parent="Obstacles/AnimatableBody3D" unique_id=1733262393 instance=ExtResource("3_cj3ca")]
+
+[node name="AnimatableBody3D2" type="AnimatableBody3D" parent="Obstacles" unique_id=2115420457]
+transform = Transform3D(0.7019493, 0.7122269, 3.1132423e-08, 0, -4.371139e-08, 1, 0.7122269, -0.7019493, -3.0683182e-08, -8.912119, 25.288788, 0.097747356)
+sync_to_physics = false
+
+[node name="Laser" parent="Obstacles/AnimatableBody3D2" unique_id=1186349454 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(7.8893185, 0, 0, 0, 1.141439, 0, 0, 1.7763568e-15, 1, 0, 0, 0)
+
+[node name="SpinComponent" parent="Obstacles/AnimatableBody3D2" unique_id=67629805 instance=ExtResource("3_cj3ca")]
+_rotation_speed = 4.0
+
+[node name="AnimatableBody3D3" type="AnimatableBody3D" parent="Obstacles" unique_id=161322142]
+transform = Transform3D(0.7252284, -0.6885082, -3.009566e-08, 0, -4.371139e-08, 1, -0.6885082, -0.7252284, -3.1700733e-08, -8.121295, 18.621794, 1.1215787)
+sync_to_physics = false
+
+[node name="Laser" parent="Obstacles/AnimatableBody3D3" unique_id=551880002 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(9.211218, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SpinComponent" parent="Obstacles/AnimatableBody3D3" unique_id=1009120365 instance=ExtResource("3_cj3ca")]
+_rotation_speed = 1.0
+
+[node name="AddTime2" parent="Obstacles" unique_id=151927682 instance=ExtResource("4_vqd15")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.7634687, 28.872976, 4.164285)
+_time_to_add = 2.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Obstacles/AddTime2" unique_id=613723189]
+light_color = Color(1, 0.9098039, 0.047058824, 1)
+light_energy = 5.0
+
+[node name="JumpBoost" parent="Obstacles" unique_id=120868238 instance=ExtResource("15_338c1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.568653, -0.12500036, 5.5892444)
+_boost_mult = 4.0
+
+[node name="Pizza" parent="Obstacles" unique_id=1812960298 instance=ExtResource("5_6wav4")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -12.924563, 4.3299603, 9.077141)
+
+[node name="AnimatableBody3D4" type="AnimatableBody3D" parent="Obstacles" unique_id=1394783104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.103134, 28.55476, 1.7999642)
+sync_to_physics = false
+
+[node name="Fridge" parent="Obstacles/AnimatableBody3D4" unique_id=1724268238 instance=ExtResource("14_338c1")]
+transform = Transform3D(3.62627e-08, 2.21989, 3.062827e-10, -7.2525395e-08, 9.703447e-08, -0.99999994, -0.8295939, 9.703448e-08, 8.742278e-08, -4.4724236, -0.78157425, -1.937151e-07)
+
+[node name="SpinComponent" parent="Obstacles/AnimatableBody3D4" unique_id=773001910 instance=ExtResource("3_cj3ca")]
+
+[node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("13_mf48c")]
+transform = Transform3D(0.009961329, 0, -0.00087858725, 0, 0.01, 0, 0.00087858725, 0, 0.009961329, 8.598991, 18.557625, 21.001705)
+
+[node name="Table2" parent="Obstacles" unique_id=1207550493 instance=ExtResource("13_mf48c")]
+transform = Transform3D(0.009961329, 0, -0.00087858725, 0, 0.01, 0, 0.00087858725, 0, 0.009961329, 8.598991, 25.062498, 21.001705)
+
+[node name="Fork" parent="Obstacles" unique_id=1049968083 instance=ExtResource("4_feb7w")]
+transform = Transform3D(0.5999966, 0.0020099361, 8.785923e-11, 0, -2.6226834e-08, 0.6, 0.0020099361, -0.5999966, -2.6226685e-08, 6.47013, 29.943384, 7.127262)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Obstacles/Fork" unique_id=1613332891]
+light_energy = 0.2
+
+[node name="Fork" parent="Obstacles/Fork" unique_id=110228194 instance=ExtResource("4_feb7w")]
+transform = Transform3D(1.9665564, -0.36420768, 0.002829676, 0.33130375, 1.782327, -0.84471714, 0.15130468, 0.83106124, 1.8128563, -4.6587143, 5.2058997, 5.398159)
 
 [node name="Structure" type="Node3D" parent="." unique_id=1574767441]
 
@@ -42,20 +118,26 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
+[node name="Ground2" type="CSGBox3D" parent="Structure" unique_id=823691878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.019787, -19.976866)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_25303")
+
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=1258065261]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.82757, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
 [node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=408122203]
-transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
+transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 39.193836, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
 [node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("5_vqd15")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 37.647472, -0.80473423)
 
 [node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=1173232195]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
@@ -88,7 +170,7 @@ size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
 [node name="Wall6" type="CSGBox3D" parent="Structure" unique_id=248571262]
-transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 30, -10)
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 30, -20.733881)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
@@ -99,11 +181,26 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
+[node name="Wall9" type="CSGBox3D" parent="Structure" unique_id=1550474681]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 30, -19.962717)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_25303")
+
+[node name="Wall10" type="CSGBox3D" parent="Structure" unique_id=1660868569]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, 9.995382, 30, -19.962717)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_25303")
+
 [node name="Wall8" type="CSGBox3D" parent="Structure" unique_id=423745751]
 transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 30, 10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
+
+[node name="Fork" parent="Structure" unique_id=223861287 instance=ExtResource("4_feb7w")]
+transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 2.1906633, 35.52763, -9.366376)
 
 [node name="Lighting" type="Node3D" parent="." unique_id=777508909]
 script = ExtResource("3_m4wrk")
@@ -829,10 +926,10 @@ light_specular = 2.101
 area_range = 11.538
 
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_cj3ca")]
-transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
+transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -4.411914, 14.888153, 9.689786)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=330884576]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2151473, -0.04159212, 0.25809488)
+transform = Transform3D(-1.4570463e-07, 0, -3.3333335, 0, 3.3333335, 0, 3.3333335, 0, -1.4570463e-07, 0.9815254, -0.041591644, 0.25809383)
 light_color = Color(0.9647059, 0.6392157, 0, 1)
 light_energy = 0.5
 
@@ -843,3 +940,42 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_338c1")]
+
+[node name="Table" parent="." unique_id=2112872938 instance=ExtResource("13_mf48c")]
+transform = Transform3D(-0.00059448736, 0, -0.009982313, 0, 0.01, 0, 0.009982313, 0, -0.00059448736, -4.027304, 0.52498007, 14.796148)
+
+[node name="Fridge" parent="." unique_id=1186951040 instance=ExtResource("14_338c1")]
+transform = Transform3D(-0.93811214, 0, 0.34633163, 0, 1, 0, -0.34633163, 0, -0.93811214, -8.661112, 6.116889, 9.970356)
+
+[node name="Table2" parent="." unique_id=234786904 instance=ExtResource("13_mf48c")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.8066791, 6.4535217, 21.635807)
+
+[node name="Fork" parent="." unique_id=1689038335 instance=ExtResource("4_feb7w")]
+transform = Transform3D(0.5999967, 0.0020099396, 8.785725e-11, 0, -2.6226834e-08, 0.6, 0.0020099396, -0.5999967, -2.6226687e-08, 5.474151, 10.61246, 8.843754)
+
+[node name="Fridge2" parent="." unique_id=1670025267 instance=ExtResource("14_338c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0881174, 12.459792, 9.992175)
+
+[node name="Fridge3" parent="." unique_id=150169741 instance=ExtResource("14_338c1")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.1440377, 13.459915, 13.657476)
+
+[node name="Laser" parent="." unique_id=833507689 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(5.9754825, 0, 0, 0, -3.1494656e-07, 5, 0, -7.2051373, -2.1855695e-07, 0.0023508072, 20.229586, -10.157507)
+
+[node name="Laser2" parent="." unique_id=2054802 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(5.9754825, 0, 0, 0, 1.7691529, -1.4210855e-14, 0, 0, 4.9999995, 0.0023508072, 20.229586, -10.157507)
+
+[node name="Laser3" parent="." unique_id=1698592633 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(5.9754825, 0, 0, 0, 1.7691529, -1.4210855e-14, 0, 0, 4.9999995, 0.0023508072, 23.229586, -10.157507)
+
+[node name="Laser4" parent="." unique_id=1540857173 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(5.9754825, 0, 0, 0, 1.7691529, -1.4210855e-14, 0, 0, 4.9999995, 0.0023508072, 26.229586, -10.157507)
+
+[node name="Laser5" parent="." unique_id=1085835203 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(5.9754825, 0, 0, 0, 1.7691529, -1.4210855e-14, 0, 0, 4.9999995, 0.0023508072, 29.229586, -10.157507)
+
+[node name="Laser6" parent="." unique_id=1776303714 instance=ExtResource("10_m4wrk")]
+transform = Transform3D(5.9754825, 0, 0, 0, 1.7691529, -1.4210855e-14, 0, 0, 4.9999995, 0.0023508072, 32.229584, -10.157507)
+
+[node name="Fork2" parent="." unique_id=1043099435 instance=ExtResource("4_feb7w")]
+transform = Transform3D(-8.742278e-08, 2, 8.742278e-08, 0, -8.742278e-08, 2, 2, 8.742278e-08, 3.821371e-15, -5.2970343, 30.0546, -18.20286)
