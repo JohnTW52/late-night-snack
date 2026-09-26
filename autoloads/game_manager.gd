@@ -34,6 +34,11 @@ var timer_vals: Dictionary = {
 func _ready() -> void:
 	just_changed_level = false
 
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("restart level"):
+		get_tree().reload_current_scene();
+
 # This function will be useful if we add save and quit later
 # Will set level_index to whatever current level is
 func sync_level_index() -> void:
