@@ -72,14 +72,6 @@ transform = Transform3D(9.211218, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 [node name="SpinComponent" parent="Obstacles/AnimatableBody3D3" unique_id=1009120365 instance=ExtResource("3_cj3ca")]
 _rotation_speed = 1.0
 
-[node name="AddTime2" parent="Obstacles" unique_id=151927682 instance=ExtResource("4_vqd15")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.7634687, 28.872976, 4.164285)
-_time_to_add = 2.0
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Obstacles/AddTime2" unique_id=613723189]
-light_color = Color(1, 0.9098039, 0.047058824, 1)
-light_energy = 5.0
-
 [node name="JumpBoost" parent="Obstacles" unique_id=120868238 instance=ExtResource("15_338c1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.568653, -0.12500036, 5.5892444)
 _boost_mult = 4.0
@@ -110,6 +102,14 @@ light_energy = 0.2
 
 [node name="Fork" parent="Obstacles/Fork" unique_id=110228194 instance=ExtResource("4_feb7w")]
 transform = Transform3D(1.9665564, -0.36420768, 0.002829676, 0.33130375, 1.782327, -0.84471714, 0.15130468, 0.83106124, 1.8128563, -4.6587143, 5.2058997, 5.398159)
+
+[node name="AddTime" parent="Obstacles" unique_id=1548117864 instance=ExtResource("4_vqd15")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.7634687, 28.872976, 4.164285)
+_time_to_add = 3.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Obstacles/AddTime" unique_id=1887860118]
+light_color = Color(1, 0.88235295, 0.21960784, 1)
+light_energy = 3.0
 
 [node name="Structure" type="Node3D" parent="." unique_id=1574767441]
 
