@@ -9,7 +9,7 @@ var timer_vals: Dictionary = {
 	3: 20.0,
 	4: 15.0,
 	5: 7.0,
-	6: 10.0,
+	6: 12.0,
 	7: 60.0,
 	8: 60.0,
 	9: 10.0,
@@ -23,10 +23,11 @@ var timer_vals: Dictionary = {
 	"res://levels/level03.tscn",
 	"res://levels/level04.tscn",
 	"res://levels/level05.tscn",
+	"res://levels/level06.tscn",
 	"res://levels/level07.tscn",
 	"res://levels/level08.tscn",
 	"res://levels/level09.tscn",
-	]
+]
 
 func _ready() -> void:
 	just_changed_level = false

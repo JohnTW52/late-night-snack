@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://damq3lemb6828" path="res://objects/food/pizza.tscn" id="7_858d1"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_ho4s2"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_1gfio"]
+[ext_resource type="PackedScene" uid="uid://gc0mhougms2u" path="res://objects/lights/flickering_light.tscn" id="8_rp6xw"]
 [ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="9_fvdud"]
 
 [sub_resource type="Environment" id="Environment_lpcka"]
@@ -874,6 +875,11 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
+[node name="FlickeringLight" parent="Lighting" unique_id=1238897794 instance=ExtResource("8_rp6xw")]
+transform = Transform3D(-1, 3.821371e-15, -8.742278e-08, 8.742278e-08, 4.371139e-08, -1, 0, -1, -4.371139e-08, -7.9689474, -1.9365942, 0)
+light_color = Color(0.49411765, 0, 1, 1)
+light_energy = 4.0
+
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_jdr1m")]
 transform = Transform3D(-0.29999998, 0, -1.3113416e-08, 0, 0.29999998, 0, 1.3113416e-08, 0, -0.29999998, 8.828911, 8.995005, 7.8400817)
 
@@ -897,7 +903,7 @@ transform = Transform3D(0.008007199, 0.99996793, 0, -0.99996793, 0.008007199, 0,
 transform = Transform3D(0.18414961, -0.98289824, 0, 0.98289824, 0.18414961, 0, 0, 0, 1, 10.422298, 6.9080853, 2.4651852)
 
 [node name="Pizza" parent="." unique_id=1812960298 instance=ExtResource("7_858d1")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.0779587, 8.014996, 6.7915945)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.9908332, 8.014996, 6.7915945)
 
 [node name="Pizza2" parent="." unique_id=7218421 instance=ExtResource("7_858d1")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.388109, 8.380327, 7.4186053)
