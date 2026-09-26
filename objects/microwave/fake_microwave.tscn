@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://1jqak860km1l"]
+
+[ext_resource type="Texture2D" uid="uid://del3515muijcg" path="res://objects/microwave/microwave_-_modern_furniture_game-ready_3.png" id="1_sxfkx"]
+
+[node name="FakeMicrowave" type="Sprite3D" unique_id=1475066486]
+billboard = 1
+texture = ExtResource("1_sxfkx")

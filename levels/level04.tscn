@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_8ye52"]
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_fvdud"]
+[ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="3_jdr1m"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_qkyi5"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_jdr1m"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_858d1"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_rp6xw"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_ho4s2"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_1gfio"]
+[ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="9_fvdud"]
 
 [sub_resource type="Environment" id="Environment_lpcka"]
 glow_intensity = 4.32
@@ -34,6 +36,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.0
 
 [node name="Obstacles" type="Node3D" parent="." unique_id=1560721325]
 transform = Transform3D(1, 0, -4.371139e-08, 0, 1, 0, 4.371139e-08, 0, 1, 0.00084269047, 1.7926872, -0.104669094)
+
+[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(1, 0, 4.371139e-08, 0, 1, 0, -4.371139e-08, 0, 1, -8.375892, -1.6781244, -3.7209873)
 
 [node name="Structure" type="Node3D" parent="." unique_id=481325484]
 
@@ -829,7 +834,7 @@ light_specular = 2.101
 area_range = 11.538
 
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_jdr1m")]
-transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
+transform = Transform3D(-0.29999998, 0, -1.3113416e-08, 0, 0.29999998, 0, 1.3113416e-08, 0, -0.29999998, 8.34128, 1.2111385, 8.540746)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=1115200759]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2151473, -0.04159212, 0.25809488)
@@ -843,3 +848,12 @@ visible = false
 visible = false
 
 [node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_1gfio")]
+
+[node name="MovingFridge" parent="." unique_id=346364558 instance=ExtResource("9_fvdud")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, -3.3473735, 2.0562391, -2.543117)
+move_duration = 1
+point_1_location = Vector3(0, 0, 5)
+point_2_location = Vector3(0, 0, -5)
+
+[node name="MovingFridge2" parent="." unique_id=1252331940 instance=ExtResource("9_fvdud")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, -1.422042, 2, -1.9929073)

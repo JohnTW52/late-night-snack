@@ -4,7 +4,7 @@ var just_changed_level := false
 var game_over: bool = false
 var level_index: int
 var timer_vals: Dictionary = {
-	1: 10.0,
+	1: 100.0, # for testing purposes # 10.0,
 	2: 15.0,
 	3: 20.0,
 	4: 30.0,
