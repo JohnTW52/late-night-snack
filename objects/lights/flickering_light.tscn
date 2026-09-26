@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://gc0mhougms2u"]
+
+[ext_resource type="Script" uid="uid://dl31fn5cbe86q" path="res://objects/lights/flickering_light.gd" id="1_4ky4n"]
+
+[node name="FlickeringLight" type="AreaLight3D" unique_id=1238897794]
+script = ExtResource("1_4ky4n")
