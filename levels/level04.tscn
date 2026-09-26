@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_qkyi5"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_jdr1m"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_858d1"]
+[ext_resource type="PackedScene" uid="uid://b5kk1b6hu045o" path="res://objects/food/popcorn.tscn" id="6_jdr1m"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_rp6xw"]
+[ext_resource type="PackedScene" uid="uid://damq3lemb6828" path="res://objects/food/pizza.tscn" id="7_858d1"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_ho4s2"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_1gfio"]
 [ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="9_fvdud"]
@@ -40,6 +42,36 @@ transform = Transform3D(1, 0, -4.371139e-08, 0, 1, 0, 4.371139e-08, 0, 1, 0.0008
 [node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("3_jdr1m")]
 transform = Transform3D(1, 0, 4.371139e-08, 0, 1, 0, -4.371139e-08, 0, 1, -8.375892, -1.6781244, -3.7209873)
 
+[node name="MovingFridge2" parent="Obstacles" unique_id=1252331940 instance=ExtResource("9_fvdud")]
+transform = Transform3D(0.70000005, -3.059798e-08, 3.6487718e-16, 0, 8.347424e-09, 0.70000005, -3.0597974e-08, -0.7000002, 8.347417e-09, -8.43239, -2.113889, 0.85388577)
+move_duration = 1
+point_1_location = Vector3(0, 0, 10)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="Fridge2" parent="Obstacles" unique_id=1472248142 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(1.2154907, 0, 4.371139e-08, 0, 1.2133651, 0, -5.3130787e-08, 0, 1, -4.3266726, -1.6781242, -3.2036498)
+
+[node name="Fridge3" parent="Obstacles" unique_id=2082640076 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(0.40005296, 0, 0.916492, 0, 1, 0, -0.916492, 0, 0.40005296, -3.8811033, -1.6781232, -0.5809024)
+
+[node name="Fridge4" parent="Obstacles" unique_id=131527982 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(1, 0, 4.371139e-08, 0, 1, 0, -4.371139e-08, 0, 1, -8.024766, -1.6781237, 1.8679041)
+
+[node name="Fridge7" parent="Obstacles" unique_id=812746502 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(1.1627389, 0, 4.371139e-08, 0, 1.9494026, 0, -5.0824934e-08, 0, 1, 8.07959, -1.6781247, 8.028929)
+
+[node name="MovingFridge3" parent="Obstacles" unique_id=520211558 instance=ExtResource("9_fvdud")]
+transform = Transform3D(-3.9376005e-08, -0.01853315, -0.6997546, 0.6647443, -0.2192743, 0.0058074854, -0.21935111, -0.66451144, 0.01759973, -1.1846033, 4.429573, -6.6137433)
+move_duration = 6
+point_1_location = Vector3(0, 0, 12)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge4" parent="Obstacles" unique_id=328088013 instance=ExtResource("9_fvdud")]
+transform = Transform3D(7.932161e-08, 0.018533073, 0.69975454, -0.6647443, 0.21927433, -0.0058074254, -0.21935113, -0.66451144, 0.01759967, 0.82851106, 3.3490665, -6.871551)
+move_duration = 5
+point_1_location = Vector3(0, 0, 12)
+point_2_location = Vector3(0, 0, 0)
+
 [node name="Structure" type="Node3D" parent="." unique_id=481325484]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1902593475]
@@ -47,20 +79,26 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")
 
+[node name="Ground2" type="CSGBox3D" parent="Structure" unique_id=256497531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.9304628, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_ma3h5")
+
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=1342673593]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.113289, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")
 
 [node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=739772113]
-transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
+transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 19.754059, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")
 
 [node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("5_858d1")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 18.207695, -0.80473423)
 
 [node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=456804555]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
@@ -109,6 +147,9 @@ transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0,
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")
+
+[node name="PopCorn" parent="Structure" unique_id=419641044 instance=ExtResource("6_jdr1m")]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, -4.8940845, 5.9008827, -3.9474926)
 
 [node name="Lighting" type="Node3D" parent="." unique_id=1016091640]
 script = ExtResource("3_qkyi5")
@@ -834,7 +875,7 @@ light_specular = 2.101
 area_range = 11.538
 
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_jdr1m")]
-transform = Transform3D(-0.29999998, 0, -1.3113416e-08, 0, 0.29999998, 0, 1.3113416e-08, 0, -0.29999998, 8.34128, 1.2111385, 8.540746)
+transform = Transform3D(-0.29999998, 0, -1.3113416e-08, 0, 0.29999998, 0, 1.3113416e-08, 0, -0.29999998, 8.828911, 8.995005, 7.8400817)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=1115200759]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2151473, -0.04159212, 0.25809488)
@@ -849,11 +890,14 @@ visible = false
 
 [node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_1gfio")]
 
-[node name="MovingFridge" parent="." unique_id=346364558 instance=ExtResource("9_fvdud")]
-transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, -3.3473735, 2.0562391, -2.543117)
-move_duration = 1
-point_1_location = Vector3(0, 0, 5)
-point_2_location = Vector3(0, 0, -5)
+[node name="Fridge" parent="." unique_id=1997306903 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(0.008007199, 0.99996793, 0, -0.99996793, 0.008007199, 0, 0, 0, 1, 5.16975, 6.0349007, -3.3217573)
 
-[node name="MovingFridge2" parent="." unique_id=1252331940 instance=ExtResource("9_fvdud")]
-transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, -1.422042, 2, -1.9929073)
+[node name="Fridge2" parent="." unique_id=1316652542 instance=ExtResource("3_jdr1m")]
+transform = Transform3D(0.18414961, -0.98289824, 0, 0.98289824, 0.18414961, 0, 0, 0, 1, 10.422298, 6.9080853, 2.4651852)
+
+[node name="Pizza" parent="." unique_id=1812960298 instance=ExtResource("7_858d1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.0779587, 8.014996, 6.7915945)
+
+[node name="Pizza2" parent="." unique_id=7218421 instance=ExtResource("7_858d1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.388109, 8.380327, 7.4186053)

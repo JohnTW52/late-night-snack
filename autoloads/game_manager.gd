@@ -4,10 +4,10 @@ var just_changed_level := false
 var game_over: bool = false
 var level_index: int
 var timer_vals: Dictionary = {
-	1: 100.0, # for testing purposes # 10.0,
+	1: 10.0,
 	2: 15.0,
 	3: 20.0,
-	4: 30.0,
+	4: 20.0,
 	5: 45.0,
 	6: 10.0,
 	7: 10.0,
@@ -38,6 +38,38 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("restart level"):
 		get_tree().reload_current_scene();
+	
+	# temp for debugging
+	if Input.is_action_just_pressed("1"):
+		get_tree().change_scene_to_file(levels[0])
+		sync_level_index()
+	if Input.is_action_just_pressed("2"):
+		get_tree().change_scene_to_file(levels[1])
+		sync_level_index()
+	if Input.is_action_just_pressed("3"):
+		get_tree().change_scene_to_file(levels[2])
+		sync_level_index()
+	if Input.is_action_just_pressed("4"):
+		get_tree().change_scene_to_file(levels[3])
+		sync_level_index()
+	if Input.is_action_just_pressed("5"):
+		get_tree().change_scene_to_file(levels[4])
+		sync_level_index()
+	if Input.is_action_just_pressed("6"):
+		get_tree().change_scene_to_file(levels[5])
+		sync_level_index()
+	if Input.is_action_just_pressed("7"):
+		get_tree().change_scene_to_file(levels[6])
+		sync_level_index()
+	if Input.is_action_just_pressed("8"):
+		get_tree().change_scene_to_file(levels[7])
+		sync_level_index()
+	if Input.is_action_just_pressed("9"):
+		get_tree().change_scene_to_file(levels[8])
+		sync_level_index()
+	if Input.is_action_just_pressed("0"):
+		get_tree().change_scene_to_file(levels[9])
+		sync_level_index()
 
 # This function will be useful if we add save and quit later
 # Will set level_index to whatever current level is
