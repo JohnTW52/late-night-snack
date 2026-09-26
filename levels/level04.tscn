@@ -44,9 +44,6 @@ transform = Transform3D(1, 0, 4.371139e-08, 0, 1, 0, -4.371139e-08, 0, 1, -8.375
 
 [node name="MovingFridge2" parent="Obstacles" unique_id=1252331940 instance=ExtResource("9_fvdud")]
 transform = Transform3D(0.70000005, -3.059798e-08, 3.6487718e-16, 0, 8.347424e-09, 0.70000005, -3.0597974e-08, -0.7000002, 8.347417e-09, -8.43239, -2.113889, 0.85388577)
-move_duration = 1
-point_1_location = Vector3(0, 0, 10)
-point_2_location = Vector3(0, 0, 0)
 
 [node name="Fridge2" parent="Obstacles" unique_id=1472248142 instance=ExtResource("3_jdr1m")]
 transform = Transform3D(1.2154907, 0, 4.371139e-08, 0, 1.2133651, 0, -5.3130787e-08, 0, 1, -4.3266726, -1.6781242, -3.2036498)
@@ -62,15 +59,9 @@ transform = Transform3D(1.1627389, 0, 4.371139e-08, 0, 1.9494026, 0, -5.0824934e
 
 [node name="MovingFridge3" parent="Obstacles" unique_id=520211558 instance=ExtResource("9_fvdud")]
 transform = Transform3D(-3.9376005e-08, -0.01853315, -0.6997546, 0.6647443, -0.2192743, 0.0058074854, -0.21935111, -0.66451144, 0.01759973, -1.1846033, 4.429573, -6.6137433)
-move_duration = 6
-point_1_location = Vector3(0, 0, 12)
-point_2_location = Vector3(0, 0, 0)
 
 [node name="MovingFridge4" parent="Obstacles" unique_id=328088013 instance=ExtResource("9_fvdud")]
 transform = Transform3D(7.932161e-08, 0.018533073, 0.69975454, -0.6647443, 0.21927433, -0.0058074254, -0.21935113, -0.66451144, 0.01759967, 0.82851106, 3.3490665, -6.871551)
-move_duration = 5
-point_1_location = Vector3(0, 0, 12)
-point_2_location = Vector3(0, 0, 0)
 
 [node name="Structure" type="Node3D" parent="." unique_id=481325484]
 
