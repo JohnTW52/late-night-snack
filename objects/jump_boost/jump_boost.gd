@@ -31,9 +31,11 @@ func _process(delta: float) -> void:
 	if _player_entered:
 		_tick_boost_timer(delta)
 	
-	_time += delta
-	global_position.y += sin(_time * _frequency) * _amplitude
-	global_rotate(Vector3.UP, _rotation_speed * delta)
+	_time += clamp(delta, 0, 1_000_000)
+	global_position.y += clamp(sin(_time * _frequency) * _amplitude, deg_to_rad(-360), deg_to_rad(360))
+	
+	var speed = clamp(_rotation_speed * delta, -1000.0, 1000.0)
+	global_rotate(Vector3.UP, speed)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name != "PlayerCharacter":

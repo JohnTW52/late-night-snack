@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_aepdn"]
 [ext_resource type="PackedScene" uid="uid://cy26cxhw1vnff" path="res://objects/components/move_component.tscn" id="5_drsqm"]
 [ext_resource type="VoxelGIData" uid="uid://bitqd5ngqcm21" path="res://levels/light_resources/level07.VoxelGI_data.res" id="5_pbjfv"]
-[ext_resource type="PackedScene" uid="uid://uw48p44klomk" path="res://objects/feather_fall/feather_fall.tscn" id="6_devcg"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_drsqm"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_devcg"]
 [ext_resource type="PackedScene" uid="uid://62a0p7cmfmlk" path="res://objects/laser/laser.tscn" id="7_jjp5m"]
@@ -1814,9 +1813,6 @@ shape = SubResource("CylinderShape3D_wfdtc")
 
 [node name="SpinComponent" parent="Obstacles/Plate2/AnimatableBody3D" unique_id=525084044 instance=ExtResource("4_devcg")]
 
-[node name="FeatherFall" parent="Obstacles" unique_id=2133828143 instance=ExtResource("6_devcg")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.1868973, 20.059343, 4.9541235)
-
 [node name="Table" parent="Obstacles" unique_id=1071800340 instance=ExtResource("18_kcs38")]
 transform = Transform3D(-1.0056417e-17, 8.742278e-11, -0.002, 0.002, -8.742278e-11, -6.938894e-18, -8.742278e-11, -0.002, -8.742277e-11, -2.1868978, 22.949999, 10.097748)
 
@@ -2010,6 +2006,9 @@ shape = SubResource("BoxShape3D_t576s")
 
 [node name="Chair" parent="Obstacles" unique_id=120038101 instance=ExtResource("19_juqn4")]
 transform = Transform3D(-0.072224356, 0.13146725, 6.023673e-09, -6.814874e-11, -7.0499975e-09, 0.14999998, 0.13146725, 0.07222435, 3.4777685e-09, -11.852776, 34.229412, 7.190966)
+
+[node name="Table9" parent="Obstacles" unique_id=1212045074 instance=ExtResource("18_kcs38")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -16.47985, 8.949999, -0.05430615)
 
 [node name="Structure" type="Node3D" parent="." unique_id=1297216731]
 

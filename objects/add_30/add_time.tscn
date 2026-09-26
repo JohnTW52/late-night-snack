@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btvtqto0rbmka" path="res://objects/add_30/clock_low_poly.glb" id="1_jov8w"]
 [ext_resource type="Script" uid="uid://cnvam4x070qe6" path="res://objects/add_30/add_time.gd" id="1_voy5p"]
+[ext_resource type="AudioStream" uid="uid://ki1u3q6xwl2o" path="res://sfx/bling.mp3" id="3_s8p3n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rruc7"]
 size = Vector3(0.66986084, 0.79107666, 0.76464844)
@@ -19,5 +20,8 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1913829071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0069274902, 0.04598999, 0.0053710938)
 shape = SubResource("BoxShape3D_rruc7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1058165470]
+stream = ExtResource("3_s8p3n")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
