@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 	if _player_entered:
 		_tick_fall_timer(delta)
 	
-	_time += delta
+	_time += clamp(delta, 0, 1_000)
 	global_position.y += clamp(sin(_time * _frequency) * _amplitude, deg_to_rad(-360), deg_to_rad(360))
 	
 	var speed = clamp(_rotation_speed * delta, -1000.0, 1000.0)

@@ -1279,7 +1279,7 @@ transform = Transform3D(1, 0, 1.4210855e-14, -9.313226e-10, 1, 1.7902346e-15, -1
 transform = Transform3D(1, 0, 1.0658141e-14, -6.9849193e-10, 1, 1.7763568e-15, -2.1316282e-14, 1.4710455e-15, 1, 0, 9.536743e-07, -4.7683716e-07)
 
 [node name="Noodle2" type="Node3D" parent="Obstacles" unique_id=1472356861]
-transform = Transform3D(-2.2554183e-08, -1.0658141e-14, -0.5, 4.2632564e-14, 0.5, -1.0658141e-14, 0.5, -4.658821e-22, -2.1855694e-08, -2.1868973, 8.1315, 4.44405)
+transform = Transform3D(-0.25000003, -9.2302205e-15, -0.4330127, 4.2632564e-14, 0.5, -1.0658141e-14, 0.4330127, -5.329071e-15, -0.25000003, -2.1868973, 8.1315, 4.44405)
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Noodle2" unique_id=1703505534]
 sync_to_physics = false
@@ -1305,7 +1305,7 @@ transform = Transform3D(0.17384408, 0.013716213, -0.9846778, 0.13656114, 0.98990
 shape = SubResource("BoxShape3D_5pecy")
 
 [node name="Noodle" type="Node3D" parent="Obstacles" unique_id=1768071791]
-transform = Transform3D(-2.2437767e-08, -8.881784e-15, -0.5, 3.5527137e-14, 0.5, -8.881784e-15, 0.5, -3.8823513e-22, -2.1855694e-08, -2.1868982, 7.34578, 6.328985)
+transform = Transform3D(0.43301272, -4.440893e-15, -0.25, 3.5527137e-14, 0.5, -8.881784e-15, 0.25, 7.691851e-15, 0.43301272, -2.1868987, 7.34578, 6.328985)
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Noodle" unique_id=1645184953]
 sync_to_physics = false
@@ -1754,11 +1754,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0, -0.2963841)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0, 0)
 move_duration = 8.0
 
-[node name="Knife" parent="Obstacles" unique_id=1485426572 instance=ExtResource("13_5jgwp")]
-transform = Transform3D(0.49934795, -0.02552643, 9.812049e-09, 0.012763207, 0.249674, 0.43301272, -0.022106549, -0.43244812, 0.24999999, -17.186897, 11.255259, -1.495811)
-
 [node name="Knife2" parent="Obstacles" unique_id=1698324120 instance=ExtResource("13_5jgwp")]
-transform = Transform3D(0.49934795, -0.025526466, 8.51876e-09, 0.0123322345, 0.24124262, -0.4377784, 0.022349872, 0.4372076, 0.24155758, -16.704075, 15.51992, 3.2666473)
+transform = Transform3D(0.49934793, -0.025526468, 1.874165e-08, -0.00049489737, -0.009681553, -0.49990594, 0.025521673, 0.49925417, -0.009694219, -16.704075, 15.51992, 0.26664728)
 
 [node name="Knife3" parent="Obstacles" unique_id=488813134 instance=ExtResource("13_5jgwp")]
 transform = Transform3D(0.49934793, -0.025526464, 2.8571002e-08, -0.011975136, -0.23425776, -0.44156525, 0.02254322, 0.44098952, -0.2345636, -16.110603, 19.238705, -4.3564143)
