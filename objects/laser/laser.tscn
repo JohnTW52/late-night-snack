@@ -59,7 +59,7 @@ emission_energy_multiplier = 16.0
 script = ExtResource("1_db4gc")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1395397418]
-collision_layer = 2
+collision_layer = 16
 collision_mask = 2
 
 [node name="Sketchfab_Scene" type="Node3D" parent="Area3D" unique_id=747011529]
