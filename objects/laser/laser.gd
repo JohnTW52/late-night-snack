@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var time_to_remove := 7.0
+@export var time_to_remove := 10.0
 
 @onready var audio := $AudioStreamPlayer3D
 

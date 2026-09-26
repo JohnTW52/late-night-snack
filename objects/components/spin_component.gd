@@ -15,4 +15,5 @@ func _process(delta: float) -> void:
 	if _not_ready:
 		print("Couldn't find AnimatableBody3D parent object.")
 	else:
-		get_parent().global_rotate(_rotation_axis, _rotation_speed * delta)
+		var speed = clamp(_rotation_speed * delta, -1000.0, 1000.0)
+		get_parent().global_rotate(_rotation_axis, speed)
