@@ -1,0 +1,496 @@
+{
+  "assetCategories": {
+    "surface": {
+      "plaster": {
+        "painted": {}
+      }
+    }
+  },
+  "averageColor": "#BD6D36",
+  "categories": [
+    "surface",
+    "Paint",
+    "Interior"
+  ],
+  "comp_version": 1,
+  "description": "",
+  "environment": {
+    "biome": "undefined",
+    "region": "undefined"
+  },
+  "highest_available_res": 8192,
+  "id": "sjyoacbc",
+  "json": {
+    "contentLength": 10100,
+    "uri": "sjyoacbc.json"
+  },
+  "maps": [
+    {
+      "averageColor": "#BD6D36",
+      "bitDepth": 16,
+      "colorSpace": "sRGB",
+      "contentLength": 137785338,
+      "maxIntensity": 132,
+      "mimeType": "image/x-exr",
+      "minIntensity": 125,
+      "name": "Basecolor",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "basecolor",
+      "uri": "sjyoacbc_8K_Basecolor.exr"
+    },
+    {
+      "averageColor": "#BD6D36",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 24749423,
+      "maxIntensity": 132,
+      "mimeType": "image/jpeg",
+      "minIntensity": 125,
+      "name": "Basecolor",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "basecolor",
+      "uri": "sjyoacbc_8K_Basecolor.jpg"
+    },
+    {
+      "averageColor": "#FFFFFF",
+      "bitDepth": 32,
+      "colorSpace": "sRGB",
+      "contentLength": 220384848,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 255,
+      "name": "Cavity",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "cavity",
+      "uri": "sjyoacbc_8K_Cavity.exr"
+    },
+    {
+      "averageColor": "#FFFFFF",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 50995089,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 255,
+      "name": "Cavity",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "cavity",
+      "uri": "sjyoacbc_8K_Cavity.jpg"
+    },
+    {
+      "averageColor": "#3C3C3C",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 100925446,
+      "maxIntensity": 78,
+      "mimeType": "image/x-exr",
+      "minIntensity": 36,
+      "name": "Gloss",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "sjyoacbc_8K_Gloss.exr"
+    },
+    {
+      "averageColor": "#3C3C3C",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 33095253,
+      "maxIntensity": 78,
+      "mimeType": "image/jpeg",
+      "minIntensity": 36,
+      "name": "Gloss",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "sjyoacbc_8K_Gloss.jpg"
+    },
+    {
+      "averageColor": "#8080FE",
+      "bitDepth": 16,
+      "colorSpace": "Linear",
+      "contentLength": 193989276,
+      "maxIntensity": 168,
+      "mimeType": "image/x-exr",
+      "minIntensity": 112,
+      "name": "Normal",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "normal",
+      "uri": "sjyoacbc_8K_Normal.exr"
+    },
+    {
+      "averageColor": "#8080FE",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 88053133,
+      "maxIntensity": 168,
+      "mimeType": "image/jpeg",
+      "minIntensity": 112,
+      "name": "Normal",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "normal",
+      "uri": "sjyoacbc_8K_Normal.jpg"
+    },
+    {
+      "averageColor": "#C3C3C3",
+      "bitDepth": 32,
+      "colorSpace": "sRGB",
+      "contentLength": 90241350,
+      "maxIntensity": 219,
+      "mimeType": "image/x-exr",
+      "minIntensity": 177,
+      "name": "Roughness",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "sjyoacbc_8K_Roughness.exr"
+    },
+    {
+      "averageColor": "#C3C3C3",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 31866905,
+      "maxIntensity": 219,
+      "mimeType": "image/jpeg",
+      "minIntensity": 177,
+      "name": "Roughness",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "sjyoacbc_8K_Roughness.jpg"
+    },
+    {
+      "averageColor": "#404040",
+      "bitDepth": 16,
+      "colorSpace": "sRGB",
+      "contentLength": 1380426,
+      "maxIntensity": 64,
+      "mimeType": "image/x-exr",
+      "minIntensity": 63,
+      "name": "Specular",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "specular",
+      "uri": "sjyoacbc_8K_Specular.exr"
+    },
+    {
+      "averageColor": "#404040",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 802998,
+      "maxIntensity": 64,
+      "mimeType": "image/jpeg",
+      "minIntensity": 63,
+      "name": "Specular",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "specular",
+      "uri": "sjyoacbc_8K_Specular.jpg"
+    }
+  ],
+  "meta": [
+    {
+      "key": "scanArea",
+      "name": "Scan Area",
+      "value": "1x1 m"
+    },
+    {
+      "key": "height",
+      "name": "Height",
+      "value": "20 m"
+    },
+    {
+      "key": "tileable",
+      "name": "Tileable",
+      "value": true
+    },
+    {
+      "key": "texelDensity",
+      "name": "Texel Density",
+      "value": "8192 px/m"
+    },
+    {
+      "key": "calibration",
+      "name": "Calibration",
+      "value": "GretagMacbeth ColorChecker Color Rendition Chart"
+    },
+    {
+      "key": "scanner",
+      "name": "Scanner",
+      "value": "MKX"
+    }
+  ],
+  "models": [],
+  "name": "Wall Paint Detail",
+  "pack": {
+    "_id": "definitive-interior-plaster",
+    "name": "Definitive Interior Plaster"
+  },
+  "physicalSize": null,
+  "points": 2,
+  "previews": {
+    "images": [
+      {
+        "contentLength": 178859,
+        "resolution": "360x360",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "sjyoacbc_Grid_360.png"
+      },
+      {
+        "contentLength": 242243,
+        "resolution": "420x420",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "sjyoacbc_Grid_420.png"
+      },
+      {
+        "contentLength": 720754,
+        "resolution": "720x720",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "sjyoacbc_Grid_720.png"
+      },
+      {
+        "contentLength": 976056,
+        "resolution": "840x840",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "sjyoacbc_Grid_840.png"
+      },
+      {
+        "contentLength": 2179673,
+        "resolution": "1440x768",
+        "tags": [
+          "preview",
+          "clay"
+        ],
+        "uri": "sjyoacbc_PopupClay_1440.png"
+      },
+      {
+        "contentLength": 4037800,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview",
+          "clay"
+        ],
+        "uri": "sjyoacbc_PopupClay_1920.png"
+      },
+      {
+        "contentLength": 8899439,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "clay",
+          "retina"
+        ],
+        "uri": "sjyoacbc_PopupClay_2880.png"
+      },
+      {
+        "contentLength": 17212926,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "clay",
+          "retina"
+        ],
+        "uri": "sjyoacbc_PopupClay_3840.png"
+      },
+      {
+        "contentLength": 2588188,
+        "resolution": "1440x768",
+        "tags": [
+          "preview",
+          "tiled"
+        ],
+        "uri": "sjyoacbc_PopupTiled_1440.png"
+      },
+      {
+        "contentLength": 4744025,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview",
+          "tiled"
+        ],
+        "uri": "sjyoacbc_PopupTiled_1920.png"
+      },
+      {
+        "contentLength": 10010453,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "tiled",
+          "retina"
+        ],
+        "uri": "sjyoacbc_PopupTiled_2880.png"
+      },
+      {
+        "contentLength": 18141574,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "tiled",
+          "retina"
+        ],
+        "uri": "sjyoacbc_PopupTiled_3840.png"
+      },
+      {
+        "contentLength": 2562571,
+        "resolution": "1440x768",
+        "tags": [
+          "preview"
+        ],
+        "uri": "sjyoacbc_Popup_1440.png"
+      },
+      {
+        "contentLength": 4693879,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview"
+        ],
+        "uri": "sjyoacbc_Popup_1920.png"
+      },
+      {
+        "contentLength": 10377906,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "sjyoacbc_Popup_2880.png"
+      },
+      {
+        "contentLength": 19783478,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "sjyoacbc_Popup_3840.png"
+      }
+    ],
+    "relativeSize": "1x1",
+    "scaleReferences": []
+  },
+  "process_date": "2024-04-17 14:19:00",
+  "properties": [],
+  "referencePreviews": {
+    "maps": [],
+    "models": []
+  },
+  "references": [],
+  "revised": false,
+  "semanticTags": {
+    "architectural_style": {},
+    "asset_type": "surface",
+    "color": [
+      "brown",
+      "white"
+    ],
+    "contains": [
+      "paint",
+      "plaster"
+    ],
+    "descriptive": [
+      "smooth",
+      " fresh"
+    ],
+    "environment": [
+      "urban"
+    ],
+    "industry": [
+      "archviz",
+      "games",
+      "VFX"
+    ],
+    "interior_exterior": [
+      "interior",
+      "exterior"
+    ],
+    "latin_name": [],
+    "locations": {
+      "Global": {
+        "Global": {}
+      }
+    },
+    "maxSize": 1,
+    "minSize": 1,
+    "name": "Wall Paint Detail",
+    "orientation": [
+      "wall"
+    ],
+    "resolution": 8192,
+    "season": [],
+    "state": [
+      "new"
+    ],
+    "subject_matter": "manmade",
+    "theme": [
+      "painted",
+      " smooth",
+      " construction",
+      " house",
+      "constructional",
+      " "
+    ]
+  },
+  "tags": [
+    "surface mix",
+    "saturated",
+    "vivid",
+    "colorful",
+    "light",
+    "white",
+    "brown",
+    "archviz"
+  ],
+  "texelDensity": 8192,
+  "texture_type": "basic",
+  "ue_plugin_archives": [
+    {
+      "contentLength": 221022792,
+      "gltfVersion": "2.0",
+      "tier": 0,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_0/sjyoacbc_tier_0.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 62458530,
+      "gltfVersion": "2.0",
+      "tier": 1,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_1/sjyoacbc_tier_1.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 15422914,
+      "gltfVersion": "2.0",
+      "tier": 2,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_2/sjyoacbc_tier_2.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 1092833,
+      "gltfVersion": "2.0",
+      "tier": 3,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_3/sjyoacbc_tier_3.zip",
+      "version": 1
+    }
+  ],
+  "version": 2
+}

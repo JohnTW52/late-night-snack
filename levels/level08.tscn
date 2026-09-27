@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_afn4x"]
 [ext_resource type="Texture2D" uid="uid://bhtlp8hwu5aik" path="res://objects/dining_scene/textures/dining_scene_2.png" id="8_akonu"]
 [ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="9_luatw"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="10_akonu"]
 
 [sub_resource type="Environment" id="Environment_luatw"]
 glow_intensity = 4.32
@@ -2952,36 +2953,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.000005, 19, -9)
 [node name="Structure" type="Node3D" parent="." unique_id=1118504127]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=609665302]
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=1546924697]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.045818, -2)
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling2" type="CSGBox3D" parent="Structure" unique_id=1455410885]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8.045818, 18)
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling3" type="CSGBox3D" parent="Structure" unique_id=56707709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.045818, -2)
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling4" type="CSGBox3D" parent="Structure" unique_id=1482183959]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 15.045818, 18)
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling5" type="CSGBox3D" parent="Structure" unique_id=221208837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 23.045818, 0)
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
@@ -2994,6 +3001,7 @@ material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling6" type="CSGBox3D" parent="Structure" unique_id=1992837364]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 23.045818, 2)
+material_override = ExtResource("10_akonu")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")

@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="19_juqn4"]
 [ext_resource type="Texture2D" uid="uid://dwvlreowpwfse" path="res://objects/dining_scene/textures/dining_scene_4.png" id="20_m1o7j"]
 [ext_resource type="Texture2D" uid="uid://bqgyhtv8fi54g" path="res://objects/dining_scene/textures/dining_scene_5.png" id="21_oukjv"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="23_m1o7j"]
 
 [sub_resource type="Environment" id="Environment_7dxhd"]
 glow_intensity = 4.32
@@ -2010,6 +2011,7 @@ transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -16.47985, 8.9499
 [node name="Structure" type="Node3D" parent="." unique_id=1297216731]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1960958588]
+material_override = ExtResource("23_m1o7j")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_iu0bt")

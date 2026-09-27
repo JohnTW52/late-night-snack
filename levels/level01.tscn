@@ -2,9 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_vsh7h"]
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_emax3"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="2_j5cmh"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="3_53p8g"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="3_kxijb"]
+[ext_resource type="Texture2D" uid="uid://cx5aoaanh4lfl" path="res://addons/godot-prototype-texture/PNG/grid_1024x1024/grid_black_1024x1024.png" id="3_py2r8"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_vxcwb"]
+[ext_resource type="Material" uid="uid://bqb81c0gqxemr" path="res://materials/new_standard_material_3d.tres" id="3_wrqhy"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="4_emax3"]
 [ext_resource type="VoxelGIData" uid="uid://caw2cj8tbiw1p" path="res://levels/light_resources/level01.VoxelGI_data.res" id="4_xq8ic"]
 [ext_resource type="PackedScene" uid="uid://gc0mhougms2u" path="res://objects/lights/flickering_light.tscn" id="5_w7224"]
@@ -21,22 +24,7 @@ volumetric_fog_density = 0.01
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_rruc7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5epe"]
-albedo_texture = ExtResource("2_emax3")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xq8ic"]
-albedo_texture = ExtResource("2_emax3")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7224"]
-albedo_texture = ExtResource("2_emax3")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5cmh"]
 albedo_texture = ExtResource("2_emax3")
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -46,10 +34,9 @@ albedo_texture = ExtResource("2_emax3")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6q0d3"]
-albedo_texture = ExtResource("2_emax3")
-uv1_triplanar = true
-uv1_world_triplanar = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yxjm"]
+albedo_texture = ExtResource("3_py2r8")
+uv1_scale = Vector3(4, 4, 4)
 
 [node name="Level01" type="Node3D" unique_id=2058142477]
 
@@ -65,13 +52,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.0
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=751229420]
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_x5epe")
+material = ExtResource("2_j5cmh")
 
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=536434327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+material_override = ExtResource("3_wrqhy")
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_xq8ic")
 
 [node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=752285699]
 transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
@@ -81,27 +68,29 @@ material = SubResource("StandardMaterial3D_w7224")
 
 [node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=279799204]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
+material_override = ExtResource("3_wrqhy")
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_j5cmh")
 
 [node name="Wall2" type="CSGBox3D" parent="Structure" unique_id=1487185108]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 10, -10)
+material_override = ExtResource("3_wrqhy")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_py2r8")
 
 [node name="Wall3" type="CSGBox3D" parent="Structure" unique_id=1399190837]
 transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 10, 0)
+material_override = ExtResource("3_wrqhy")
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_6q0d3")
 
 [node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=578426983]
 transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 10, 10)
+material_override = ExtResource("3_wrqhy")
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_6q0d3")
+material = SubResource("StandardMaterial3D_1yxjm")
 
 [node name="Lighting" type="Node3D" parent="." unique_id=870142447]
 script = ExtResource("3_vxcwb")
@@ -257,7 +246,7 @@ light_energy = 10.674
 light_bake_mode = 1
 
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("3_53p8g")]
-transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8051648, 0.25987506)
+transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -0.07658577, 1.8798633, 0.25987506)
 
 [node name="TurretMount" parent="." unique_id=254010352 instance=ExtResource("3_kxijb")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
