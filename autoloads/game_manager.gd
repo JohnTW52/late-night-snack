@@ -8,13 +8,12 @@ var timer_vals: Dictionary = {
 	2: 15.0,
 	3: 20.0,
 	4: 15.0,
-	5: 20.0,
-	6: 7.0,
-	7: 10.0,
-	8: 60.0,
+	5: 7.0,
+	6: 10.0,
+	7: 60.0,
+	8: 10.0,
 	9: 10.0,
-	10: 10.0,
-	11: 10.0
+	10: 10.0
 }
 
 @onready var levels: Array[String] = [
@@ -22,7 +21,7 @@ var timer_vals: Dictionary = {
 	"res://levels/level02.tscn",
 	"res://levels/level03.tscn",
 	"res://levels/level04.tscn",
-	"res://levels/secret_spin_level.tscn",
+	#"res://levels/secret_spin_level.tscn",
 	"res://levels/level05.tscn",
 	"res://levels/level06.tscn",
 	"res://levels/level07.tscn",
@@ -94,10 +93,7 @@ func has_next_level() -> bool:
 	return false
 
 func increment_level_index() -> void:
-	if level_index == 3:
-		level_index += 2
-		return
-	sync_level_index()
+	# this will break the secret level setup: sync_level_index()
 	level_index += 1
 
 func get_timer_val() -> float:
