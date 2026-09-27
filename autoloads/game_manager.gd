@@ -94,6 +94,9 @@ func has_next_level() -> bool:
 	return false
 
 func increment_level_index() -> void:
+	if level_index == 3:
+		level_index += 2
+		return
 	sync_level_index()
 	level_index += 1
 
