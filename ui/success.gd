@@ -4,8 +4,14 @@ extends CanvasLayer
 
 func _ready() -> void:
 	label.text = _get_success_text()
-	print(GameManager.level_index)
-	await get_tree().create_timer(1.5).timeout
+	var i = GameManager.level_index
+	if (i == 8):
+		GameManager.cheer_audio.play()
+		await get_tree().create_timer(7).timeout
+		label.text = "or do you..."
+		await get_tree().create_timer(4).timeout
+	else:
+		await get_tree().create_timer(1.5).timeout
 	get_tree().change_scene_to_file(GameManager.levels[GameManager.level_index])
 
 func _get_success_text() -> String:
@@ -27,7 +33,7 @@ func _get_success_text() -> String:
 		7:
 			return " "
 		8:
-			return "i don feel so good"
+			return "You win!"
 		9:
 			return "jus.. one.. more... snack"
 		10:

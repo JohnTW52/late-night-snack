@@ -1,5 +1,7 @@
 extends Node
 
+var cheer_audio : AudioStreamPlayer
+
 var just_changed_level := false
 var game_over: bool = false
 var level_index: int
@@ -38,6 +40,11 @@ var total_fails : int = 0
 func _ready() -> void:
 	load_data()
 	just_changed_level = false
+	
+	cheer_audio = AudioStreamPlayer.new()
+	add_child(cheer_audio)
+	cheer_audio.stream = preload("res://sfx/ominous cheers.mp3")
+	cheer_audio.volume_db = -12
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("restart level"):
