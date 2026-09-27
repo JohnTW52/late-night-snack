@@ -27,7 +27,8 @@ var was_on_floor: bool
 var is_falling: bool = false
 var movement_locked: bool
 var walk_or_run: String = "WalkState" ## Remembers whether the player was walking or running before going airborne.
-
+var knockback := Vector3.ZERO
+var knockback_recovery := 100.0
 var hit_ground_cooldown_ref: float
 
 # -------------------------------------------------------------------------
@@ -196,7 +197,7 @@ func _ready() -> void:
 	_input_actions_check()
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if GameManager.game_over:
 		return
 	
@@ -213,7 +214,6 @@ func _process(_delta: float) -> void:
 	jump_gravity = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
 	fall_gravity = (-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)
 	jump_velocity = (2.0 * jump_height) / jump_time_to_peak
-	
 
 func _physics_process(delta: float) -> void:
 	if movement_locked or GameManager.game_over:
@@ -237,6 +237,10 @@ func _physics_process(delta: float) -> void:
 		if platform_ang_vel.y != 0:
 			rotate_y(platform_ang_vel.y * delta)
 
+	knockback = knockback.move_toward(Vector3.ZERO, knockback_recovery * delta)
+	
+	velocity += knockback
+	
 	_tick_jump_cooldown(delta)
 	_modify_physics_properties()
 	_tick_stamina(delta)
@@ -279,6 +283,15 @@ func lock_movement() -> void:
 
 func unlock_movement() -> void:
 	movement_locked = false
+
+func apply_knockback(source_position: Vector3, force: float) -> void:
+	var direction = source_position.direction_to(global_position)
+	knockback = direction * force
+
+func end_speed_boost() -> void:
+	can_run = false
+	await get_tree().create_timer(2.0).timeout
+	can_run = true
 
 # =========================================================================
 # Hitbox / model height tweening
