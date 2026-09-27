@@ -39,20 +39,22 @@ grow_vertical = 0
 layout_mode = 2
 
 [node name="Start" type="Button" parent="Buttons/VBoxContainer" unique_id=1989738815]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(250, 75)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "START :)"
 
+[node name="Button" type="Button" parent="Buttons/VBoxContainer" unique_id=2014623882]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Level Select"
+
 [node name="Leave" type="Button" parent="Buttons/VBoxContainer" unique_id=1182957767]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(250, 75)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "LEAVE :("
-
-[node name="Button" type="Button" parent="Buttons/VBoxContainer" unique_id=2014623882]
-layout_mode = 2
-text = "Level Select"
 
 [node name="Title" type="MarginContainer" parent="." unique_id=1742878347]
 anchors_preset = 5
@@ -104,5 +106,5 @@ texture = ExtResource("2_0dkrt")
 shape = SubResource("RectangleShape2D_x8qym")
 
 [connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Buttons/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
