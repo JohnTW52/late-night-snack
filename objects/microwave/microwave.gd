@@ -15,7 +15,7 @@ func _ready() -> void:
 		show_success_screen()
 	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
 		timer = 30;
-		GameManager.level_index = 4;
+		GameManager.level_index = 3;
 	else:
 		timer = GameManager.get_timer_val()
 	

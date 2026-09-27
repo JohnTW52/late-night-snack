@@ -105,11 +105,11 @@ transform = Transform3D(1.9665564, -0.36420768, 0.002829676, 0.33130375, 1.78232
 
 [node name="AddTime" parent="Obstacles" unique_id=1548117864 instance=ExtResource("4_vqd15")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.7634687, 28.872976, 4.164285)
-_time_to_add = 3.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles/AddTime" unique_id=1887860118]
-light_color = Color(1, 0.88235295, 0.21960784, 1)
-light_energy = 3.0
+light_color = Color(0, 0.88235295, 1, 1)
+light_energy = 5.0
+omni_range = 9.196
 
 [node name="Structure" type="Node3D" parent="." unique_id=1574767441]
 

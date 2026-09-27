@@ -21,7 +21,7 @@ var timer_vals: Dictionary = {
 	"res://levels/level02.tscn",
 	"res://levels/level03.tscn",
 	"res://levels/level04.tscn",
-	"res://levels/secret_spin_level.tscn",
+	#"res://levels/secret_spin_level.tscn",
 	"res://levels/level05.tscn",
 	"res://levels/level06.tscn",
 	"res://levels/level07.tscn",
@@ -93,10 +93,7 @@ func has_next_level() -> bool:
 	return false
 
 func increment_level_index() -> void:
-	if level_index == 3:
-		level_index += 2
-		return
-	sync_level_index()
+	# this will break the secret level setup: sync_level_index()
 	level_index += 1
 
 func get_timer_val() -> float:
