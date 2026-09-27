@@ -124,6 +124,12 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
+[node name="Ground3" type="CSGBox3D" parent="Structure" unique_id=36194741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.833164, -19.976866)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_25303")
+
 [node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=1258065261]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.82757, 0)
 use_collision = true

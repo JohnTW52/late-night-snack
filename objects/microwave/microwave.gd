@@ -12,8 +12,11 @@ var timer: float
 func _ready() -> void:
 	if GameManager.just_changed_level:
 		show_success_screen()
-	
-	timer = GameManager.get_timer_val()
+	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
+		timer = 30;
+		GameManager.level_index = 3;
+	else:
+		timer = GameManager.get_timer_val()
 
 func _process(delta: float) -> void:
 	if timer > 0.01:
