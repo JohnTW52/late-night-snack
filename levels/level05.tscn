@@ -111,6 +111,10 @@ light_color = Color(0, 0.88235295, 1, 1)
 light_energy = 5.0
 omni_range = 9.196
 
+[node name="JumpBoost2" parent="Obstacles" unique_id=786404394 instance=ExtResource("15_338c1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.336899, 12.648649, 0.7161494)
+_boost_mult = 4.0
+
 [node name="Structure" type="Node3D" parent="." unique_id=1574767441]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1508680440]

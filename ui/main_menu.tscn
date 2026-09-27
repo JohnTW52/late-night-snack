@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cullgmlhaf2aj" path="res://ui/main_menu.gd" id="1_t7e0r"]
 [ext_resource type="Texture2D" uid="uid://del3515muijcg" path="res://objects/microwave/microwave_-_modern_furniture_game-ready_3.png" id="2_0dkrt"]
+[ext_resource type="PackedScene" uid="uid://bk6h8bpf3lvof" path="res://ui/level_select.tscn" id="2_8uxxo"]
 [ext_resource type="Script" uid="uid://c7t58gjfs5jcf" path="res://ui/bouncing_image.gd" id="3_rmr83"]
 [ext_resource type="Texture2D" uid="uid://c1q6nq58qfd0c" path="res://objects/food/textures/popcorn-red-white-striped-container-260nw-2435205663.webp" id="3_wk0pr"]
 
@@ -12,6 +13,7 @@ size = Vector2(255, 128)
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1727256392]
 script = ExtResource("1_t7e0r")
+level_select = ExtResource("2_8uxxo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=380314100]
 anchors_preset = 15
@@ -47,6 +49,10 @@ custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "LEAVE :("
+
+[node name="Button" type="Button" parent="Buttons/VBoxContainer" unique_id=2014623882]
+layout_mode = 2
+text = "Level Select"
 
 [node name="Title" type="MarginContainer" parent="." unique_id=1742878347]
 anchors_preset = 5
@@ -99,3 +105,4 @@ shape = SubResource("RectangleShape2D_x8qym")
 
 [connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Button" to="." method="_on_button_pressed"]

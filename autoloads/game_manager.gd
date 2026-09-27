@@ -28,6 +28,11 @@ var timer_vals: Dictionary = {
 	"res://levels/level09.tscn"
 ]
 
+# index 0 is level 1 and so on
+var level_completion_data: Array[int] = [
+	0, -1, -1, -1, -1, -1, -1, -1, -1, -1 # last one is secret level
+]
+
 func _ready() -> void:
 	just_changed_level = false
 
