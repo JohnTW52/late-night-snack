@@ -27,7 +27,7 @@ var _firing_timer := 2.0
 func _ready() -> void:
 	target_player = owner.get_node("PlayerCharacter").get_node("PlayerCharacter")
 	
-	health.value = 99.0
+	health.value = 100.0
 	
 	if GameManager.just_changed_level:
 		show_success_screen()
@@ -75,8 +75,9 @@ func interact(player: PlayerCharacter) -> void:
 	
 	if player.has_method("apply_knockback"):
 		player.apply_knockback(global_position, knockback_force)
-		speed *= 1.7
-		health.value -= 33 
+		health.value -= 20
+		print(health.value)
+		_calc_new_speed()
 		if health.value <= 0:
 			death_audio.play()
 			dead = true
@@ -137,3 +138,25 @@ func _set_firing_stats() -> void:
 	else:
 		_gun_timer = randf_range(1.0, 2.5)
 		_firing_timer = randf_range(2.5, 4.0)
+
+func _calc_new_speed() -> void:
+	if health.value > 100.0:
+			speed = 2.5
+	elif health.value > 90.0:
+			speed = 2.5
+	elif health.value > 80.0:
+			speed = 2.5
+	elif health.value > 70.0:
+			speed = 3.0
+	elif health.value > 60.0:
+			speed = 3.0
+	elif health.value > 50.0:
+			speed = 3.0
+	elif health.value > 40.0:
+			speed = 3.0
+	elif health.value > 30.0:
+			speed = 3.5
+	elif health.value > 20.0:
+			speed = 3.5
+	elif health.value > 10.0:
+			speed = 4.0

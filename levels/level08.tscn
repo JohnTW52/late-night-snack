@@ -440,7 +440,7 @@ stream = ExtResource("5_afn4x")
 max_db = 0.0
 
 [node name="Laser12" type="Node3D" parent="Obstacles" unique_id=1294130792]
-transform = Transform3D(-1, 0, 8.742282e-08, 0, 1, 0, -8.742278e-08, 0, -1.0000005, -16.170185, 7.0237613, -0.08914833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -16.170185, 7.0237613, -0.08914833)
 script = ExtResource("2_yekxc")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser12" unique_id=1625999280]
@@ -1017,7 +1017,7 @@ stream = ExtResource("5_afn4x")
 max_db = 0.0
 
 [node name="Laser14" type="Node3D" parent="Obstacles" unique_id=883393909]
-transform = Transform3D(-4.371139e-08, 0, -1.0000005, 0, 1, 0, 1, 0, -4.371141e-08, -8.880048, 14.02376, 7.2009892)
+transform = Transform3D(-4.371139e-08, 0, -1.0000005, 0, 1, 0, 1, 0, -4.371141e-08, -8.880048, 14.02376, 8.200989)
 script = ExtResource("2_yekxc")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser14" unique_id=739562795]
@@ -1400,7 +1400,7 @@ stream = ExtResource("5_afn4x")
 max_db = 0.0
 
 [node name="Laser18" type="Node3D" parent="Obstacles" unique_id=144278853]
-transform = Transform3D(-1, 0, -8.7422805e-08, 0, 1, 0, 8.742277e-08, 0, -1.0000005, -13.747429, 14.02376, -0.74101627)
+transform = Transform3D(-1, 0, -8.7422805e-08, 0, 1, 0, 8.742277e-08, 0, -1.0000005, -15.747429, 14.02376, -0.7410161)
 script = ExtResource("2_yekxc")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser18" unique_id=2038859513]
@@ -1688,7 +1688,7 @@ stream = ExtResource("5_afn4x")
 max_db = 0.0
 
 [node name="Laser31" type="Node3D" parent="Obstacles" unique_id=813116434]
-transform = Transform3D(-4.371138e-08, 0, 1.0000005, 0, 1, 0, -1, 0, -4.3711395e-08, -8.880048, 13.993223, -5.5499616)
+transform = Transform3D(-0.25881907, 0, 0.9659263, 0, 1, 0, -0.9659258, 0, -0.2588192, -8.880048, 13.993223, -5.5499616)
 script = ExtResource("2_yekxc")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser31" unique_id=493091]
