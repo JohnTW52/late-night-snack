@@ -932,10 +932,10 @@ light_specular = 2.101
 area_range = 11.538
 
 [node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_cj3ca")]
-transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, -4.411914, 14.888153, 9.689786)
+transform = Transform3D(0, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, 0, 4.4008913, 22.763723, 9.689786)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=330884576]
-transform = Transform3D(-1.4570463e-07, 0, -3.3333335, 0, 3.3333335, 0, 3.3333335, 0, -1.4570463e-07, 0.9815254, -0.041591644, 0.25809383)
+transform = Transform3D(-1.4570463e-07, 0, -3.3333335, 0, 3.3333335, 0, 3.3333335, 0, -1.4570463e-07, -0.14842606, -0.041591644, 0.25809383)
 light_color = Color(0.9647059, 0.6392157, 0, 1)
 light_energy = 0.5
 
