@@ -17,6 +17,7 @@ func _ready() -> void:
 		timer = 30;
 		GameManager.level_index = 3;
 		GameManager.level_completion_data[9] = 0
+		GameManager.save_data()
 	else:
 		timer = GameManager.get_timer_val()
 	
@@ -44,6 +45,7 @@ func change_level() -> void:
 	else:
 		GameManager.level_completion_data[GameManager.level_index] = 1
 	GameManager.level_completion_data[GameManager.level_index+1] = 0
+	GameManager.save_data()
 	
 	if GameManager.has_next_level():
 		var next_level := GameManager.levels[GameManager.level_index + 1]

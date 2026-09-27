@@ -1,5 +1,7 @@
 extends Node
 
+var save_path = "user://save"
+
 var just_changed_level := false
 var game_over: bool = false
 var level_index: int
@@ -107,3 +109,18 @@ func get_timer_val() -> float:
 func on_game_over() -> void:
 	get_tree().change_scene_to_file(levels[level_index])
 	game_over = false
+
+func save_data():
+	var file = FileAccess.open("user://save.dat", FileAccess.WRITE)
+	file.store_var(level_completion_data)
+	
+func load_data(): # called when menu loads
+	if not FileAccess.file_exists("user://save.dat"):
+		return
+	var file = FileAccess.open("user://save.dat", FileAccess.READ)
+	level_completion_data = file.get_var()
+
+# for testing purposes
+func reset_save():
+	if FileAccess.file_exists("user://save.dat"):
+		DirAccess.remove_absolute("user://save.dat")
