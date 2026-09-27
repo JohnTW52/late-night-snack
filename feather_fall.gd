@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var _fall_mult := 3.0 ## Higher number means slower fall
+@export var _fall_time := 10.0
 var _player: PlayerCharacter
 var _player_entered := false
 var _used := false
@@ -9,13 +10,12 @@ var _frequency := 3.0
 var _rotation_speed := 2.0
 var _time := 0.0
 var _fall_timer: float
-var _fall_time := 10.0
 var _default_fall_time: float
 
 func _ready() -> void:
 	visible = true
 	_fall_timer = _fall_time
-	_player = null
+	_player = null 
 
 func _process(delta: float) -> void:
 	if _player and _fall_timer < 0.01:

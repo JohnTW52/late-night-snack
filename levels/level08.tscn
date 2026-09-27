@@ -631,6 +631,102 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
 stream = ExtResource("5_afn4x")
 max_db = 0.0
 
+[node name="Laser36" type="Node3D" parent="Obstacles" unique_id=206177972]
+transform = Transform3D(1.3113416e-07, 0, -1.0000005, 0, 1, 0, 1, 0, 1.3113423e-07, -8.22818, 7.0237613, 7.910852)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser36" unique_id=645724156]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser36/AnimatableBody3D" unique_id=1822270557]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=909275134]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=61509034]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=740348799]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1662671003]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=2075495159]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1927657415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=1676006680]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=1237390548]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=1722461857]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=1301951610]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=34813345]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser36/AnimatableBody3D/Area3D" unique_id=1701506479]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser36/AnimatableBody3D" unique_id=1218115249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser36" unique_id=930250517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser36" unique_id=271381111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser36" unique_id=575009609 instance=ExtResource("4_olxdc")]
+move_duration = 4.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser36" unique_id=1921098550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
 [node name="Laser19" type="Node3D" parent="Obstacles" unique_id=476329638]
 transform = Transform3D(-0.7071066, 0, 0.7071072, 0, 1, 0, -0.7071068, 0, -0.70710695, -8.22818, 11.16213, -0.089147985)
 script = ExtResource("2_yekxc")
@@ -1208,7 +1304,7 @@ stream = ExtResource("5_afn4x")
 max_db = 0.0
 
 [node name="Laser16" type="Node3D" parent="Obstacles" unique_id=1792185629]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -4.880048, 14.02376, -0.7410159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -3.9978929, 14.02376, -0.74101585)
 script = ExtResource("2_yekxc")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser16" unique_id=1919190632]
@@ -1296,9 +1392,105 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
 
 [node name="MoveComponent" parent="Obstacles/Laser16" unique_id=563246905 instance=ExtResource("4_olxdc")]
-move_duration = 0.2
+move_duration = 1.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser16" unique_id=182629163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser18" type="Node3D" parent="Obstacles" unique_id=144278853]
+transform = Transform3D(-1, 0, -8.7422805e-08, 0, 1, 0, 8.742277e-08, 0, -1.0000005, -13.747429, 14.02376, -0.74101627)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser18" unique_id=2038859513]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser18/AnimatableBody3D" unique_id=1573346839]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=87876077]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=1167591273]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=210797255]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1785854760]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=1664118673]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1236650338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=716785901]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=104307006]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=1036994932]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=58806496]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=1231874374]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser18/AnimatableBody3D/Area3D" unique_id=1219220035]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser18/AnimatableBody3D" unique_id=416659710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser18" unique_id=978182496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser18" unique_id=1683380953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser18" unique_id=361359395 instance=ExtResource("4_olxdc")]
+move_duration = 0.8
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser18" unique_id=1495298813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
 stream = ExtResource("5_afn4x")
 max_db = 0.0
@@ -1495,6 +1687,101 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
 stream = ExtResource("5_afn4x")
 max_db = 0.0
 
+[node name="Laser31" type="Node3D" parent="Obstacles" unique_id=813116434]
+transform = Transform3D(-4.371138e-08, 0, 1.0000005, 0, 1, 0, -1, 0, -4.3711395e-08, -8.880048, 13.993223, -5.5499616)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser31" unique_id=493091]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser31/AnimatableBody3D" unique_id=550256077]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=2059801868]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=895886722]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1894365165]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1479652426]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=1893510678]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=2142298481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=568507458]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=1208637788]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=1688433245]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=2092115681]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=1942434609]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser31/AnimatableBody3D/Area3D" unique_id=834580834]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser31/AnimatableBody3D" unique_id=688793584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser31" unique_id=115743542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser31" unique_id=690319423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser31" unique_id=281401021 instance=ExtResource("4_olxdc")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser31" unique_id=428705689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
 [node name="Laser22" type="Node3D" parent="Obstacles" unique_id=748945295]
 transform = Transform3D(-4.371139e-08, 0, -1.0000005, 0, 1, 0, 1, 0, -4.371141e-08, -8.880048, 17.025177, 2.1986716)
 script = ExtResource("2_yekxc")
@@ -1588,6 +1875,965 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
 move_duration = 1.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser22" unique_id=1153413587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser23" type="Node3D" parent="Obstacles" unique_id=184424020]
+transform = Transform3D(-4.371139e-08, 0, -1.0000005, 0, 1, 0, 1, 0, -4.371141e-08, -8.880048, 22.036137, 7.811298)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser23" unique_id=2003364895]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser23/AnimatableBody3D" unique_id=497425389]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=716451835]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=1326500690]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=500778094]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=2134982373]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=501805650]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=590741898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=1508403913]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=10842684]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=616129019]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=1531435463]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=1022463557]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser23/AnimatableBody3D/Area3D" unique_id=1485619832]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser23/AnimatableBody3D" unique_id=1838368329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser23" unique_id=1059041099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser23" unique_id=1661794714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser23" unique_id=119994075 instance=ExtResource("4_olxdc")]
+move_duration = 1.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser23" unique_id=2113352371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser24" type="Node3D" parent="Obstacles" unique_id=1506365540]
+transform = Transform3D(0.7071067, 0, -0.7071072, 0, 1, 0, 0.7071068, 0, 0.70710707, -8.880048, 22.036137, -0.79901075)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser24" unique_id=1052004990]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser24/AnimatableBody3D" unique_id=1995012119]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=1466207177]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=320273140]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1134927314]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=243816804]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=927991002]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1177008633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=110616896]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=1201828409]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=926485140]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=1034593971]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=159649710]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser24/AnimatableBody3D/Area3D" unique_id=394486410]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser24/AnimatableBody3D" unique_id=712890517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser24" unique_id=1468271649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser24" unique_id=1951911926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser24" unique_id=1601575762 instance=ExtResource("4_olxdc")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser24" unique_id=454800791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser25" type="Node3D" parent="Obstacles" unique_id=247237773]
+transform = Transform3D(0.70710677, 0, 0.7071071, 0, 1, 0, -0.70710677, 0, 0.7071071, -8.880048, 22.036137, -0.7410161)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser25" unique_id=1469435036]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser25/AnimatableBody3D" unique_id=1078780066]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=1130704278]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=1488296456]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1200886704]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1025303374]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=109217002]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1472133666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=1125075031]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=288565926]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=393448242]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=968640722]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=389201336]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser25/AnimatableBody3D/Area3D" unique_id=811676802]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser25/AnimatableBody3D" unique_id=1831832404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser25" unique_id=468797405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser25" unique_id=22963148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser25" unique_id=554558461 instance=ExtResource("4_olxdc")]
+move_duration = 1.5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser25" unique_id=102779174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser26" type="Node3D" parent="Obstacles" unique_id=1199896498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -2.4838734, 22.036137, -0.7410158)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser26" unique_id=653926359]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser26/AnimatableBody3D" unique_id=1188490078]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=1040687901]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=158841512]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1080287072]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1680867535]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=1988471716]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1334875834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=1556201682]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=2109396986]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=2051097187]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=57902163]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=421450254]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser26/AnimatableBody3D/Area3D" unique_id=180628707]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser26/AnimatableBody3D" unique_id=1738266913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser26" unique_id=719799012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser26" unique_id=642236923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser26" unique_id=393573200 instance=ExtResource("4_olxdc")]
+move_duration = 0.2
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser26" unique_id=886665633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser27" type="Node3D" parent="Obstacles" unique_id=712389869]
+transform = Transform3D(-1, 0, -8.7422805e-08, 0, 1, 0, 8.742277e-08, 0, -1.0000005, -16.091259, 22.036137, -0.7410164)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser27" unique_id=1382895763]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser27/AnimatableBody3D" unique_id=2108125182]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=1103463747]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=314312827]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1569170450]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1070509799]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=589934297]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=880025914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=1641690055]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=723694723]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=714509417]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=1454645539]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=111168183]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser27/AnimatableBody3D/Area3D" unique_id=1265271083]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser27/AnimatableBody3D" unique_id=1605460517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser27" unique_id=1045463360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser27" unique_id=498264475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser27" unique_id=1279550893 instance=ExtResource("4_olxdc")]
+move_duration = 0.2
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser27" unique_id=1928182008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser35" type="Node3D" parent="Obstacles" unique_id=119857765]
+transform = Transform3D(1, 0, 1.7484562e-07, 0, 1, 0, -1.7484552e-07, 0, 1.0000005, -11.877858, 22.036137, -0.7410162)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser35" unique_id=1995191329]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser35/AnimatableBody3D" unique_id=1322317567]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=645503163]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=1815385432]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1154333590]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=552075608]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=627768575]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=82470669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=245533357]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=1749486364]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=1560786893]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=1447305756]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=152878789]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser35/AnimatableBody3D/Area3D" unique_id=723411894]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser35/AnimatableBody3D" unique_id=1634710752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser35" unique_id=1383312054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser35" unique_id=1154826080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser35" unique_id=1928661257 instance=ExtResource("4_olxdc")]
+move_duration = 1.4
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser35" unique_id=1353008857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser28" type="Node3D" parent="Obstacles" unique_id=517602046]
+transform = Transform3D(-0.7071068, 0, -0.70710707, 0, 1, 0, 0.7071067, 0, -0.7071072, -7.1851463, 25.174507, 0.95388585)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser28" unique_id=2047038012]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser28/AnimatableBody3D" unique_id=85126419]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=1917116495]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=1726317697]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=743338740]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=553498836]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=1737218514]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1404697338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=1170589538]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=956957739]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=1163242488]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=1064514078]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=632599576]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser28/AnimatableBody3D/Area3D" unique_id=986606996]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser28/AnimatableBody3D" unique_id=1199214458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser28" unique_id=1718115295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser28" unique_id=32615076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser28" unique_id=108170507 instance=ExtResource("4_olxdc")]
+move_duration = 1.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser28" unique_id=1964196248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser32" type="Node3D" parent="Obstacles" unique_id=1271859623]
+transform = Transform3D(-4.371139e-08, 0, -1.0000005, 0, 1, 0, 1, 0, -4.371141e-08, -8.880048, 23.628078, -7.3633685)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser32" unique_id=1088716253]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser32/AnimatableBody3D" unique_id=1829218167]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=24108207]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=1933383716]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=1973543019]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1700377537]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=54650616]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1534593885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=1152021284]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=834673231]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=1613570903]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=205941864]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=550778082]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser32/AnimatableBody3D/Area3D" unique_id=509603843]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser32/AnimatableBody3D" unique_id=94370874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser32" unique_id=699205158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser32" unique_id=879527409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser32" unique_id=514098342 instance=ExtResource("4_olxdc")]
+move_duration = 1.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser32" unique_id=1300037967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser33" type="Node3D" parent="Obstacles" unique_id=1378104437]
+transform = Transform3D(-4.371138e-08, 0, 1.0000005, 0, 1, 0, -1, 0, -4.3711395e-08, -8.880048, 22.0056, -7.774177)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser33" unique_id=2009638495]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser33/AnimatableBody3D" unique_id=370869822]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=858439468]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=801602719]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=312991074]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=1257325397]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=1197599097]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=419147858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=865261026]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=135698510]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=97960463]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=1194627697]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=1347976536]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser33/AnimatableBody3D/Area3D" unique_id=2117653054]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser33/AnimatableBody3D" unique_id=1318202623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser33" unique_id=1890258843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser33" unique_id=1971507820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser33" unique_id=1849622814 instance=ExtResource("4_olxdc")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser33" unique_id=1580665074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
+stream = ExtResource("5_afn4x")
+max_db = 0.0
+
+[node name="Laser34" type="Node3D" parent="Obstacles" unique_id=1935875667]
+transform = Transform3D(-4.371139e-08, 0, -1.0000005, 0, 1, 0, 1, 0, -4.371141e-08, -8.880048, 25.037554, 2.1986716)
+script = ExtResource("2_yekxc")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/Laser34" unique_id=150917130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Area3D" type="Area3D" parent="Obstacles/Laser34/AnimatableBody3D" unique_id=1722423459]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sketchfab_Scene" type="Node3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=259106062]
+
+[node name="Sketchfab_model" type="Node3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D/Sketchfab_Scene" unique_id=625525067]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
+
+[node name="55a0331cfd884e69ae2662c277b2e577_fbx" type="Node3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model" unique_id=645048773]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx" unique_id=696806120]
+
+[node name="Scifi_WidthLaser_barrier" type="Node3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode" unique_id=797741976]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 0, 0, 0)
+
+[node name="Scifi_WidthLaser_barrier_Scifi_Tunnel_Texture_0" type="MeshInstance3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D/Sketchfab_Scene/Sketchfab_model/55a0331cfd884e69ae2662c277b2e577_fbx/RootNode/Scifi_WidthLaser_barrier" unique_id=1110384055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1088017e-07, 0.6805777)
+mesh = SubResource("ArrayMesh_luatw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=1208982912]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.007568364, 0.7389897, 0.0016479492)
+shape = SubResource("BoxShape3D_akonu")
+
+[node name="LaserObject" type="CSGCylinder3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=1690663389]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.2635787, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject2" type="CSGCylinder3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=472741734]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.5736942, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject3" type="CSGCylinder3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=197989877]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 0.8814709, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject4" type="CSGCylinder3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=1692707238]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="LaserObject5" type="CSGCylinder3D" parent="Obstacles/Laser34/AnimatableBody3D/Area3D" unique_id=594473048]
+transform = Transform3D(-2.1855695e-09, 2, 0, -0.05, -8.742278e-08, 0, 0, 0, 0.05, -0.010498047, 1.1788924, 0)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+radius = 0.576
+height = 1.5895996
+material = SubResource("StandardMaterial3D_o453y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Laser34/AnimatableBody3D" unique_id=1597506218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011474609, 0.70910645, 0.059936523)
+shape = SubResource("BoxShape3D_lrqr7")
+
+[node name="Marker3D" type="Marker3D" parent="Obstacles/Laser34" unique_id=294246863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, 9.999995)
+
+[node name="Marker3D2" type="Marker3D" parent="Obstacles/Laser34" unique_id=910349592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, -9.999995)
+
+[node name="MoveComponent" parent="Obstacles/Laser34" unique_id=128992154 instance=ExtResource("4_olxdc")]
+move_duration = 1.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Obstacles/Laser34" unique_id=1570863141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 0, 0, 0)
 stream = ExtResource("5_afn4x")
 max_db = 0.0
@@ -1697,6 +2943,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.000005, 15, 9)
 [node name="AddTime9" parent="." unique_id=813420179 instance=ExtResource("9_luatw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.000005, 23, -9)
 
+[node name="AddTime10" parent="." unique_id=249500149 instance=ExtResource("9_luatw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.000005, 21, -9)
+
+[node name="AddTime11" parent="." unique_id=594116395 instance=ExtResource("9_luatw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.000005, 19, -9)
+
 [node name="Structure" type="Node3D" parent="." unique_id=1118504127]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=609665302]
@@ -1730,6 +2982,12 @@ material = SubResource("StandardMaterial3D_lq5y7")
 
 [node name="Ceiling5" type="CSGBox3D" parent="Structure" unique_id=221208837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 23.045818, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_lq5y7")
+
+[node name="Ceiling7" type="CSGBox3D" parent="Structure" unique_id=740715715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30.045818, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lq5y7")
@@ -2417,6 +3675,7 @@ area_range = 11.538
 
 [node name="AreaLight3D61" type="AreaLight3D" parent="Lighting" unique_id=1494305623]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, 0)
+visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -2447,6 +3706,7 @@ area_range = 11.538
 
 [node name="AreaLight3D64" type="AreaLight3D" parent="Lighting" unique_id=287627281]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 25, 10)
+visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -2477,6 +3737,7 @@ area_range = 11.538
 
 [node name="AreaLight3D67" type="AreaLight3D" parent="Lighting" unique_id=1429332848]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 25, -10)
+visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -2507,6 +3768,7 @@ area_range = 11.538
 
 [node name="AreaLight3D70" type="AreaLight3D" parent="Lighting" unique_id=580614506]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, 0)
+visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -2561,6 +3823,7 @@ visible = false
 [connection signal="body_entered" from="Obstacles/Laser5/AnimatableBody3D/Area3D" to="Obstacles/Laser5" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser12/AnimatableBody3D/Area3D" to="Obstacles/Laser12" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser13/AnimatableBody3D/Area3D" to="Obstacles/Laser13" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser36/AnimatableBody3D/Area3D" to="Obstacles/Laser36" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser19/AnimatableBody3D/Area3D" to="Obstacles/Laser19" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser29/AnimatableBody3D/Area3D" to="Obstacles/Laser29" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser20/AnimatableBody3D/Area3D" to="Obstacles/Laser20" method="_on_area_3d_body_entered"]
@@ -2568,6 +3831,18 @@ visible = false
 [connection signal="body_entered" from="Obstacles/Laser17/AnimatableBody3D/Area3D" to="Obstacles/Laser17" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser15/AnimatableBody3D/Area3D" to="Obstacles/Laser15" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser16/AnimatableBody3D/Area3D" to="Obstacles/Laser16" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser18/AnimatableBody3D/Area3D" to="Obstacles/Laser18" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser21/AnimatableBody3D/Area3D" to="Obstacles/Laser21" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser30/AnimatableBody3D/Area3D" to="Obstacles/Laser30" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser31/AnimatableBody3D/Area3D" to="Obstacles/Laser31" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser22/AnimatableBody3D/Area3D" to="Obstacles/Laser22" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser23/AnimatableBody3D/Area3D" to="Obstacles/Laser23" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser24/AnimatableBody3D/Area3D" to="Obstacles/Laser24" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser25/AnimatableBody3D/Area3D" to="Obstacles/Laser25" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser26/AnimatableBody3D/Area3D" to="Obstacles/Laser26" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser27/AnimatableBody3D/Area3D" to="Obstacles/Laser27" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser35/AnimatableBody3D/Area3D" to="Obstacles/Laser35" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser28/AnimatableBody3D/Area3D" to="Obstacles/Laser28" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser32/AnimatableBody3D/Area3D" to="Obstacles/Laser32" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser33/AnimatableBody3D/Area3D" to="Obstacles/Laser33" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Obstacles/Laser34/AnimatableBody3D/Area3D" to="Obstacles/Laser34" method="_on_area_3d_body_entered"]

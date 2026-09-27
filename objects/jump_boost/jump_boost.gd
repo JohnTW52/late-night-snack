@@ -48,7 +48,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			_player_entered = true
 			_boost_timer += _boost_time
 			if _player.jump_height == _default_jump_height:
-				print("Setting jump boost")
 				_set_player_boost_stats()
 			$bling.play()
 		else:

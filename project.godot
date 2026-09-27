@@ -34,6 +34,19 @@ project/assembly_name="Late Night Snack"
 
 enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "red",
+"res://autoloads/": "orange",
+"res://config/": "yellow",
+"res://levels/": "green",
+"res://objects/": "teal",
+"res://player/": "blue",
+"res://sfx/": "purple",
+"res://ui/": "pink"
+}
+
 [global_group]
 
 "pause me"="aaahhhh"

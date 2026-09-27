@@ -8,7 +8,7 @@ var timer_vals: Dictionary = {
 	2: 15.0,
 	3: 20.0,
 	4: 15.0,
-	5: 7.0,
+	5: 10.0,
 	6: 12.0,
 	7: 60.0,
 	8: 60.0,
@@ -22,18 +22,19 @@ var timer_vals: Dictionary = {
 	"res://levels/level02.tscn",
 	"res://levels/level03.tscn",
 	"res://levels/level04.tscn",
+	"res://levels/secret_spin_level.tscn",
 	"res://levels/level05.tscn",
 	"res://levels/level06.tscn",
 	"res://levels/level07.tscn",
 	"res://levels/level08.tscn",
-	"res://levels/level09.tscn",
+	"res://levels/level09.tscn"
 ]
 
 func _ready() -> void:
 	just_changed_level = false
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("restart level"):
 		get_tree().reload_current_scene();
 		game_over = false
@@ -93,7 +94,7 @@ func has_next_level() -> bool:
 	return false
 
 func increment_level_index() -> void:
-	#sync_level_index()
+	sync_level_index()
 	level_index += 1
 
 func get_timer_val() -> float:
