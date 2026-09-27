@@ -1,17 +1,15 @@
 extends Node
 
-var save_path = "user://save"
-
 var just_changed_level := false
 var game_over: bool = false
 var level_index: int
 var timer_vals: Dictionary = {
 	1: 10.0,
 	2: 15.0,
-	3: 20.0,
+	3: 10.0,
 	4: 15.0,
 	5: 10.0,
-	6: 10.0,
+	6: 20.0,
 	7: 60.0,
 	8: 60.0,
 	9: 60.0,
@@ -35,12 +33,16 @@ var level_completion_data: Array[int] = [
 	0, -1, -1, -1, -1, -1, -1, -1, -1, -1 # last one is secret level
 ]
 
+var total_fails : int = 0
+
 func _ready() -> void:
 	load_data()
 	just_changed_level = false
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("restart level"):
+		total_fails += 1;
+		save_data()
 		get_tree().reload_current_scene();
 		game_over = false
 	
@@ -108,17 +110,23 @@ func get_timer_val() -> float:
 
 func on_game_over() -> void:
 	get_tree().change_scene_to_file(levels[level_index])
+	total_fails += 1;
+	save_data()
 	game_over = false
 
 func save_data():
-	var file = FileAccess.open("user://save.dat", FileAccess.WRITE)
+	var file = FileAccess.open("user://level.dat", FileAccess.WRITE)
 	file.store_var(level_completion_data)
+	var file2 = FileAccess.open("user://fails.dat", FileAccess.WRITE)
+	file2.store_var(total_fails)
 	
 func load_data(): # called when menu loads
-	if not FileAccess.file_exists("user://save.dat"):
-		return
-	var file = FileAccess.open("user://save.dat", FileAccess.READ)
-	level_completion_data = file.get_var()
+	if FileAccess.file_exists("user://level.dat"):
+		var file = FileAccess.open("user://level.dat", FileAccess.READ)
+		level_completion_data = file.get_var()
+	if FileAccess.file_exists("user://fails.dat"):
+		var file2 = FileAccess.open("user://fails.dat", FileAccess.READ)
+		total_fails = file2.get_var()
 
 # for testing purposes
 #func reset_save():

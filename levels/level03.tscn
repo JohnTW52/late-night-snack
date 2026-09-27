@@ -1,257 +1,465 @@
-[gd_scene format=4 uid="uid://78l7kbiv71ka"]
+[gd_scene format=3 uid="uid://cb771w8bd60qi"]
 
-[ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_ri3il"]
-[ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_bsp3h"]
-[ext_resource type="PackedScene" uid="uid://ccxkj8n7gy6el" path="res://objects/components/spin_component.tscn" id="2_ijvsb"]
-[ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_gfovl"]
-[ext_resource type="Texture2D" uid="uid://bh5j40hpki81u" path="res://objects/dining_scene/textures/dining_scene_6.png" id="3_gky32"]
-[ext_resource type="Texture2D" uid="uid://bw8mkx32hulxt" path="res://objects/dining_scene/textures/dining_scene_7.png" id="4_42w8j"]
-[ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_dqrp8"]
-[ext_resource type="PackedScene" uid="uid://cthddd5p1chx2" path="res://objects/dining_scene/individual_scenes/knife.tscn" id="4_i155e"]
-[ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="5_0j27q"]
-[ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_i155e"]
-[ext_resource type="Texture2D" uid="uid://df56x07wv6uis" path="res://objects/dining_scene/textures/dining_scene_8.png" id="5_t3isr"]
-[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_nlg5r"]
-[ext_resource type="PackedScene" uid="uid://dk1wax506w1r6" path="res://objects/food/sandwich_toast.tscn" id="6_osxv8"]
-[ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_2fkce"]
-[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_rqdcb"]
-[ext_resource type="PackedScene" uid="uid://b5fa5gtdrquyt" path="res://objects/dining_scene/individual_scenes/plate.tscn" id="9_gfovl"]
-[ext_resource type="PackedScene" uid="uid://cejlqgj6motxy" path="res://objects/dining_scene/individual_scenes/moving_chair.tscn" id="10_dqrp8"]
-[ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="12_i155e"]
-[ext_resource type="PackedScene" uid="uid://no8hbx3i7864" path="res://objects/food/chicken_leg.tscn" id="13_2fkce"]
-[ext_resource type="VoxelGIData" uid="uid://dyq8d8oa1wt45" path="res://levels/light_resources/level03.VoxelGI_data.res" id="13_srsp4"]
-[ext_resource type="PackedScene" uid="uid://b5kk1b6hu045o" path="res://objects/food/popcorn.tscn" id="14_rqdcb"]
-[ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="17_osxv8"]
-[ext_resource type="PackedScene" uid="uid://cs2xbvd35rgl2" path="res://objects/dining_scene/individual_scenes/chair.tscn" id="17_tdng2"]
+[ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_ntv8x"]
+[ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_756aw"]
+[ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_g61hi"]
+[ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_2hexr"]
+[ext_resource type="PackedScene" uid="uid://uw48p44klomk" path="res://objects/feather_fall/feather_fall.tscn" id="4_756aw"]
+[ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_dfnf4"]
+[ext_resource type="PackedScene" uid="uid://damq3lemb6828" path="res://objects/food/pizza.tscn" id="5_fy4ed"]
+[ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="5_plqi5"]
+[ext_resource type="PackedScene" uid="uid://gc0mhougms2u" path="res://objects/lights/flickering_light.tscn" id="6_dfnf4"]
+[ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_fk2yf"]
+[ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_plqi5"]
+[ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_fy4ed"]
+[ext_resource type="PackedScene" uid="uid://1jqak860km1l" path="res://objects/microwave/fake_microwave.tscn" id="10_g61hi"]
+[ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="11_2hexr"]
+[ext_resource type="PackedScene" uid="uid://62a0p7cmfmlk" path="res://objects/laser/laser.tscn" id="13_fk2yf"]
 
-[sub_resource type="Environment" id="Environment_0j27q"]
+[sub_resource type="Environment" id="Environment_j2t4w"]
 glow_intensity = 4.32
 fog_enabled = true
 fog_light_energy = 0.22
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_tdng2"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_q3yi1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lhy4b"]
-resource_name = "PlateAndCutlery"
-cull_mode = 2
-albedo_texture = ExtResource("3_gky32")
-metallic = 1.0
-metallic_texture = ExtResource("4_42w8j")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("4_42w8j")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("5_t3isr")
-ao_enabled = true
-ao_texture = ExtResource("4_42w8j")
-metadata/_gltf_primary_texture_coord = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_hj0b6"]
-_surfaces = [{
-"aabb": AABB(-1.2827556, -1.3487701, -0.07003212, 2.5655112, 2.6975384, 0.136168),
-"format": 34896654337,
-"index_count": 360,
-"index_data": PackedByteArray("CAAgACEAIQAiAAgAHAAgAAgACAAjABwACAAiACMAHAAjACQAIQAlACIAGwAgABwAHAAkABsAIQAgAAoACgAlACEAIgAPACMAIwACACQAIwAPAAIAIgAEAA8AJQAEACIAHQACAA8ACgAmACUAJQASAAQAJgASACUAEAAPAAQAEAAdAA8AHgAEABIAHgAQAAQAEQAmAAoACgAgABEAJgAJABIAJwAeABIAJwASAAkAEQAoACYAKAAJACYAFQAoABEAEQAgABUAKAAHAAkAFAAnAAkAFAAJAAcAFQApACgAKQAHACgAFQAgAAYABgApABUABgAgABcABgAqACkAFwAqAAYAKQALAAcAKgALACkAFwAgAA0ADQAgABsAFwArACoADQArABcAKgAFAAsAKwAFACoAGwAsAA0ADQAsACsAGwAkACwAKwAZAAUALAAZACsAJAADACwALAADABkAJAACAAMALQADAAIAHQAtAAIAGgAZAAMALQAaAAMAGAAFABkAGgAYABkAGAAWAAUAFgALAAUAAQAYABoAFgAuAAsALgAHAAsALgAUAAcALwAWABgALwAYAAEADAAuABYADAAWAC8AMAAUAC4AMAAuAAwAEwAUADAAEwAnABQAMQAwAAwAMgATADAAMQAyADAAAAAnABMAAAAeACcAMgAzABMAMwAAABMAMQA0ADIAMgA0ADMANQAxAAwANQAMAC8ANQA0ADEANgA1AC8ANgA0ADUANgAvAAEAMwA3AAAAMwA0ADcAOAAeAAAANwA4AAAAOAAQAB4ANwA5ADgANwA0ADkAHwAQADgAOQAfADgAHwAdABAAOQA0ADoAOQA6AB8ADgAdAB8AOgAOAB8ADgAtAB0AOgA0ADsAOgA7AA4APAAtAA4AOwA8AA4APAAaAC0AAQAaADwAOwA9ADwAPQABADwAOwA0AD0APQA2AAEAPQA0ADYA"),
-"lods": [0.35654244, PackedByteArray("CgAIABEAEQAJAAoACgASAAgACgAJABIAEQAHAAkAEwASAAkAFAAJAAcAFAATAAkAFQAHABEAEQAIABUADAAUAAcAEwAUAAwAFQALAAcADAAHAAsABgALABUAFQAIAAYAFgAMAAsADAABABMADAAWAAEABgAFAAsAFgALAAUAFwAFAAYABgAIABcAGAAWAAUAAQAWABgAFwAZAAUAGAAFABkADQAZABcAFwAIAA0AGgAYABkAAQAYABoADQADABkAGgAZAAMAGwADAA0ADQAIABsADgAaAAMAAQAaAA4AGwACAAMADgADAAIAGwAIABwAHAACABsACAAPABwAHAAPAAIACAAEAA8AEgAEAAgAHQACAA8AHQAOAAIAEAAPAAQAEAAdAA8AHgAEABIAHgAQAAQAEwAeABIADgAdAB8AHwAdABAAHwABAA4AAAAQAB4AHwAQAAAAAAAeABMAAAABAB8AEwABAAAA"), 0.95357394, PackedByteArray("CgAIAAYACgAJAAgACgAHAAkABgAHAAoABwAAAAkABgALAAcADAAHAAsAAAAHAAwABgAFAAsABQAMAAsADAAFAAEADAABAAAABgADAAUAAQAFAAMADQADAAYABgAIAA0AAQADAA4AAAABAA4ADQACAAMACAACAA0ADgADAAIACAAPAAIADwAOAAIADgAQAAAADgAPABAAAAAQAAQAEAAPAAQACAAEAA8AAAAEAAkACQAEAAgA"), 2.6871338, PackedByteArray("AAABAAIAAQADAAIAAgAEAAAAAQAFAAMABgACAAMABgADAAUABwAFAAEABgAFAAcABwABAAAACAACAAYABgAHAAgACAAEAAIABwAAAAkACAAHAAkAAAAEAAkACQAEAAgA")],
-"name": "PlateAndCutlery",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 62,
-"vertex_data": PackedByteArray("/39AHjNKAAD/f77hM0oAAAAAjaf//wAA5DCM5///AADkMHIY//8AABrPjOf//wAA1rV5xmt0AAD//3FY//8AAChKhTlrdAAAGs9yGP//AADWtYU5a3QAAP//jaf//wAAvuEznjNKAAAoSnnGa3QAAEAeM54zSgAAAABxWP//AADkMHIYAK0AABzXFGVrdAAA/38AAP//AABovOswM0oAAP//cVgArQAAHNfqmmt0AAAaz4znAK0AAP9/HNdrdAAA/3///wCtAAD/f/////8AAOQwjOcArQAA4ijqmmt0AADiKBRla3QAAAAAcVgArQAA/38AAACtAABAHsthM0oAAP9//39rdAAA/3/iKGt0AAAmRkY0VqoAAGYiE2NWqgAAZiLrnFaqAAD/f2YiVqoAANi5RjRWqgAAGs9yGACtAACY3RNjVqoAAJjd65xWqgAA2Lm4y1aqAAD/f5jdVqoAACZGuMtWqgAAAACNpwCtAAD//42nAK0AAGi8E88zSgAAvuHLYTNKAAA+1/WaAAAAAD7XCWUAAAAA67VpOQAAAAD/f/9/AAAAAOu1lcYAAAAA/38+1wAAAAD/f8AoAAAAAJZD6zAzSgAAE0ppOQAAAADAKAllAAAAAMAo9ZoAAAAAlkMTzzNKAAATSpXGAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_e8ksf"]
-resource_name = "Sketchfab_Scene_Plate_001_PlateAndCutlery_0"
-_surfaces = [{
-"aabb": AABB(-1.2827556, -1.3487701, -0.07003212, 2.5655112, 2.6975384, 0.136168),
-"attribute_data": PackedByteArray("HFoSZxxaEmddOrQ+diXOPksixxpLIscafi4JPsI61j1MAOZVTADmVY8UmDpWzas+DQBSLQ0AUi1keF85Mko1PgA/OoEAPzqBgQJ8Phw7AT8NPg0ADT4NAD81eD5keF85yXvSVMl70lT1k/c+xaWpPsl75yzJe+cs9ZP3Ph+eMz5Yj1wxWI9cMUJZDz/8c0U+kNz2C5Dc9gsKkVw/22c/PbC3DQCwtw0Ao7E3P2R4XzkPfAIrD3wCK4If+D6qCiw+mpIzcZqSM3EGmxI/8mfiPgTgvEsE4LxLfgVgP456lz5m8xBSZvMQUtdncz9YIaQ+lbdQfZW3UH1+ljc/u6H6Pju9iIU7vYiF+Ts9P6aIBT9Ri4iFUYuIhWZSCz+liAU/O706yju9Osr5Oz0/eTtKP1GLOspRizrKZ1ILP3k7Sj84ERhQOBEYUMXGiT0LMaA+bhigdm4YoHaTcsM9zkHtPgA/9H4AP/R+tAR8PvTq/T7/WdAa/1nQGvv/sz4Uh9Y9QmR7DEJkewz0hMg+K7lHPae3aRSnt2kUpag3PwJNoz1m804rZvNOK9dncz87OS0+5XuqUeV7qlHTy/c+QFWjPqW33Gilt9xoH6Y3P/m40T6nzMKap8zCmneoTD9Gwxo/p8wAtafMALV3qEw/1wA1P0akVtJGpFbSMEckP0xXUj/lewC15XsAtdPL9z7XADU/5XvCmuV7wprTy/c+RsMaP+cis2fnIrNn1Z4LPtFnzz4Za5BPGWuQTwI01j4QIZ8+L2Macy9jGnMrX8Y+wjbmPnxk+XR8ZPl0b/nIPmn06T7OGb10zhm9dIpzzj1OfOk+lHmQLZR5kC3mKvM++EI2PkICFS5CAhUuUaMQPDxWOD67F4gMuxeIDAngvT0EjUg9/z1eAv89XgKM/3c+WrsXPA8ZcQ4PGXEOfH3IPcYYZz2W0IIcltCCHJuXUD8qGOQ92pLWC9qS1gsJ2xI/QHA9PQLgoDEC4KAx3gNgP42CRj5Qj3BLUI9wSyBRDz/y4JY+ldDUYJXQ1GBZllA/N6nBPrOeq2CznqtgArQePz5XwT6J3GJxidxicfeJXD99xeI+RqThp0ak4acwRyQ/DuInP0akbH1GpGx9MEckP5nZ+j56JS0feiUtH0rsFT5/avk9RT4bQUU+G0F0F3k+WTeCPis+JRcrPiUXBq54Pt4suT0wPrsRMD67ERjBeD6G2o09zlYsH85WLB9xna0+4WP5PR1rdDIda3QyVTzWPsPTST78ZRo0/GUaNP35yz7XalA+22JRDttiUQ7Nt8U+zhtlPZ95EVSfeRFUGkDzPhEjqD7+ZeVN/mXlTU3+yz5wzJs+9FbDYvRWw2Js6a0+5IbFPsM+RnDDPkZw7BB7PuWM4D6yPvFqsj7xapHLej764tU+BCZDYwQmQ2OwERg+bIjGPogCNlWIAjZVwx0iPBtuqj4KEZsyChGbMklTiD0Tb0o+ZBZXTmQWV079I7M9a7CcPkEWRzRBFkc0ABCyPe8dUT6b0rQZm9K0GS+cUj81ps09p7f0EKe39BBEqDc/b6SHPbacjRm2nI0ZKrccP4dpzD28nlccvJ5XHMW8Hj9+uuI9SuOLMErjizAsS2M/Ki5CPk3jzExN48xMXU5jP/aYmT6d0p9jndKfY8+eUj9YQMc+pbdTbKW3U2yrpjc/QafYPqOcfmOjnH5ji6QcPx79xj4GjH1MBox9TOMGDD/h+5g+GoxMMBqMTDCmGgw/gjJBPg=="),
-"format": 34896654455,
-"index_count": 360,
-"index_data": PackedByteArray("EQAzADQANAAzABAAIQAzABEAEAAzAB0AIAAzACEAHQAzAB4AEwAzACAAHgAzABIAHwAzABMAEgAzAB8ANQA2ADcANQA3ADgANwA2ADkANwA5ABcANwAXADgAOQA6ABcANQA4AAEAOQA7ADoAOQA2ADsAOgA8ABcAFwAqADgAFwA8ACoAOAAqACsAOAArAAEAKgA8ABgAKgAYAAUAKwAqAAUAPAAHABgAKwAFACkAPAAnAAcAOgAnADwAJwAGAAcAKAArACkAAQArACgAKAApAAMAIwAnADoAJwA9AAYAIwA9ACcAPQAlAAYAOwAjADoAPQAkACUAJAAEACUAAAA9ACMAAAAkAD0AOwA+ACMAPgAAACMAOwA2AD4APgA/AAAAPgA2AD8AQAAkAAAAPwBAAAAAJAAWAAQAQAAWACQAFgAVAAQAPwBBAEAAPwA2AEEAIgAWAEAAQQAiAEAAFgAmABUAIgAmABYAJgACABUAQQBCACIAQQA2AEIAFAAmACIAQgAUACIAJgBDAAIAFABDACYAQwADAAIAQwAoAAMARAAoAEMARABDABQAAQAoAEQAQgBFABQARQBEABQAQgA2AEUARgABAEQARQBGAEQARQA2AEYARgA1AAEARgA2ADUARwAKAEgASAAKAC0ARwAJAAoALABHAEgALABIABkALgBHACwASAAtAEkAGQBIAEkASQAtAAsAGQBJAEoASwAJAEcALgBLAEcASwAaAAkADQBLAC4ATAAaAEsADQBMAEsATAAOABoAMABMAA0ATQAOAEwAMABNAEwATQAyAA4AHABNADAATgAyAE0AHABOAE0ATgAPADIAMQBOABwATwAPAE4AMQBPAE4ATwAMAA8ALwBPADEAUAAMAE8ALwBQAE8AUAAbAAwACABQAC8AUQAbAFAACABRAFAAUQALABsASgBRAAgASQALAFEASgBJAFEA"),
-"lods": [0.35654244, PackedByteArray("EAARAB0AHQARAB4AHgARABIAEgARAB8AHwARABMAEwARACAAIAARACEAAAABACIAIgAWAAAAIwABAAAAAAAWACQAAAAkACMAJAAWAAQAJAAEACUAIwAkACUAFgAVAAQAIwAlAAYAFgAmABUAIgAmABYAJgACABUAFAAmACIAJgAUAAIAIgABABQAFAADAAIAJwAjAAYAJwAGAAcAIwAnABcAFwAnAAcAFwABACMAFwAHABgAFAAoAAMAAQAoABQAKAApAAMAKgAXABgAFwAqAAEAKgAYAAUAAQArACgAAQAqACsAKAArACkAKwAqAAUAKwAFACkALAAKABkAGQAKAC0ALAAJAAoAGQAtAAgALgAJACwALQALAAgALgAaAAkACAALABsADQAaAC4ACAAbAC8ADQAOABoALwAbAAwAMAAOAA0ALwAMADEAMAAyAA4AMQAMAA8AHAAyADAAMQAPABwAHAAPADIA"), 0.95357394, PackedByteArray("EAARABIAEgARABMAAAABABQAAQADABQAFAADAAIAAQAFAAMAFQAUAAIAFAAVABYAFAAWAAAAFgAVAAQAAAAWAAQAAAAEAAYABwAAAAYAFwAFAAEAFwABAAAAAAAHABcABQAXABgAFwAHABgAGQAJAAoADQAJABkADQAaAAkAGQAKAAgADQAOABoACgALAAgADQAPAA4ACAALABsAHAAPAA0ACAAbAAwAHAAMAA8ACAAMABwA"), 2.6871338, PackedByteArray("AAABAAIAAQADAAIAAgAEAAAAAQAFAAMAAAAEAAYABwAFAAEABwABAAAABwAAAAYACAAJAAoACgALAAgACAALAAwADQAJAAgACAAMAA0ADQAOAAkADQAMAA8ADQAPAA4A")],
-"material": SubResource("StandardMaterial3D_lhy4b"),
-"name": "PlateAndCutlery",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 82,
-"vertex_data": PackedByteArray("/39AHjNK4fb/f77hM0rf9gAAjaf//43x5DCM5///+dXkMHIY//8+phrPjOf//4KmGs9yGP//wNX//3FY////8ShKhTlrdLyb//9xWP//wq8az3IY///cqeQwchj//4WlAACNp///pK/WtXnGa3TomxrPjOf//5Gl5DCM5///16nWtYU5a3SpiShKhTlrdKmJ1rV5xmt0qYkoSnnGa3SpiUAeM54zStb/AABxWP//qcTkMHIYAK29277hM54zSlH6//+Np///nMXWtYU5a3RHm///jaf//42uAABxWP//aq4oSnnGa3RRmxzXFGVrdKeJHNfqmmt0p4n/fxzXa3SlieIo6pprdKeJ4igUZWt0p4lAHsthM0o8+mi86zAzSmf6/38AAACtz9r/fwAA//+LqQAAcVgArZLo//9xWACtP//kMIznAK3y5v9//////5GpGs+M5wCt3tv/f///AK3L2hzXFGVrdNib/38AAP//GqUc1+qaa3QznOIoFGVrdPqb/38c12t0YZviKOqaa3TPm/9//////yCl/3//f2t0AID/f+Ioa3Slif9/PtcAAA74/3//fwAA///rtZXGAAAS+Gi8E88zSt32Ptf1mgAAGPu+4cthM0rq/z7XCWUAAPv///+NpwCt8egaz3IYAK3s5uu1aTkAABH7/3/AKAAAEPiWQ+swM0rZ9hNKaTkAAA74wCgJZQAADfsAAI2nAK1q/5ZDE88zSm76wCj1mgAA+f8TSpXGAAAS+5jdE2NWqmOb2LlGNFaqL5v/f2YiVqrmmv9/4ihrdE+bmN3rnFaqMJvYubjLVqrumv9/mN1WqvmaJka4y1aqNJtmIuucVqo+m2YiE2NWqvaaJkZGNFaq2ZrGHmqiY+HEXRZhMJGF8cok3D+Smuq/BmZjDhjbAp/9bj/mexKTJ40ksBOdPTgyYtNE2HTbrRmm7crNfCxF7F7CpcxQuK7HpkxQOFizWTOuR9Qo652+WciUESrim2LZXWJPpttruvVs4G8/GAZNwAn6PgqMH1eiI+EhYaTdAAD/f6Vd3R7anlciSydrnpYdoqYnFmWhABQKwgA59JoiFSi67O4JUPnr5T1L1u1k+OnLXpPmQO2/D/2zb92W/80iUABDCobgcxnAEjfw5kv/f////v//f7jhnV5v4HBgTN50Yc7daGGV2n5iudesYt4chaZ2x91lBhHnrxodAqWFHqahhSL7nh4iCJ/aJf+dlOqeRSviHVnUJjGd3uL2WlTmSu2/9ZPg2PXDH731ix9sI/X/6hn97CgKUOA8CmgfzBm7El3cJAAL5hIT")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_hj0b6")
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_wfdtc"]
-height = 0.12390137
-radius = 1.3198242
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osxv8"]
-albedo_texture = ExtResource("2_bsp3h")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0040"]
+albedo_texture = ExtResource("2_756aw")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [node name="Level02" type="Node3D" unique_id=421491462]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1652815732]
-environment = SubResource("Environment_0j27q")
-camera_attributes = SubResource("CameraAttributesPractical_tdng2")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=443440868]
+environment = SubResource("Environment_j2t4w")
+camera_attributes = SubResource("CameraAttributesPractical_q3yi1")
 
-[node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_ri3il")]
+[node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_ntv8x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9983726, 1.0500007, -7.257905)
+
+[node name="Obstacles" type="Node3D" parent="." unique_id=492550979]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
 
-[node name="Upgrades" type="Node3D" parent="." unique_id=2046558736]
+[node name="Structure" type="Node3D" parent="." unique_id=1604509711]
 
-[node name="Obstacles" type="Node3D" parent="." unique_id=2057828465]
-
-[node name="SpinningPlate" type="Node3D" parent="Obstacles" unique_id=2014087753]
-transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 5, 1, -5)
-
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/SpinningPlate" unique_id=386691065]
-sync_to_physics = false
-
-[node name="SpinComponent" parent="Obstacles/SpinningPlate/AnimatableBody3D" unique_id=1733262393 instance=ExtResource("2_ijvsb")]
-transform = Transform3D(1, 0, 0, 0, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 0)
-
-[node name="PlateObject" type="MeshInstance3D" parent="Obstacles/SpinningPlate/AnimatableBody3D" unique_id=954770935]
-transform = Transform3D(0.99999994, 0, 4.440892e-16, 0, 0.99999994, -3.5527137e-15, 4.440892e-16, 3.5527137e-15, 0.9999999, 0, 0, 0)
-mesh = SubResource("ArrayMesh_e8ksf")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/SpinningPlate/AnimatableBody3D" unique_id=1716451557]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.3711395e-08, 0, 2.2143752e-10, -0.005065926)
-shape = SubResource("CylinderShape3D_wfdtc")
-
-[node name="SpinningPlate2" type="Node3D" parent="Obstacles" unique_id=347129625]
-transform = Transform3D(0.39595467, 0.056744006, 2.4803595e-09, 1.500832e-16, -1.7484554e-08, 0.4, 0.056744006, -0.39595467, -1.7307727e-08, 7, 1.746006, -3)
-
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Obstacles/SpinningPlate2" unique_id=1357612063]
-sync_to_physics = false
-
-[node name="SpinComponent" parent="Obstacles/SpinningPlate2/AnimatableBody3D" unique_id=1574905824 instance=ExtResource("2_ijvsb")]
-transform = Transform3D(1, 0, 0, 0, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 0)
-
-[node name="PlateObject" type="MeshInstance3D" parent="Obstacles/SpinningPlate2/AnimatableBody3D" unique_id=145787613]
-transform = Transform3D(0.99999994, 0, 4.440892e-16, 0, 0.99999994, -3.5527137e-15, 4.440892e-16, 3.5527137e-15, 0.9999999, 0, 0, 0)
-mesh = SubResource("ArrayMesh_e8ksf")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/SpinningPlate2/AnimatableBody3D" unique_id=367636343]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.3711395e-08, 0, 2.2143752e-10, -0.005065926)
-shape = SubResource("CylinderShape3D_wfdtc")
-
-[node name="Plate3" parent="Obstacles" unique_id=1234702622 instance=ExtResource("9_gfovl")]
-transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 4.728446, 2.913979, -0.6708102)
-
-[node name="Plate4" parent="Obstacles" unique_id=1868426124 instance=ExtResource("9_gfovl")]
-transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 6.783132, 4.3170166, 1.7717276)
-
-[node name="Plate6" parent="Obstacles" unique_id=1036570207 instance=ExtResource("9_gfovl")]
-transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 3.161155, 5.629191, 3.832625)
-
-[node name="Plate5" parent="Obstacles" unique_id=260392177 instance=ExtResource("9_gfovl")]
-transform = Transform3D(0.3959547, 0.05674401, 2.4803595e-09, 0, -1.7484556e-08, 0.4, 0.05674401, -0.3959547, -1.7307729e-08, 8.71932, 2.5067813, 8.889471)
-
-[node name="Chair" parent="Obstacles" unique_id=1070338695 instance=ExtResource("10_dqrp8")]
-transform = Transform3D(2.1657897e-08, -9.2442995e-09, 0.15, -0.14999689, 0.0009668325, 2.9802315e-08, -0.00096683064, -0.14999689, -1.0141421e-08, -9, 10, 0)
-
-[node name="Knife_001" parent="Obstacles" unique_id=1485426572 instance=ExtResource("4_i155e")]
-transform = Transform3D(0.29756317, -0.7131556, 0.20703791, -0.032944888, 0.21014346, 0.77120334, -0.74186957, -0.295378, 0.048795186, 4.287088, 3.193059, 7.4496455)
-
-[node name="Fridge" parent="Obstacles" unique_id=1724268238 instance=ExtResource("5_0j27q")]
-transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -2, 0, 5)
-
-[node name="Sandwich_Toast" parent="Obstacles" unique_id=548936730 instance=ExtResource("6_osxv8")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.1623602, 5.740596, 3.7214067)
-
-[node name="Chair2" parent="Obstacles" unique_id=120038101 instance=ExtResource("17_tdng2")]
-transform = Transform3D(-0.005843275, -1.3082172e-08, 0.14988615, 0, -0.15, -1.3113417e-08, 0.14988615, -4.656613e-10, 0.0058432757, -9.348975, 7.4500003, 6.9474106)
-
-[node name="Chair3" parent="Obstacles" unique_id=1730127617 instance=ExtResource("17_tdng2")]
-transform = Transform3D(0.0029216267, 0.0050604315, 0.14988615, -0.12990381, 0.075, -1.2572855e-08, -0.07494308, -0.1298052, 0.005843275, -9.276434, 8.943556, 5.235583)
-
-[node name="ChickenLeg" parent="Obstacles" unique_id=546279883 instance=ExtResource("13_2fkce")]
-transform = Transform3D(-1.6622832, -1.0477773, 0.37279662, 7.1994553e-09, 0.67042416, 1.8842853, -1.1121216, 1.5661082, -0.5572175, -2.8307338, 9.124382, -2.8821805)
-
-[node name="ChickenLeg2" parent="Obstacles" unique_id=139960285 instance=ExtResource("13_2fkce")]
-transform = Transform3D(-0.8494227, 1.7645202, -0.4061395, -0.9623886, -0.059980102, 1.7522018, 1.5337174, 0.9396119, 0.8745513, 0.6799192, 10.397487, -5.992517)
-
-[node name="ChickenLeg3" parent="Obstacles" unique_id=68596548 instance=ExtResource("13_2fkce")]
-transform = Transform3D(1.9139479, 0.48594436, 0.3172698, -0.3877119, 0.25707588, 1.9451458, 0.4318354, -1.9229589, 0.3402181, -3.8728251, 11.559215, -8.3673)
-
-[node name="Structure" type="Node3D" parent="." unique_id=1005893555]
-
-[node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1527392474]
+[node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1491048348]
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=2019730558]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+[node name="Ground3" type="CSGBox3D" parent="Structure" unique_id=900505639]
+transform = Transform3D(1.3814117, 0, 0, 0, 1, 0, 0, 0, 1, -3.7427368, -7.2595735, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=1374320813]
-transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 14.64077, 0)
+[node name="Ground4" type="CSGBox3D" parent="Structure" unique_id=728622041]
+transform = Transform3D(1.4597417, 0, 0, 0, 1, 0, 0, 0, 1, 20.110968, -7.2595735, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("5_i155e")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 13.094404, -0.80473423)
+[node name="Ground5" type="CSGBox3D" parent="Structure" unique_id=168139462]
+transform = Transform3D(1.4316474, 0, 0, 0, 1, 0, 0, 0, 1, 24.315945, -18.052706, 35.015945)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=2142747500]
+[node name="Ground2" type="CSGBox3D" parent="Structure" unique_id=1696945164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.68754, -1.1654592, 17.693989)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling" type="CSGBox3D" parent="Structure" unique_id=15987444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling4" type="CSGBox3D" parent="Structure" unique_id=441208247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.033472, 7, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling2" type="CSGBox3D" parent="Structure" unique_id=630982395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 19.872189)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling7" type="CSGBox3D" parent="Structure" unique_id=2012902002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30.72595, 19.872189)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling5" type="CSGBox3D" parent="Structure" unique_id=797076192]
+transform = Transform3D(-4.371139e-08, 0, 1.5438402, 0, 1, 0, -1, 0, -6.74834e-08, 25.41137, 5.5402126, 19.872189)
+use_collision = true
+size = Vector3(40.969604, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling6" type="CSGBox3D" parent="Structure" unique_id=677418382]
+transform = Transform3D(-4.371139e-08, 0, 1.5438402, 0, 1, 0, -1, 0, -6.74834e-08, 25.41137, -30.897434, 19.872189)
+use_collision = true
+size = Vector3(40.969604, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Ceiling3" type="CSGBox3D" parent="Structure" unique_id=1234415515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.909064, 7, 19.872189)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="TurretMount" type="CSGBox3D" parent="Structure" unique_id=1178742789]
+transform = Transform3D(0.004491131, 0, 0, 0, 12.887701, 0, 0, 0, -0.005371355, 0, 6.6407695, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="TurretMount2" parent="Structure" unique_id=254010352 instance=ExtResource("5_dfnf4")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.0127565265, 5.0944047, -0.80473423)
+
+[node name="Wall1" type="CSGBox3D" parent="Structure" unique_id=985587885]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 10, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall2" type="CSGBox3D" parent="Structure" unique_id=1087443752]
+[node name="Wall23" type="CSGBox3D" parent="Structure" unique_id=672521364]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 34.119442, -4.20265, 12.615425)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall53" type="CSGBox3D" parent="Structure" unique_id=1783328671]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 0.12116951, 26.099358, 2.7391362, 11.08274)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall25" type="CSGBox3D" parent="Structure" unique_id=352028544]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 34.119442, -23.80978, 12.615425)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall34" type="CSGBox3D" parent="Structure" unique_id=987720816]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 34.119442, -4.20265, 31.819843)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall35" type="CSGBox3D" parent="Structure" unique_id=960845904]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 34.119442, -23.80978, 31.819843)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall26" type="CSGBox3D" parent="Structure" unique_id=1326908822]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 34.119442, -23.80978, 12.615425)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall2" type="CSGBox3D" parent="Structure" unique_id=1249984020]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 10, -10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall3" type="CSGBox3D" parent="Structure" unique_id=56345908]
-transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 10, 0)
+[node name="Wall17" type="CSGBox3D" parent="Structure" unique_id=848254601]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -19.411776, -2.3983784, -10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=47931813]
-transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 10, 10)
+[node name="Wall20" type="CSGBox3D" parent="Structure" unique_id=229627244]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0.19719124, -2.3983784, -10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall5" type="CSGBox3D" parent="Structure" unique_id=130835991]
+[node name="Wall22" type="CSGBox3D" parent="Structure" unique_id=1851217563]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 20.084835, -2.3983784, 4.4173365)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall27" type="CSGBox3D" parent="Structure" unique_id=1722786293]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 20.084835, -21.619095, 4.4173365)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall24" type="CSGBox3D" parent="Structure" unique_id=741224138]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 39.76528, -2.3983784, 4.4173365)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall28" type="CSGBox3D" parent="Structure" unique_id=1965525700]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 39.76528, -21.868393, 4.4173365)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall36" type="CSGBox3D" parent="Structure" unique_id=1332901940]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 20.084835, -2.3983784, 38.79895)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall37" type="CSGBox3D" parent="Structure" unique_id=787620781]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 20.084835, -21.619095, 38.79895)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall49" type="CSGBox3D" parent="Structure" unique_id=1747530453]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 20.084835, -2.3983784, 25.165312)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall51" type="CSGBox3D" parent="Structure" unique_id=1598024716]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 39.756447, -2.3983784, 25.165312)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall50" type="CSGBox3D" parent="Structure" unique_id=939471916]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 20.084835, -21.619095, 25.009651)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall52" type="CSGBox3D" parent="Structure" unique_id=2116780466]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 39.7334, -28.147905, 25.165312)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall38" type="CSGBox3D" parent="Structure" unique_id=1449566124]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 39.76528, -2.3983784, 38.79895)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall39" type="CSGBox3D" parent="Structure" unique_id=160466302]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 39.76528, -21.868393, 38.79895)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall12" type="CSGBox3D" parent="Structure" unique_id=1820566255]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -15.078289, 8.846446, 9.994649)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall3" type="CSGBox3D" parent="Structure" unique_id=1675031577]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -3.6589317, 10, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall18" type="CSGBox3D" parent="Structure" unique_id=1472543987]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -13.75918, -2.7742958, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall11" type="CSGBox3D" parent="Structure" unique_id=185334369]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -3.6589317, 8.164536, 7.9160795)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall13" type="CSGBox3D" parent="Structure" unique_id=1707826897]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10.048375, 8.1645355, 18.079178)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall9" type="CSGBox3D" parent="Structure" unique_id=1476332981]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -2.847117, 22.053234)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall33" type="CSGBox3D" parent="Structure" unique_id=533077896]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -2.847117, 33.28817)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall29" type="CSGBox3D" parent="Structure" unique_id=1428306514]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -21.863764, 22.053234)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall32" type="CSGBox3D" parent="Structure" unique_id=736220896]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -21.863764, 32.966885)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall21" type="CSGBox3D" parent="Structure" unique_id=451668745]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -2.847117, -1.3373513)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall30" type="CSGBox3D" parent="Structure" unique_id=152454785]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -22.274385, -1.3373513)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall31" type="CSGBox3D" parent="Structure" unique_id=1377099031]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -17.66814, 9.384357)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall44" type="CSGBox3D" parent="Structure" unique_id=135841759]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 0.3015505, 10, -21.938559, 9.384357)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall15" type="CSGBox3D" parent="Structure" unique_id=1288897486]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1.1874201, 10, 5.237341, 19.716917)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall10" type="CSGBox3D" parent="Structure" unique_id=1763232445]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -3.6589317, -11.127875, 19.3236)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall43" type="CSGBox3D" parent="Structure" unique_id=985963440]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -3.6589317, -25.940176, 19.3236)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=428107935]
+transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, -2.847117, 27.230276)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall40" type="CSGBox3D" parent="Structure" unique_id=1161926868]
+transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, -22.004465, 27.230276)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall41" type="CSGBox3D" parent="Structure" unique_id=1035711531]
+transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, -17.33358, 9.661848)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall42" type="CSGBox3D" parent="Structure" unique_id=1745314870]
+transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, -25.37415, 9.661848)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall14" type="CSGBox3D" parent="Structure" unique_id=1094936451]
+transform = Transform3D(-1.4976972e-15, 1.3113416e-07, -1, -0.26128447, -4.371139e-08, 0, -1.1421106e-08, 1, 1.3113416e-07, 0, -2.6301155, 9.957371)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall19" type="CSGBox3D" parent="Structure" unique_id=1962908329]
+transform = Transform3D(-4.086903e-15, 1.3113417e-07, -1, -0.71299076, -4.3711392e-08, 0, -3.1165815e-08, 1.0000001, 1.3113416e-07, -14.035306, -6.8083563, 9.957371)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall16" type="CSGBox3D" parent="Structure" unique_id=922689737]
+transform = Transform3D(-1.4976972e-15, 1.3113416e-07, -1, -0.26128447, -4.371139e-08, 0, -1.1421106e-08, 1, 1.3113416e-07, 18.411306, -2.6301155, 9.957371)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall45" type="CSGBox3D" parent="Structure" unique_id=1345610719]
+transform = Transform3D(-1.7846688e-15, 1.3113414e-07, -1.4755473, -0.3113488, -4.3711385e-08, 0, -1.3609488e-08, 0.99999994, 1.9349466e-07, 24.76793, 2.8425827, 9.957371)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall46" type="CSGBox3D" parent="Structure" unique_id=1027102838]
+transform = Transform3D(-1.4976972e-15, 1.3113416e-07, -1, -0.26128447, -4.371139e-08, 0, -1.1421106e-08, 1, 1.3113416e-07, 19.995852, -2.6301155, 12.13233)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall48" type="CSGBox3D" parent="Structure" unique_id=815392935]
+transform = Transform3D(-1.4976972e-15, 1.3113416e-07, -1, -0.26128447, -4.371139e-08, 0, -1.1421106e-08, 1, 1.3113416e-07, 19.995852, -7.778591, 12.13233)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall47" type="CSGBox3D" parent="Structure" unique_id=1464450683]
+transform = Transform3D(-1.7846688e-15, 1.3113416e-07, -1, -0.3113488, -4.371139e-08, 0, -1.3609488e-08, 1, 1.3113416e-07, 19.995852, 2.8425827, 12.13233)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_j0040")
+
+[node name="Wall5" type="CSGBox3D" parent="Structure" unique_id=1373344027]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, 30, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall6" type="CSGBox3D" parent="Structure" unique_id=839459688]
+[node name="Wall6" type="CSGBox3D" parent="Structure" unique_id=1962281190]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 30, -10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall7" type="CSGBox3D" parent="Structure" unique_id=1780151906]
+[node name="Wall7" type="CSGBox3D" parent="Structure" unique_id=197398128]
 transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, 30, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Wall8" type="CSGBox3D" parent="Structure" unique_id=554771477]
+[node name="Wall8" type="CSGBox3D" parent="Structure" unique_id=2083338442]
 transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 30, 10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
-material = SubResource("StandardMaterial3D_osxv8")
+material = SubResource("StandardMaterial3D_j0040")
 
-[node name="Lighting" type="Node3D" parent="." unique_id=344013018]
-script = ExtResource("3_gfovl")
+[node name="FeatherFall" parent="Structure" unique_id=2133828143 instance=ExtResource("4_756aw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.581381, 1.0870783, 8.590003)
 
-[node name="AreaLight3D" type="AreaLight3D" parent="Lighting" unique_id=308869798]
-transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 11, 0)
+[node name="Pizza" parent="Structure" unique_id=1812960298 instance=ExtResource("5_fy4ed")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.885618, -13.939213, 11.308479)
+
+[node name="Label3D" type="Label3D" parent="Structure" unique_id=57938209]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.370249, -5.663419, 6.9884825)
+text = "You  went the wrong way"
+
+[node name="Pizza2" parent="Structure" unique_id=1394660141 instance=ExtResource("5_fy4ed")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 30.523834, -18.383888, 24.604506)
+
+[node name="Lighting" type="Node3D" parent="." unique_id=1452612256]
+script = ExtResource("3_g61hi")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="Lighting" unique_id=1392804664]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -260,8 +468,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D2" type="AreaLight3D" parent="Lighting" unique_id=625057450]
-transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 11, 6)
+[node name="AreaLight3D2" type="AreaLight3D" parent="Lighting" unique_id=1291815743]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -270,8 +478,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D3" type="AreaLight3D" parent="Lighting" unique_id=613008316]
-transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 11, -6)
+[node name="AreaLight3D3" type="AreaLight3D" parent="Lighting" unique_id=818920108]
+transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 10, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -280,8 +488,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D4" type="AreaLight3D" parent="Lighting" unique_id=705192626]
-transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 11, 10)
+[node name="AreaLight3D4" type="AreaLight3D" parent="Lighting" unique_id=814066883]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 10, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -290,8 +498,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D5" type="AreaLight3D" parent="Lighting" unique_id=1063557384]
-transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 11, 10)
+[node name="AreaLight3D5" type="AreaLight3D" parent="Lighting" unique_id=983774251]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 10, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -300,8 +508,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D6" type="AreaLight3D" parent="Lighting" unique_id=653810551]
-transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 11, 10)
+[node name="AreaLight3D6" type="AreaLight3D" parent="Lighting" unique_id=1358555999]
+transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 10, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -310,8 +518,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D7" type="AreaLight3D" parent="Lighting" unique_id=719328810]
-transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 11, -10)
+[node name="AreaLight3D7" type="AreaLight3D" parent="Lighting" unique_id=130139016]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 10, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -320,8 +528,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D8" type="AreaLight3D" parent="Lighting" unique_id=904791359]
-transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 11, -10)
+[node name="AreaLight3D8" type="AreaLight3D" parent="Lighting" unique_id=406552429]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 10, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -330,8 +538,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D9" type="AreaLight3D" parent="Lighting" unique_id=540446376]
-transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 11, -10)
+[node name="AreaLight3D9" type="AreaLight3D" parent="Lighting" unique_id=660438137]
+transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 10, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -340,8 +548,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D10" type="AreaLight3D" parent="Lighting" unique_id=1789072830]
-transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 11, 0)
+[node name="AreaLight3D10" type="AreaLight3D" parent="Lighting" unique_id=1925866886]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -350,8 +558,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D11" type="AreaLight3D" parent="Lighting" unique_id=1081758509]
-transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 11, -6)
+[node name="AreaLight3D11" type="AreaLight3D" parent="Lighting" unique_id=179843106]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -360,8 +568,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D12" type="AreaLight3D" parent="Lighting" unique_id=1966189362]
-transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 11, 6)
+[node name="AreaLight3D12" type="AreaLight3D" parent="Lighting" unique_id=1703342433]
+transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 10, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -370,9 +578,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D25" type="AreaLight3D" parent="Lighting" unique_id=1871635946]
+[node name="AreaLight3D25" type="AreaLight3D" parent="Lighting" unique_id=1353925408]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -381,9 +588,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D26" type="AreaLight3D" parent="Lighting" unique_id=234577463]
+[node name="AreaLight3D26" type="AreaLight3D" parent="Lighting" unique_id=300300462]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -392,9 +598,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D27" type="AreaLight3D" parent="Lighting" unique_id=478069864]
+[node name="AreaLight3D27" type="AreaLight3D" parent="Lighting" unique_id=1461065380]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 15, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -403,9 +608,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D28" type="AreaLight3D" parent="Lighting" unique_id=1186774566]
+[node name="AreaLight3D28" type="AreaLight3D" parent="Lighting" unique_id=269009861]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 15, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -414,9 +618,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D29" type="AreaLight3D" parent="Lighting" unique_id=1813465639]
+[node name="AreaLight3D29" type="AreaLight3D" parent="Lighting" unique_id=1329322119]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 15, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -425,9 +628,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D30" type="AreaLight3D" parent="Lighting" unique_id=66217170]
+[node name="AreaLight3D30" type="AreaLight3D" parent="Lighting" unique_id=1516777397]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 15, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -436,9 +638,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D31" type="AreaLight3D" parent="Lighting" unique_id=1389949540]
+[node name="AreaLight3D31" type="AreaLight3D" parent="Lighting" unique_id=426982374]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 15, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -447,9 +648,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D32" type="AreaLight3D" parent="Lighting" unique_id=429069131]
+[node name="AreaLight3D32" type="AreaLight3D" parent="Lighting" unique_id=1595785944]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 15, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -458,9 +658,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D33" type="AreaLight3D" parent="Lighting" unique_id=1177485485]
+[node name="AreaLight3D33" type="AreaLight3D" parent="Lighting" unique_id=1979899686]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 15, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -469,9 +668,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D34" type="AreaLight3D" parent="Lighting" unique_id=1143142940]
+[node name="AreaLight3D34" type="AreaLight3D" parent="Lighting" unique_id=2021855929]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -480,9 +678,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D35" type="AreaLight3D" parent="Lighting" unique_id=1258449948]
+[node name="AreaLight3D35" type="AreaLight3D" parent="Lighting" unique_id=1069718924]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -491,9 +688,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D36" type="AreaLight3D" parent="Lighting" unique_id=278527610]
+[node name="AreaLight3D36" type="AreaLight3D" parent="Lighting" unique_id=1232850464]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 15, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -502,7 +698,7 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D13" type="AreaLight3D" parent="Lighting" unique_id=326495372]
+[node name="AreaLight3D13" type="AreaLight3D" parent="Lighting" unique_id=710789774]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -510,10 +706,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D14" type="AreaLight3D" parent="Lighting" unique_id=1300116424]
+[node name="AreaLight3D14" type="AreaLight3D" parent="Lighting" unique_id=1426565478]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -521,10 +716,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D15" type="AreaLight3D" parent="Lighting" unique_id=733910335]
+[node name="AreaLight3D15" type="AreaLight3D" parent="Lighting" unique_id=988908637]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 5, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -532,10 +726,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D16" type="AreaLight3D" parent="Lighting" unique_id=2083347800]
+[node name="AreaLight3D16" type="AreaLight3D" parent="Lighting" unique_id=477994371]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 5, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -543,10 +736,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D17" type="AreaLight3D" parent="Lighting" unique_id=1999338328]
+[node name="AreaLight3D17" type="AreaLight3D" parent="Lighting" unique_id=303510153]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 5, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -554,10 +746,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D18" type="AreaLight3D" parent="Lighting" unique_id=753436433]
+[node name="AreaLight3D18" type="AreaLight3D" parent="Lighting" unique_id=901527473]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 5, 10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -565,10 +756,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D19" type="AreaLight3D" parent="Lighting" unique_id=2115045513]
+[node name="AreaLight3D19" type="AreaLight3D" parent="Lighting" unique_id=1208998289]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 5, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -576,10 +766,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D20" type="AreaLight3D" parent="Lighting" unique_id=1547608774]
+[node name="AreaLight3D20" type="AreaLight3D" parent="Lighting" unique_id=1128210372]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 5, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -587,10 +776,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D21" type="AreaLight3D" parent="Lighting" unique_id=2102947872]
+[node name="AreaLight3D21" type="AreaLight3D" parent="Lighting" unique_id=767153075]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 5, -10)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -598,10 +786,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D22" type="AreaLight3D" parent="Lighting" unique_id=514446231]
+[node name="AreaLight3D22" type="AreaLight3D" parent="Lighting" unique_id=794416388]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 0)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -609,10 +796,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D23" type="AreaLight3D" parent="Lighting" unique_id=2096320571]
+[node name="AreaLight3D23" type="AreaLight3D" parent="Lighting" unique_id=976840542]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, -6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -620,10 +806,9 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D24" type="AreaLight3D" parent="Lighting" unique_id=1654497160]
+[node name="AreaLight3D24" type="AreaLight3D" parent="Lighting" unique_id=199893602]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 5, 6)
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
@@ -631,12 +816,10 @@ light_indirect_energy = 8.958
 light_volumetric_fog_energy = 1.254
 light_size = 0.696
 light_specular = 2.101
-light_bake_mode = 1
 area_range = 11.538
 
-[node name="AreaLight3D37" type="AreaLight3D" parent="Lighting" unique_id=1536625994]
+[node name="AreaLight3D37" type="AreaLight3D" parent="Lighting" unique_id=301595999]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 30, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -645,9 +828,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D38" type="AreaLight3D" parent="Lighting" unique_id=1851587447]
+[node name="AreaLight3D38" type="AreaLight3D" parent="Lighting" unique_id=218862976]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 30, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -656,9 +838,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D39" type="AreaLight3D" parent="Lighting" unique_id=256448132]
+[node name="AreaLight3D39" type="AreaLight3D" parent="Lighting" unique_id=1504934310]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 30, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -667,9 +848,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D40" type="AreaLight3D" parent="Lighting" unique_id=1285685556]
+[node name="AreaLight3D40" type="AreaLight3D" parent="Lighting" unique_id=937890738]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 30, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -678,9 +858,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D41" type="AreaLight3D" parent="Lighting" unique_id=1070480260]
+[node name="AreaLight3D41" type="AreaLight3D" parent="Lighting" unique_id=1311764449]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 30, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -689,9 +868,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D42" type="AreaLight3D" parent="Lighting" unique_id=2101251326]
+[node name="AreaLight3D42" type="AreaLight3D" parent="Lighting" unique_id=53876046]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 30, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -700,9 +878,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D43" type="AreaLight3D" parent="Lighting" unique_id=1449615153]
+[node name="AreaLight3D43" type="AreaLight3D" parent="Lighting" unique_id=1661357905]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 30, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -711,9 +888,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D44" type="AreaLight3D" parent="Lighting" unique_id=109258210]
+[node name="AreaLight3D44" type="AreaLight3D" parent="Lighting" unique_id=1030308695]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 30, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -722,9 +898,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D45" type="AreaLight3D" parent="Lighting" unique_id=571933638]
+[node name="AreaLight3D45" type="AreaLight3D" parent="Lighting" unique_id=2020649632]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.732056e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 30, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -733,9 +908,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D46" type="AreaLight3D" parent="Lighting" unique_id=788687240]
+[node name="AreaLight3D46" type="AreaLight3D" parent="Lighting" unique_id=690443780]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 30, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -744,9 +918,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D47" type="AreaLight3D" parent="Lighting" unique_id=329315219]
+[node name="AreaLight3D47" type="AreaLight3D" parent="Lighting" unique_id=1043877071]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 30, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -755,9 +928,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D48" type="AreaLight3D" parent="Lighting" unique_id=685885984]
+[node name="AreaLight3D48" type="AreaLight3D" parent="Lighting" unique_id=49864914]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 30, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -766,9 +938,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D49" type="AreaLight3D" parent="Lighting" unique_id=925822930]
+[node name="AreaLight3D49" type="AreaLight3D" parent="Lighting" unique_id=1797621491]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 35, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -777,9 +948,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D50" type="AreaLight3D" parent="Lighting" unique_id=820494673]
+[node name="AreaLight3D50" type="AreaLight3D" parent="Lighting" unique_id=776732456]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 35, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -788,9 +958,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D51" type="AreaLight3D" parent="Lighting" unique_id=1199083289]
+[node name="AreaLight3D51" type="AreaLight3D" parent="Lighting" unique_id=732745613]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 35, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -799,9 +968,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D52" type="AreaLight3D" parent="Lighting" unique_id=1008963034]
+[node name="AreaLight3D52" type="AreaLight3D" parent="Lighting" unique_id=1291696289]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 35, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -810,9 +978,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D53" type="AreaLight3D" parent="Lighting" unique_id=1528703751]
+[node name="AreaLight3D53" type="AreaLight3D" parent="Lighting" unique_id=898502412]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 35, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -821,9 +988,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D54" type="AreaLight3D" parent="Lighting" unique_id=1827446589]
+[node name="AreaLight3D54" type="AreaLight3D" parent="Lighting" unique_id=1703111297]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 35, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -832,9 +998,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D55" type="AreaLight3D" parent="Lighting" unique_id=744668409]
+[node name="AreaLight3D55" type="AreaLight3D" parent="Lighting" unique_id=2104238722]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 35, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -843,9 +1008,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D56" type="AreaLight3D" parent="Lighting" unique_id=1049791591]
+[node name="AreaLight3D56" type="AreaLight3D" parent="Lighting" unique_id=1296174278]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 35, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -854,9 +1018,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D57" type="AreaLight3D" parent="Lighting" unique_id=567457853]
+[node name="AreaLight3D57" type="AreaLight3D" parent="Lighting" unique_id=36796358]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 35, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -865,9 +1028,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D58" type="AreaLight3D" parent="Lighting" unique_id=1065966184]
+[node name="AreaLight3D58" type="AreaLight3D" parent="Lighting" unique_id=1488376694]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 35, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -876,9 +1038,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D59" type="AreaLight3D" parent="Lighting" unique_id=672909650]
+[node name="AreaLight3D59" type="AreaLight3D" parent="Lighting" unique_id=2108755243]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 35, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -887,9 +1048,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D60" type="AreaLight3D" parent="Lighting" unique_id=640118325]
+[node name="AreaLight3D60" type="AreaLight3D" parent="Lighting" unique_id=619024057]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 35, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -898,9 +1058,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D61" type="AreaLight3D" parent="Lighting" unique_id=37506081]
+[node name="AreaLight3D61" type="AreaLight3D" parent="Lighting" unique_id=1975045723]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -909,9 +1068,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D62" type="AreaLight3D" parent="Lighting" unique_id=1710724729]
+[node name="AreaLight3D62" type="AreaLight3D" parent="Lighting" unique_id=1224383025]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -920,9 +1078,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D63" type="AreaLight3D" parent="Lighting" unique_id=38792787]
+[node name="AreaLight3D63" type="AreaLight3D" parent="Lighting" unique_id=1553980834]
 transform = Transform3D(-4.371139e-08, -1.3113416e-07, -1, 1, -5.732056e-15, -4.371139e-08, 0, -1, 1.3113416e-07, -10, 25, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -931,9 +1088,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D64" type="AreaLight3D" parent="Lighting" unique_id=831546014]
+[node name="AreaLight3D64" type="AreaLight3D" parent="Lighting" unique_id=1445420482]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 0, 25, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -942,9 +1098,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D65" type="AreaLight3D" parent="Lighting" unique_id=624277138]
+[node name="AreaLight3D65" type="AreaLight3D" parent="Lighting" unique_id=1776372609]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, 6, 25, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -953,9 +1108,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D66" type="AreaLight3D" parent="Lighting" unique_id=2039303278]
+[node name="AreaLight3D66" type="AreaLight3D" parent="Lighting" unique_id=5966060]
 transform = Transform3D(1.9106855e-15, -1, 1.7484555e-07, 1, -5.732056e-15, -4.371139e-08, 4.371139e-08, 1.7484555e-07, 1, -6, 25, 10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -964,9 +1118,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D67" type="AreaLight3D" parent="Lighting" unique_id=1395180142]
+[node name="AreaLight3D67" type="AreaLight3D" parent="Lighting" unique_id=733185237]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 0, 25, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -975,9 +1128,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D68" type="AreaLight3D" parent="Lighting" unique_id=1833285274]
+[node name="AreaLight3D68" type="AreaLight3D" parent="Lighting" unique_id=1826369966]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, -6, 25, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -986,9 +1138,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D69" type="AreaLight3D" parent="Lighting" unique_id=592559348]
+[node name="AreaLight3D69" type="AreaLight3D" parent="Lighting" unique_id=1428249706]
 transform = Transform3D(-5.7320566e-15, 1, -2.6226832e-07, 1, -5.7320553e-15, -4.371139e-08, -4.371139e-08, -2.6226832e-07, -1, 6, 25, -10)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -997,9 +1148,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D70" type="AreaLight3D" parent="Lighting" unique_id=246517435]
+[node name="AreaLight3D70" type="AreaLight3D" parent="Lighting" unique_id=498168935]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, 0)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -1008,9 +1158,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D71" type="AreaLight3D" parent="Lighting" unique_id=1401197175]
+[node name="AreaLight3D71" type="AreaLight3D" parent="Lighting" unique_id=320031111]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, -6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -1019,9 +1168,8 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="AreaLight3D72" type="AreaLight3D" parent="Lighting" unique_id=1149472574]
+[node name="AreaLight3D72" type="AreaLight3D" parent="Lighting" unique_id=1235659092]
 transform = Transform3D(4.371139e-08, 2.1855692e-07, 1, 1, -5.732054e-15, -4.371139e-08, -3.821372e-15, 1, -2.1855692e-07, 10, 25, 6)
-visible = false
 light_color = Color(0.8784314, 0.972549, 0.8745098, 1)
 light_energy = 4.0
 light_indirect_energy = 8.958
@@ -1030,38 +1178,56 @@ light_size = 0.696
 light_specular = 2.101
 area_range = 11.538
 
-[node name="VoxelGI" type="VoxelGI" parent="Lighting" unique_id=1663209478]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
-data = ExtResource("13_srsp4")
+[node name="FlickeringLight" parent="Lighting" unique_id=1238897794 instance=ExtResource("6_dfnf4")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.789067, -1.0843735, 23.488531)
+light_color = Color(0.21960784, 1, 0.54509807, 1)
 
-[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_dqrp8")]
-transform = Transform3D(0.212132, 0, -0.21213204, 0, 0.29999998, 0, 0.21213204, 0, 0.212132, -6.0346656, 13.089975, -9.17725)
+[node name="Microwave" parent="." unique_id=313443865 instance=ExtResource("4_2hexr")]
+transform = Transform3D(0.29999998, 0, -1.3113416e-08, 0, 0.29999998, 0, 1.3113416e-08, 0, 0.29999998, 13.6940975, -16.650888, 31.80751)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=173396926]
+[node name="OmniLight3D" type="OmniLight3D" parent="Microwave" unique_id=1637042204]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2151473, -0.04159212, 0.25809488)
 light_color = Color(0.9647059, 0.6392157, 0, 1)
+light_energy = 3.0
+
+[node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("6_fk2yf")]
+visible = false
+
+[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("7_plqi5")]
+visible = false
+
+[node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_fy4ed")]
+
+[node name="FakeMicrowave" parent="." unique_id=1475066486 instance=ExtResource("10_g61hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.053514, 0.16454077, 19.233292)
+
+[node name="FakeMicrowave2" parent="." unique_id=2042191075 instance=ExtResource("10_g61hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.386092, 1.3299999, -7.00688)
+
+[node name="FakeMicrowave3" parent="." unique_id=109542503 instance=ExtResource("10_g61hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1367297, -5.929573, -0.92739105)
+
+[node name="FakeMicrowave4" parent="." unique_id=208105896 instance=ExtResource("10_g61hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.077248, -5.929573, 6.5426035)
+
+[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("11_2hexr")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.788868, 0.2001841, 8.104837)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="AddTime" unique_id=943937018]
+light_color = Color(1, 0.85490197, 0, 1)
 light_energy = 0.5
 
-[node name="LastChance" parent="." unique_id=696652614 instance=ExtResource("6_nlg5r")]
-visible = false
+[node name="Laser" parent="." unique_id=1025078181 instance=ExtResource("13_fk2yf")]
+transform = Transform3D(6.9343677, 0, 0, 0, 0, -1.0000001, 0, 13.638367, 0, 22.15361, -30.839586, 5.029916)
 
-[node name="Lose" parent="." unique_id=627476690 instance=ExtResource("7_2fkce")]
-visible = false
+[node name="MovingFridge" parent="." unique_id=346364558 instance=ExtResource("5_plqi5")]
+transform = Transform3D(-6.1904357e-09, 3.8945405e-08, 0.7, 0, 0.7000002, -3.894539e-08, -0.14162065, -4.189258e-15, -3.059797e-08, 29.244019, -17.753754, 24.834763)
+move_duration = 1
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 7)
 
-[node name="PauseMenu" parent="." unique_id=1835050114 instance=ExtResource("8_rqdcb")]
-
-[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("12_i155e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.691022, 3.01388, 8.845265)
-_time_to_add = 15.0
-
-[node name="ChickenLeg" parent="." unique_id=560659050 instance=ExtResource("13_2fkce")]
-transform = Transform3D(0.5, 0, 0, 0, 0.16760604, 0.47107136, 0, -0.47107136, 0.16760604, 4.5704308, 3.10569, -0.7323486)
-
-[node name="PopCorn" parent="." unique_id=419641044 instance=ExtResource("14_rqdcb")]
-transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 6.608187, 4.594044, 1.720047)
-
-[node name="Chair" parent="." unique_id=338263409 instance=ExtResource("17_tdng2")]
-transform = Transform3D(-0.05449807, 0.13974966, 6.108652e-09, 2.370615e-16, -6.556709e-09, 0.15000002, 0.13974966, 0.05449807, 2.3821864e-09, -2.5675197, 4.9584208, 4.8018465)
-
-[node name="Table" parent="." unique_id=1071800340 instance=ExtResource("17_osxv8")]
-transform = Transform3D(-8.742278e-11, 0, 0.002, -0.002, -8.742278e-11, -8.742278e-11, 8.742278e-11, -0.002, 3.821371e-18, -3, 6, 9.857434)
+[node name="MovingFridge2" parent="." unique_id=1772870575 instance=ExtResource("5_plqi5")]
+transform = Transform3D(1.8571306e-08, -3.8945405e-08, -0.7, 2.998934e-23, 0.7000002, -3.894539e-08, 0.14162065, 7.593973e-15, 9.179391e-08, 34.83638, -14.686626, 24.834763)
+move_duration = 1
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 7)
