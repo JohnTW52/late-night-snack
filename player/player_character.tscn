@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bktcrid4opeo3" path="res://player/player_textures/under.png" id="13_bwn30"]
 [ext_resource type="Texture2D" uid="uid://vru0aqth4kki" path="res://player/player_textures/mouse_left_outline.png" id="13_ex07x"]
 [ext_resource type="Texture2D" uid="uid://b4emyttnbwuod" path="res://player/player_textures/progress.png" id="14_bqqjr"]
+[ext_resource type="PackedScene" uid="uid://chr6rh65v8sbi" path="res://ui/fail_tracker.tscn" id="20_ilatc"]
 
 [sub_resource type="Curve" id="Curve_2tsxa"]
 _limits = [0.0, 30.0, 0.0, 60.0]
@@ -511,3 +512,5 @@ theme_override_font_sizes/font_size = 40
 text = "....."
 label_settings = ExtResource("12_xim16")
 vertical_alignment = 1
+
+[node name="fails" parent="." unique_id=294730291 instance=ExtResource("20_ilatc")]

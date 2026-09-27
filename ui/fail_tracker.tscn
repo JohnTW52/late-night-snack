@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://chr6rh65v8sbi"]
+
+[ext_resource type="Script" uid="uid://3vi8gjf76s40" path="res://ui/fail_tracker.gd" id="1_v8hw6"]
+
+[node name="fails" type="Control" unique_id=294730291]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v8hw6")
+
+[node name="Label" type="Label" parent="." unique_id=180067181]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = " Total Fails: 0"
