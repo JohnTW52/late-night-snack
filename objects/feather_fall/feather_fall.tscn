@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uw48p44klomk"]
 
-[ext_resource type="Script" uid="uid://n0ammhlqjsx7" path="res://feather_fall.gd" id="1_ee7rx"]
+[ext_resource type="Script" uid="uid://n0ammhlqjsx7" path="res://objects/feather_fall/feather_fall.gd" id="1_ee7rx"]
 [ext_resource type="PackedScene" uid="uid://c65mmbmusjm8i" path="res://objects/feather_fall/day_1._feather.glb" id="2_mlo27"]
 [ext_resource type="AudioStream" uid="uid://ki1u3q6xwl2o" path="res://sfx/bling.mp3" id="3_mlo27"]
 

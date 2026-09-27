@@ -1,6 +1,10 @@
 extends CanvasLayer
 
 func _ready() -> void:
+	GameManager.load_data()
+	update_colors()
+			
+func update_colors():
 	for b in $GridContainer.get_children():
 		var index = b.name.to_int()-1;
 		var d = GameManager.level_completion_data[index];
