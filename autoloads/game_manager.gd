@@ -8,7 +8,7 @@ var timer_vals: Dictionary = {
 	2: 15.0,
 	3: 20.0,
 	4: 15.0,
-	5: 20.0,
+	5: 10.0,
 	6: 10.0,
 	7: 60.0,
 	8: 60.0,
@@ -21,12 +21,16 @@ var timer_vals: Dictionary = {
 	"res://levels/level02.tscn",
 	"res://levels/level03.tscn",
 	"res://levels/level04.tscn",
-	#"res://levels/secret_spin_level.tscn",
 	"res://levels/level05.tscn",
 	"res://levels/level06.tscn",
 	"res://levels/level07.tscn",
 	"res://levels/level08.tscn",
 	"res://levels/level09.tscn"
+]
+
+# index 0 is level 1 and so on
+var level_completion_data: Array[int] = [
+	0, -1, -1, -1, -1, -1, -1, -1, -1, -1 # last one is secret level
 ]
 
 func _ready() -> void:

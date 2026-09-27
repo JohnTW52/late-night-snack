@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://bk6h8bpf3lvof"]
+
+[ext_resource type="Script" uid="uid://bwpsv70mlesa" path="res://ui/level_select.gd" id="1_o7pgs"]
+[ext_resource type="StyleBox" uid="uid://bph63gr283mk6" path="res://ui/button_disabled.tres" id="2_2cjkr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dsvd"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cjkr"]
+content_margin_left = 12.0
+content_margin_top = 4.0
+content_margin_right = 12.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="LevelSelect" type="CanvasLayer" unique_id=1670008869]
+layer = 2
+script = ExtResource("1_o7pgs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=170269733]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="Button" type="Button" parent="." unique_id=1778171800]
+offset_left = 578.0
+offset_top = 431.0
+offset_right = 703.0
+offset_bottom = 478.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dsvd")
+text = "Back"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1739643281]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -21.0
+offset_right = 50.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="1" type="Button" parent="GridContainer" unique_id=1608214628]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "1"
+
+[node name="2" type="Button" parent="GridContainer" unique_id=1120048348]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "2"
+
+[node name="3" type="Button" parent="GridContainer" unique_id=245282657]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "3"
+
+[node name="4" type="Button" parent="GridContainer" unique_id=10556811]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "4"
+
+[node name="10" type="Button" parent="GridContainer" unique_id=2099475713]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "?"
+
+[node name="5" type="Button" parent="GridContainer" unique_id=677701657]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "5"
+
+[node name="6" type="Button" parent="GridContainer" unique_id=786696749]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "6"
+
+[node name="7" type="Button" parent="GridContainer" unique_id=789397879]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "7"
+
+[node name="8" type="Button" parent="GridContainer" unique_id=1295920308]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "8"
+
+[node name="9" type="Button" parent="GridContainer" unique_id=1045422004]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cjkr")
+theme_override_styles/disabled = ExtResource("2_2cjkr")
+text = "9"
+
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="GridContainer/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="GridContainer/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="GridContainer/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="GridContainer/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="GridContainer/10" to="." method="_on_secret_pressed"]
+[connection signal="pressed" from="GridContainer/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="GridContainer/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="GridContainer/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="GridContainer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="GridContainer/9" to="." method="_on_9_pressed"]

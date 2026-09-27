@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://7kdkxrhl2fc"]
 
 [ext_resource type="Script" uid="uid://dp8v0yoffylns" path="res://ui/pause_menu.gd" id="1_50142"]
+[ext_resource type="PackedScene" uid="uid://bk6h8bpf3lvof" path="res://ui/level_select.tscn" id="2_ejwgg"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1835050114]
 script = ExtResource("1_50142")
+level_select = ExtResource("2_ejwgg")
 
 [node name="Panel" type="Panel" parent="." unique_id=152500918]
 modulate = Color(0, 0, 0, 0.29411766)
@@ -53,10 +55,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "main menu"
 
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=923189390]
+layout_mode = 2
+text = "Level Select"
+
 [node name="Button4" type="Button" parent="VBoxContainer" unique_id=1243061542]
 layout_mode = 2
 text = "Exit :("
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_exit_button_pressed"]

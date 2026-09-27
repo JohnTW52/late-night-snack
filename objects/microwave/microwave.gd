@@ -16,6 +16,7 @@ func _ready() -> void:
 	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
 		timer = 30;
 		GameManager.level_index = 3;
+		GameManager.level_completion_data[9] = 0
 	else:
 		timer = GameManager.get_timer_val()
 	
@@ -38,6 +39,11 @@ func interact(_player: PlayerCharacter) -> void:
 
 func change_level() -> void:
 	GameManager.just_changed_level = true
+	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
+		GameManager.level_completion_data[9] = 1
+	else:
+		GameManager.level_completion_data[GameManager.level_index] = 1
+	GameManager.level_completion_data[GameManager.level_index+1] = 0
 	
 	if GameManager.has_next_level():
 		var next_level := GameManager.levels[GameManager.level_index + 1]
@@ -59,11 +65,10 @@ func update_timer_ui(time: float) -> void:
 	timer_ui.text = "%d" % int(time)
 
 func update_level_ui() -> void:
-	if GameManager.level_index == 4:
+	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
 		level_ui.text = "???/"
 		return
 	level_ui.text = "%d/9" % (GameManager.level_index + 1)
-	print(level_ui.text)
 
 func show_success_screen() -> void:
 	get_tree().change_scene_to_file("res://ui/success.tscn")
