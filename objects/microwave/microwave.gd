@@ -59,7 +59,7 @@ func update_timer_ui(time: float) -> void:
 	timer_ui.text = "%d" % int(time)
 
 func update_level_ui() -> void:
-	if GameManager.level_index == 4:
+	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
 		level_ui.text = "???/"
 		return
 	level_ui.text = "%d/9" % (GameManager.level_index + 1)
