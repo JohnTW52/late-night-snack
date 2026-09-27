@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b42ms13we5vgw"]
+
+[ext_resource type="Texture2D" uid="uid://chlxgghaeu0ih" path="res://materials/wall_paint_qj2lkls0_2k/Wall_Paint_qj2lkls0_2K_BaseColor.jpg" id="1_qrbsb"]
+[ext_resource type="Texture2D" uid="uid://baf2bgx0eorv1" path="res://materials/wall_paint_detail_sjyoacbc_2k/Wall_Paint_Detail_sjyoacbc_2K_Gloss.jpg" id="2_0becw"]
+[ext_resource type="Texture2D" uid="uid://dxibg7o86dv4k" path="res://materials/wall_paint_detail_sjyoacbc_2k/Wall_Paint_Detail_sjyoacbc_2K_Normal.jpg" id="3_yd1q0"]
+[ext_resource type="Texture2D" uid="uid://dycpqmumxp2pu" path="res://materials/wall_paint_detail_sjyoacbc_2k/Wall_Paint_Detail_sjyoacbc_2K_Roughness.jpg" id="4_fed5p"]
+
+[resource]
+albedo_color = Color(1, 1, 0, 1)
+albedo_texture = ExtResource("1_qrbsb")
+metallic_texture = ExtResource("2_0becw")
+roughness_texture = ExtResource("4_fed5p")
+normal_enabled = true
+normal_texture = ExtResource("3_yd1q0")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

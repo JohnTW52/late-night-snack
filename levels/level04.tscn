@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_fvdud"]
 [ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="3_jdr1m"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="3_qkyi5"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="4_1gfio"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="4_jdr1m"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="5_858d1"]
 [ext_resource type="PackedScene" uid="uid://b5kk1b6hu045o" path="res://objects/food/popcorn.tscn" id="6_jdr1m"]
@@ -77,12 +78,14 @@ point_2_location = Vector3(0, 0, 0)
 [node name="Structure" type="Node3D" parent="." unique_id=481325484]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1902593475]
+material_override = ExtResource("4_1gfio")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")
 
 [node name="Ground2" type="CSGBox3D" parent="Structure" unique_id=256497531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.9304628, 0)
+material_override = ExtResource("4_1gfio")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")

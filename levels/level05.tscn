@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="6_io7ik"]
 [ext_resource type="PackedScene" uid="uid://blyxf1mcpgbxp" path="res://ui/lose.tscn" id="7_mf48c"]
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_338c1"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="10_apk45"]
 [ext_resource type="PackedScene" uid="uid://62a0p7cmfmlk" path="res://objects/laser/laser.tscn" id="10_m4wrk"]
 [ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="13_mf48c"]
 [ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="14_338c1"]
@@ -118,12 +119,14 @@ _boost_mult = 4.0
 [node name="Structure" type="Node3D" parent="." unique_id=1574767441]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1508680440]
+material_override = ExtResource("10_apk45")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")
 
 [node name="Ground2" type="CSGBox3D" parent="Structure" unique_id=823691878]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.019787, -19.976866)
+material_override = ExtResource("10_apk45")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_25303")

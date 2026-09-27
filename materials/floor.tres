@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b2vcmaxa7s5pn"]
+
+[ext_resource type="Texture2D" uid="uid://d0atqvh72sjx8" path="res://materials/marble_checkered_floor_sescnen_2k/Marble_Checkered_Floor_sescnen_2K_BaseColor.jpg" id="1_c2xdu"]
+[ext_resource type="Texture2D" uid="uid://cubvqh7227xbj" path="res://materials/marble_checkered_floor_sescnen_2k/Marble_Checkered_Floor_sescnen_2K_Normal.jpg" id="2_l2teu"]
+[ext_resource type="Texture2D" uid="uid://37syicdrmnsn" path="res://materials/marble_checkered_floor_sescnen_2k/Marble_Checkered_Floor_sescnen_2K_Gloss.jpg" id="3_vphm6"]
+[ext_resource type="Texture2D" uid="uid://cvxv13swp66ve" path="res://materials/marble_checkered_floor_sescnen_2k/Marble_Checkered_Floor_sescnen_2K_Roughness.jpg" id="4_tfx4i"]
+
+[resource]
+albedo_texture = ExtResource("1_c2xdu")
+metallic = 1.0
+metallic_texture = ExtResource("3_vphm6")
+roughness_texture = ExtResource("4_tfx4i")
+normal_enabled = true
+normal_texture = ExtResource("2_l2teu")
+detail_enabled = true
+detail_blend_mode = 3
+detail_albedo = ExtResource("1_c2xdu")
+detail_normal = ExtResource("2_l2teu")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true

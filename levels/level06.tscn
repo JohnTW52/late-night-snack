@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cejlqgj6motxy" path="res://objects/dining_scene/individual_scenes/moving_chair.tscn" id="10_dqrp8"]
 [ext_resource type="PackedScene" uid="uid://bwy5wrvw662lo" path="res://objects/add_30/add_time.tscn" id="12_i155e"]
 [ext_resource type="PackedScene" uid="uid://no8hbx3i7864" path="res://objects/food/chicken_leg.tscn" id="13_2fkce"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="13_ialv6"]
 [ext_resource type="VoxelGIData" uid="uid://dyq8d8oa1wt45" path="res://levels/light_resources/level03.VoxelGI_data.res" id="13_srsp4"]
 [ext_resource type="PackedScene" uid="uid://b5kk1b6hu045o" path="res://objects/food/popcorn.tscn" id="14_rqdcb"]
 [ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="17_osxv8"]
@@ -180,6 +181,7 @@ transform = Transform3D(1.9139479, 0.48594436, 0.3172698, -0.3877119, 0.25707588
 [node name="Structure" type="Node3D" parent="." unique_id=1005893555]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1527392474]
+material_override = ExtResource("13_ialv6")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_osxv8")

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://n5o5j01yiubv" path="res://objects/dining_scene/individual_scenes/table.tscn" id="2_oig5u"]
 [ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="3_33ega"]
 [ext_resource type="PackedScene" uid="uid://wfssdpry5qlx" path="res://objects/microwave/microwave.tscn" id="3_b4xcw"]
+[ext_resource type="Material" uid="uid://b2vcmaxa7s5pn" path="res://materials/floor.tres" id="5_12q5m"]
 [ext_resource type="Script" uid="uid://dkwu72obogbfj" path="res://objects/lights/lighting.gd" id="6_orkke"]
 [ext_resource type="PackedScene" uid="uid://brybjamsph5m6" path="res://ui/last_chance.tscn" id="7_33ega"]
 [ext_resource type="PackedScene" uid="uid://5s8p7clutrh2" path="res://objects/turret/turret.tscn" id="7_n311a"]
@@ -54,6 +55,7 @@ transform = Transform3D(-0.6711426, 0.71591777, -0.19243097, -0.6424424, -0.4321
 [node name="Structure" type="Node3D" parent="." unique_id=1784533578]
 
 [node name="Ground" type="CSGBox3D" parent="Structure" unique_id=1649115966]
+material_override = ExtResource("5_12q5m")
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_xfmka")
