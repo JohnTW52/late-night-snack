@@ -8,6 +8,7 @@ var timer_done_not_already_emitted: bool = true;
 var timer: float 
 
 @onready var timer_ui := $Timer/MarginContainer/Label
+@onready var level_ui := $MarginContainer/Label
 
 func _ready() -> void:
 	if GameManager.just_changed_level:
@@ -17,6 +18,8 @@ func _ready() -> void:
 		GameManager.level_index = 3;
 	else:
 		timer = GameManager.get_timer_val()
+	
+	update_level_ui()
 
 func _process(delta: float) -> void:
 	if timer > 0.01:
@@ -54,6 +57,13 @@ func remove_time(amt: float) -> void:
 
 func update_timer_ui(time: float) -> void:
 	timer_ui.text = "%d" % int(time)
+
+func update_level_ui() -> void:
+	if GameManager.level_index == 4:
+		level_ui.text = "???/"
+		return
+	level_ui.text = "%d/9" % (GameManager.level_index + 1)
+	print(level_ui.text)
 
 func show_success_screen() -> void:
 	get_tree().change_scene_to_file("res://ui/success.tscn")

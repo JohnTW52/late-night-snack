@@ -23,3 +23,18 @@ shape = SubResource("BoxShape3D_x8qym")
 stream = ExtResource("5_fs7ny")
 volume_db = -12.0
 autoplay = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="4" unique_id=1640439208]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+
+[node name="Label" type="Label" parent="MarginContainer" index="0" unique_id=730306872]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "1/9"
