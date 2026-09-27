@@ -12,7 +12,7 @@ var timer_vals: Dictionary = {
 	4: 15.0,
 	5: 10.0,
 	6: 10.0,
-	7: 12.0,
+	7: 60.0,
 	8: 60.0,
 	9: 60.0,
 	10: 10.0
@@ -37,7 +37,6 @@ var level_completion_data: Array[int] = [
 
 func _ready() -> void:
 	just_changed_level = false
-
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("restart level"):
