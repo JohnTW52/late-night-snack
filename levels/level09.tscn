@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwader81wstmq"]
 
+[ext_resource type="Script" uid="uid://du8ad7xkr0360" path="res://levels/level_09_manager.gd" id="1_lmcsa"]
 [ext_resource type="PackedScene" uid="uid://ys53tl8s7xef" path="res://player/player_character.tscn" id="1_sshtt"]
 [ext_resource type="Texture2D" uid="uid://b4gakwc60qq5u" path="res://addons/godot-prototype-texture/PNG/grid_512x512/grid_black_512x512.png" id="2_icpok"]
 [ext_resource type="PackedScene" uid="uid://c3k85einkkmyp" path="res://objects/microwave/microwave_boss.tscn" id="2_xe3su"]
@@ -28,6 +29,7 @@ uv1_triplanar = true
 uv1_world_triplanar = true
 
 [node name="Level02" type="Node3D" unique_id=421491462]
+script = ExtResource("1_lmcsa")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=415090415]
 environment = SubResource("Environment_gw2yi")

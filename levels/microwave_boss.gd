@@ -75,7 +75,7 @@ func interact(player: PlayerCharacter) -> void:
 	
 	if player.has_method("apply_knockback"):
 		player.apply_knockback(global_position, knockback_force)
-		health.value -= 20
+		health.value -= 10
 		print(health.value)
 		_calc_new_speed()
 		if health.value <= 0:
