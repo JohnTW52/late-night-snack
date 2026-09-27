@@ -15,6 +15,8 @@
 [ext_resource type="AudioStream" uid="uid://vyr6l2t3x3y" path="res://sfx/boss_hurt2.mp3" id="13_6a33m"]
 [ext_resource type="AudioStream" uid="uid://cfs8ei2igorg8" path="res://sfx/boss_spawn.mp3" id="14_6a33m"]
 [ext_resource type="AudioStream" uid="uid://bpbg5c1u5bx5h" path="res://sfx/gun_boss.wav" id="15_wmhuk"]
+[ext_resource type="AudioStream" uid="uid://dg1bpy5n5g65b" path="res://sfx/boss_evil_laugh.mp3" id="16_a0nym"]
+[ext_resource type="AudioStream" uid="uid://ctajewuxjfysq" path="res://sfx/music/boss_fight.mp3" id="17_ua7xj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbxf4"]
 resource_name = "Plastic_black"
@@ -287,6 +289,16 @@ autoplay = true
 [node name="Gun" type="AudioStreamPlayer3D" parent="." unique_id=468669066]
 stream = ExtResource("15_wmhuk")
 attenuation_model = 3
+max_db = 0.0
+
+[node name="EvilLaugh" type="AudioStreamPlayer3D" parent="." unique_id=2129677411]
+stream = ExtResource("16_a0nym")
+attenuation_model = 3
+
+[node name="FightMusic" type="AudioStreamPlayer3D" parent="." unique_id=1578968117]
+stream = ExtResource("17_ua7xj")
+attenuation_model = 3
+autoplay = true
 
 [node name="MuzzleFlash" type="OmniLight3D" parent="." unique_id=668810523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6650586, 1.6746581, 0.20826271)

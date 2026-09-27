@@ -17,6 +17,7 @@ var _firing_timer := 2.0
 @onready var hurt_audio2 := $Hurt2
 @onready var spawn_audio := $Spawn
 @onready var gun_audio := $Gun
+@onready var laugh_audio := $EvilLaugh
 @onready var muzzle_flash: Array[OmniLight3D] = [
 	$MuzzleFlash,
 	$MuzzleFlash2,
@@ -37,10 +38,13 @@ func _ready() -> void:
 		timer = GameManager.get_timer_val()
 	
 	update_level_ui()
-	
-	#spawn_audio.play()
 
 func _process(delta: float) -> void:
+	if dead:
+		_stop_firing()
+		$hum.stop()
+		return
+
 	if timer > 0.01:
 		tick_timer(delta)
 		update_timer_ui(timer)
@@ -49,6 +53,8 @@ func _process(delta: float) -> void:
 		$hum.stop()
 		timer_done_not_already_emitted = false
 		microwave_timer_done.emit()
+		if !laugh_audio.playing:
+			laugh_audio.play()
 	
 	if not dead and timer > 0.01:
 		position.x += speed * delta
@@ -110,7 +116,7 @@ func _tick_firing_timer(delta: float) -> void:
 	_firing_timer -= delta
 
 func _on_timer_2_timeout() -> void:
-	if _gun_timer <= 0.1:
+	if _gun_timer <= 0.1 and timer > 0.1:
 		for flash in muzzle_flash:
 			flash.visible = !flash.visible
 		if can_see_player():
