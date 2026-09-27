@@ -26,8 +26,8 @@ layer = 2
 script = ExtResource("1_o7pgs")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=170269733]
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_right = 1745.0
+offset_bottom = 1235.0
 color = Color(0, 0, 0, 0.46666667)
 
 [node name="Button" type="Button" parent="." unique_id=1778171800]

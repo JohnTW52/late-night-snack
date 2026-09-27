@@ -36,6 +36,7 @@ var level_completion_data: Array[int] = [
 ]
 
 func _ready() -> void:
+	load_data()
 	just_changed_level = false
 
 func _process(_delta: float) -> void:
@@ -120,6 +121,7 @@ func load_data(): # called when menu loads
 	level_completion_data = file.get_var()
 
 # for testing purposes
-func reset_save():
-	if FileAccess.file_exists("user://save.dat"):
-		DirAccess.remove_absolute("user://save.dat")
+#func reset_save():
+#	var default_lcd : Array[int] = [0,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+#	var file = FileAccess.open("user://save.dat", FileAccess.WRITE)
+#	file.store_var(default_lcd)
