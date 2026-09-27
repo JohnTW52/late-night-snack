@@ -23,4 +23,10 @@ shape = SubResource("BoxShape3D_rruc7")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1620213647]
 stream = ExtResource("3_s8p3n")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=336107067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.068813026, 0.29844558)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=784221828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.068813026, -0.42953116)
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

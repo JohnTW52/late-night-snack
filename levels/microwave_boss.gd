@@ -141,22 +141,22 @@ func _set_firing_stats() -> void:
 
 func _calc_new_speed() -> void:
 	if health.value > 100.0:
-			speed = 2.5
+			speed = 0.5
 	elif health.value > 90.0:
-			speed = 2.5
+			speed = 0.5
 	elif health.value > 80.0:
-			speed = 2.5
+			speed = 1.0
 	elif health.value > 70.0:
-			speed = 3.0
+			speed = 2.0
 	elif health.value > 60.0:
-			speed = 3.0
+			speed = 2.0
 	elif health.value > 50.0:
-			speed = 3.0
+			speed = 2.0
 	elif health.value > 40.0:
-			speed = 3.0
-	elif health.value > 30.0:
-			speed = 3.5
-	elif health.value > 20.0:
-			speed = 3.5
-	elif health.value > 10.0:
 			speed = 4.0
+	elif health.value > 30.0:
+			speed = 4.0
+	elif health.value > 20.0:
+			speed = 5.0
+	elif health.value > 10.0:
+			speed = 6.0

@@ -1,13 +1,18 @@
 extends Node3D
 
-var timer := 0.2
+var timer := 0.01
+var timer_done := false
 
 func _process(delta: float) -> void:
-	timer -= delta
+	if not timer_done:
+		timer -= delta
+		handle_lights()
+		print(timer)
 
-func setup_lights() -> void:
-	if timer <= 0.01:
+func handle_lights() -> void:
+	if timer <= 0:
+		timer_done = true
 		for node in get_children():
 			if node is AreaLight3D and node.has_method("toggle_light_loop"):
+				await get_tree().create_timer(0.2).timeout
 				node.toggle_light_loop()
-		timer = 0.2
