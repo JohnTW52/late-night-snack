@@ -93,7 +93,7 @@ func has_next_level() -> bool:
 	return false
 
 func increment_level_index() -> void:
-	sync_level_index()
+	#sync_level_index()
 	level_index += 1
 
 func get_timer_val() -> float:

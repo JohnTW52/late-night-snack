@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://7kdkxrhl2fc" path="res://ui/pause_menu.tscn" id="8_1gfio"]
 [ext_resource type="PackedScene" uid="uid://gc0mhougms2u" path="res://objects/lights/flickering_light.tscn" id="8_rp6xw"]
 [ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="9_fvdud"]
+[ext_resource type="PackedScene" uid="uid://dkyft6worhvf3" path="res://objects/microwave/secret_microwave.tscn" id="14_ho4s2"]
 
 [sub_resource type="Environment" id="Environment_lpcka"]
 glow_intensity = 4.32
@@ -121,6 +122,30 @@ material = SubResource("StandardMaterial3D_ma3h5")
 
 [node name="Wall4" type="CSGBox3D" parent="Structure" unique_id=774857448]
 transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, 10, 10)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_ma3h5")
+
+[node name="Wall9" type="CSGBox3D" parent="Structure" unique_id=1754219739]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 10, -7.995987, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_ma3h5")
+
+[node name="Wall10" type="CSGBox3D" parent="Structure" unique_id=1136063992]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, -7.995987, -10)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_ma3h5")
+
+[node name="Wall11" type="CSGBox3D" parent="Structure" unique_id=1185073975]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -10, -7.995987, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = SubResource("StandardMaterial3D_ma3h5")
+
+[node name="Wall12" type="CSGBox3D" parent="Structure" unique_id=506112713]
+transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, 1.3113416e-07, 0, -7.995987, 10)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_ma3h5")
@@ -907,3 +932,21 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.9908332, 8.014996, 6.
 
 [node name="Pizza2" parent="." unique_id=7218421 instance=ExtResource("7_858d1")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.388109, 8.380327, 7.4186053)
+
+[node name="SecretMicrowave" parent="." unique_id=606799031 instance=ExtResource("14_ho4s2")]
+transform = Transform3D(-0.74997795, 0, -0.0057499977, 0, 0.75, 0, 0.0057499977, 0, -0.74997795, 6.4943733, -3.0443716, -0.18309247)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SecretMicrowave" unique_id=397320907]
+light_color = Color(0.5568628, 0, 1, 1)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=776229540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1483183, -2.877738, 2.8368082)
+billboard = 1
+text = "Can you find the secret
+within the secret level?"
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=890011998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1483183, -2.877738, -2.9577217)
+billboard = 1
+text = "You found a
+super secret level!"
