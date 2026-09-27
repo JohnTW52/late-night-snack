@@ -22,6 +22,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [node name="LevelSelect" type="CanvasLayer" unique_id=1670008869]
+layer = 2
 script = ExtResource("1_o7pgs")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=170269733]

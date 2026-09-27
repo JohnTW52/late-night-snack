@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var level_select: PackedScene
+
 var currently_paused := false
 var currently_in_options := false
 
@@ -34,6 +36,11 @@ func _pause_game() -> void:
 			node.set_process_unhandled_input(false)
 
 func _resume_game() -> void:
+	# if level select is open
+	for c in get_children():
+		if (c.name == "LevelSelect"):
+			c.queue_free()
+
 	visible = false
 	currently_paused = false;
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
@@ -60,8 +67,12 @@ func _on_menu_button_pressed() -> void:
 
 # teehee
 func _on_exit_button_pressed() -> void:
-	var index = randi_range(0, 2);
+	var index = randi_range(0, 3);
 	var current_index = $VBoxContainer/Button4.get_index();
 	while index == current_index:
-		index = randi_range(0, 2);
+		index = randi_range(0, 3);
 	$VBoxContainer.move_child($VBoxContainer/Button4, index)
+
+func _on_button_2_pressed() -> void:
+	var child = level_select.instantiate()
+	add_child(child)
