@@ -153,19 +153,19 @@ func _calc_new_speed() -> void:
 	elif health.value >= 80.0:
 			speed = 1
 	elif health.value >= 70.0:
-			speed = 2
+			speed = 1
 	elif health.value >= 60.0:
-			speed = 3
+			speed = 1.5
 	elif health.value >= 50.0:
-			speed = 3.5
+			speed = 1.5
 	elif health.value >= 40.0:
-			speed = 4
+			speed = 2.0
 	elif health.value >= 30.0:
-			speed = 6
+			speed = 2.0
 	elif health.value >= 20.0:
-			speed = 8
+			speed = 3.0
 	elif health.value >= 10.0:
-			speed = 10
+			speed = 4.0
 
 func toggle_minus_time(time: float) -> void:
 	minus_time_ui.visible = true
@@ -173,7 +173,8 @@ func toggle_minus_time(time: float) -> void:
 	await get_tree().create_timer(1.0).timeout
 	minus_time_ui.visible = false
 
-func toggle_add_time() -> void:
+func toggle_add_time(time: float) -> void:
 	add_time_ui.visible = true
+	add_time_ui.get_node("Label").text = "- %.1f" % time
 	await get_tree().create_timer(1.0).timeout
 	add_time_ui.visible = false

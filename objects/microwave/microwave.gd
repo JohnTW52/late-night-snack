@@ -87,7 +87,8 @@ func toggle_minus_time(time: float) -> void:
 	await get_tree().create_timer(1.0).timeout
 	minus_time_ui.visible = false
 
-func toggle_add_time() -> void:
+func toggle_add_time(time: float) -> void:
 	add_time_ui.visible = true
+	add_time_ui.get_node("Label").text = "- %.1f" % time
 	await get_tree().create_timer(1.0).timeout
 	add_time_ui.visible = false
