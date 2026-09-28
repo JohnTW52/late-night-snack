@@ -10,9 +10,15 @@ func _ready() -> void:
 		await get_tree().create_timer(7).timeout
 		label.text = "or do you..."
 		await get_tree().create_timer(4).timeout
+		get_tree().change_scene_to_file(GameManager.levels[GameManager.level_index])
+	elif (i == 9):
+		$yeah.play()
+		$purr.play()
+		await get_tree().create_timer(6).timeout
+		get_tree().change_scene_to_file("res://ui/main_menu.tscn")
 	else:
 		await get_tree().create_timer(1.5).timeout
-	get_tree().change_scene_to_file(GameManager.levels[GameManager.level_index])
+		get_tree().change_scene_to_file(GameManager.levels[GameManager.level_index])
 
 func _get_success_text() -> String:
 	match GameManager.level_index:
@@ -35,8 +41,8 @@ func _get_success_text() -> String:
 		8:
 			return "You win!"
 		9:
-			return "jus.. one.. more... snack"
-		10:
 			return "ok thats enough snack for tonight"
+		10:
+			return ""
 		_:
 			return "Uh oh..."

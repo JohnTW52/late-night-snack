@@ -11,6 +11,7 @@ func _ready() -> void:
 func _after_last_chance() -> void:
 	show()
 	GameManager.game_over = true
+	GameManager.main_track.stream_paused = true
 	$gun.play()
 	
 	var t = Timer.new()

@@ -57,7 +57,10 @@ func change_level() -> void:
 		GameManager.increment_level_index()
 		get_tree().change_scene_to_file(next_level)
 	else:
-		print("Already on last level.")
+		GameManager.increment_level_index()
+		await get_tree().create_timer(4).timeout
+		GameManager.main_track.stop()
+		show_success_screen()
 
 func tick_timer(delta: float) -> void:
 	timer -= delta

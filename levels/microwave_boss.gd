@@ -86,6 +86,7 @@ func interact(player: PlayerCharacter) -> void:
 		if health.value <= 0:
 			death_audio.play()
 			dead = true
+			change_level()
 		else:
 			var index := randi() % 20
 			if index < 9:

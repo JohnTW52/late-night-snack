@@ -51,11 +51,10 @@ func _ready() -> void:
 	add_child(main_track)
 	main_track.stream = preload("res://sfx/music/main.mp3")
 	main_track.volume_db = -7
+	main_track.stream.loop = true
 
 func _process(_delta: float) -> void:
-	if main_track.playing == false:
-		main_track.play()
-	elif level_index == 8:
+	if level_index == 8:
 		main_track.stop()
 	
 	if Input.is_action_just_pressed("restart level"):
@@ -63,6 +62,7 @@ func _process(_delta: float) -> void:
 		save_data()
 		get_tree().reload_current_scene();
 		game_over = false
+		main_track.stream_paused = false
 	
 	# temp for debugging
 	if Input.is_action_just_pressed("1"):
@@ -131,6 +131,8 @@ func on_game_over() -> void:
 	total_fails += 1;
 	save_data()
 	game_over = false
+	main_track.stream_paused = false
+	
 
 func save_data():
 	var file = FileAccess.open("user://level.dat", FileAccess.WRITE)
