@@ -127,6 +127,7 @@ func _on_timer_2_timeout() -> void:
 			flash.visible = !flash.visible
 		if can_see_player():
 			remove_time(0.5)
+			toggle_minus_time(0.5)
 
 func _stop_firing() -> void:
 	gun_audio.stop()

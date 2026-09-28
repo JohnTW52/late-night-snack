@@ -1,6 +1,7 @@
 extends Node
 
-var cheer_audio : AudioStreamPlayer
+var cheer_audio: AudioStreamPlayer
+var main_track: AudioStreamPlayer
 
 var just_changed_level := false
 var game_over: bool = false
@@ -11,9 +12,9 @@ var timer_vals: Dictionary = {
 	3: 10.0,
 	4: 15.0,
 	5: 10.0,
-	6: 20.0,
-	7: 60.0,
-	8: 60.0,
+	6: 15.0,
+	7: 55.0,
+	8: 30.0,
 	9: 60.0,
 	10: 10.0
 }
@@ -45,8 +46,18 @@ func _ready() -> void:
 	add_child(cheer_audio)
 	cheer_audio.stream = preload("res://sfx/ominous cheers.mp3")
 	cheer_audio.volume_db = -12
+	
+	main_track = AudioStreamPlayer.new()
+	add_child(main_track)
+	main_track.stream = preload("res://sfx/music/main.mp3")
+	main_track.volume_db = -7
 
 func _process(_delta: float) -> void:
+	if main_track.playing == false:
+		main_track.play()
+	elif level_index == 8:
+		main_track.stop()
+	
 	if Input.is_action_just_pressed("restart level"):
 		total_fails += 1;
 		save_data()

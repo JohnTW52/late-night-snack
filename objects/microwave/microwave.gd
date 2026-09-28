@@ -9,8 +9,13 @@ var timer: float
 
 @onready var timer_ui := $Timer/MarginContainer/Label
 @onready var level_ui := $MarginContainer/Label
+@onready var minus_time_ui := $MinusTime
+@onready var add_time_ui := $AddTime
 
 func _ready() -> void:
+	minus_time_ui.visible = false
+	add_time_ui.visible = false
+	
 	if GameManager.just_changed_level:
 		show_success_screen()
 	if get_tree() != null and get_tree().current_scene.name == "SecretLevel":
@@ -75,3 +80,14 @@ func update_level_ui() -> void:
 func show_success_screen() -> void:
 	get_tree().change_scene_to_file("res://ui/success.tscn")
 	GameManager.just_changed_level = false
+
+func toggle_minus_time(time: float) -> void:
+	minus_time_ui.visible = true
+	minus_time_ui.get_node("Label").text = "- %d" % time
+	await get_tree().create_timer(1.0).timeout
+	minus_time_ui.visible = false
+
+func toggle_add_time() -> void:
+	add_time_ui.visible = true
+	await get_tree().create_timer(1.0).timeout
+	add_time_ui.visible = false

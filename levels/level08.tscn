@@ -141,7 +141,7 @@ albedo_texture = ExtResource("2_hl8yq")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
-[node name="Level02" type="Node3D" unique_id=421491462]
+[node name="Level03" type="Node3D" unique_id=421491462]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=277056539]
 environment = SubResource("Environment_luatw")

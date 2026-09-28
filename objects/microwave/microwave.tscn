@@ -38,3 +38,35 @@ theme_override_constants/margin_right = 15
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "1/9"
+
+[node name="MinusTime" type="MarginContainer" parent="." index="5" unique_id=1098406106]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 39.0
+offset_right = 100.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="MinusTime" index="0" unique_id=659110706]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "-10"
+
+[node name="AddTime" type="MarginContainer" parent="." index="6" unique_id=1974895806]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 39.0
+offset_right = 100.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="AddTime" index="0" unique_id=486911377]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "+10"
