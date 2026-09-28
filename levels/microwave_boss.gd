@@ -122,6 +122,7 @@ func _on_timer_2_timeout() -> void:
 			flash.visible = !flash.visible
 		if can_see_player():
 			remove_time(0.5)
+			toggle_minus_time(0.5)
 
 func _stop_firing() -> void:
 	gun_audio.stop()
@@ -160,3 +161,14 @@ func _calc_new_speed() -> void:
 			speed = 5.0
 	elif health.value > 10.0:
 			speed = 6.0
+
+func toggle_minus_time(time: float) -> void:
+	minus_time_ui.visible = true
+	minus_time_ui.get_node("Label").text = "- %.1f" % time
+	await get_tree().create_timer(1.0).timeout
+	minus_time_ui.visible = false
+
+func toggle_add_time() -> void:
+	add_time_ui.visible = true
+	await get_tree().create_timer(1.0).timeout
+	add_time_ui.visible = false

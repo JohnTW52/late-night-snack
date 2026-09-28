@@ -141,14 +141,14 @@ albedo_texture = ExtResource("2_hl8yq")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
-[node name="Level02" type="Node3D" unique_id=421491462]
+[node name="Level03" type="Node3D" unique_id=421491462]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=277056539]
 environment = SubResource("Environment_luatw")
 camera_attributes = SubResource("CameraAttributesPractical_akonu")
 
 [node name="PlayerCharacter" parent="." unique_id=2033525645 instance=ExtResource("1_4d047")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.48881137, 28.276424, 4.944204)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.48881197, 1.2764244, -8.663248)
 
 [node name="Obstacles" type="Node3D" parent="." unique_id=923004167]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.09774774, 1.0500007, -8.186897)
