@@ -94,6 +94,8 @@ albedo_texture = ExtResource("2_icpok")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8qym"]
+
 [node name="Level02" type="Node3D" unique_id=421491462]
 script = ExtResource("1_lmcsa")
 
@@ -718,8 +720,12 @@ size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="Structure" unique_id=655706796]
+collision_mask = 2
 
-[node name="MoveComponent" parent="Structure/AnimatableBody3D" unique_id=1775925302 instance=ExtResource("16_bo6aj")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/AnimatableBody3D" unique_id=390304551]
+shape = SubResource("BoxShape3D_x8qym")
+
+[node name="MoveComponent" parent="Structure" unique_id=1775925302 instance=ExtResource("16_bo6aj")]
 
 [node name="Wall19" type="CSGBox3D" parent="Structure" unique_id=6374352]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 160, 10, -10)
@@ -1658,7 +1664,7 @@ _boost_mult = 4.0
 
 [node name="JumpBoost2" parent="." unique_id=1641369979 instance=ExtResource("15_uu2w3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 67.75634, 0.90446544, -0.35375786)
-_boost_mult = 5.0
+_boost_mult = 4.0
 _boost_time = 999.0
 
 [node name="AddTime" parent="." unique_id=1800928030 instance=ExtResource("18_oocia")]
