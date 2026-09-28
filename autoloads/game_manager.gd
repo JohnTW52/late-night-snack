@@ -53,9 +53,7 @@ func _ready() -> void:
 	main_track.volume_db = -7
 
 func _process(_delta: float) -> void:
-	if main_track.playing == false:
-		main_track.play()
-	elif level_index == 8:
+	if level_index == 8:
 		main_track.stop()
 	
 	if Input.is_action_just_pressed("restart level"):

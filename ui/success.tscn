@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cu4qnvlvt115u"]
 
 [ext_resource type="Script" uid="uid://d2uyje3n30gki" path="res://ui/success.gd" id="1_o8cif"]
+[ext_resource type="AudioStream" uid="uid://dgu0y10dp02f7" path="res://sfx/yeah.mp3" id="2_bllf2"]
+[ext_resource type="AudioStream" uid="uid://ldgajb4821bp" path="res://sfx/purr.mp3" id="3_5glp2"]
 
 [node name="Success" type="CanvasLayer" unique_id=331028200]
 script = ExtResource("1_o8cif")
@@ -29,3 +31,11 @@ theme_override_font_sizes/font_size = 36
 text = "Not enough. Need more snack."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="yeah" type="AudioStreamPlayer" parent="." unique_id=376105718]
+stream = ExtResource("2_bllf2")
+
+[node name="purr" type="AudioStreamPlayer" parent="." unique_id=183396948]
+stream = ExtResource("3_5glp2")
+
+[node name="kazoo" type="AudioStreamPlayer" parent="." unique_id=1057455654]

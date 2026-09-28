@@ -27,7 +27,7 @@ var _firing_timer := 2.0
 func _ready() -> void:
 	target_player = owner.get_node("PlayerCharacter").get_node("PlayerCharacter")
 	
-	health.value = 100.0
+	health.value = 10.0 # temp # 100.0
 	
 	if GameManager.just_changed_level:
 		show_success_screen()
@@ -86,6 +86,7 @@ func interact(player: PlayerCharacter) -> void:
 		if health.value <= 0:
 			death_audio.play()
 			dead = true
+			change_level()
 		else:
 			var index := randi() % 20
 			if index < 9:
