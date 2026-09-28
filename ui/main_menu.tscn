@@ -56,6 +56,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "LEAVE :("
 
+[node name="Button2" type="Button" parent="Buttons/VBoxContainer" unique_id=1400753239]
+layout_mode = 2
+text = "Debug Mode : off"
+
+[node name="Label" type="Label" parent="Buttons/VBoxContainer" unique_id=1997052184]
+layout_mode = 2
+text = "^ lets you skip levels with 1-9"
+horizontal_alignment = 1
+
 [node name="Title" type="MarginContainer" parent="." unique_id=1742878347]
 anchors_preset = 5
 anchor_left = 0.5
@@ -108,3 +117,4 @@ shape = SubResource("RectangleShape2D_x8qym")
 [connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
