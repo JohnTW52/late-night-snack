@@ -641,8 +641,6 @@ transform = Transform3D(0.13517858, -0.21030161, -9.192576e-09, 4.6388876e-16, -
 
 [node name="Microwave" parent="." unique_id=431850308 instance=ExtResource("2_xe3su")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 6, 7.5739994, 0.26)
-knockback_force = null
-speed = null
 
 [node name="Structure" type="Node3D" parent="." unique_id=1294595117]
 
