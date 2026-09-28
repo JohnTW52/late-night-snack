@@ -1,6 +1,8 @@
 extends Node3D
 
 @export var _boost_time := 5.0
+@export var boost_multiplier := 1.5
+
 var _player: PlayerCharacter
 var _player_entered := false
 var _used := false
@@ -44,7 +46,10 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			_player_entered = true
 			$AudioStreamPlayer3D.play()
 			_default_run_speed = _player.run_speed
-			_player.run_speed *= 1.5
+			_player.run_speed *= boost_multiplier
+			
+			_player.fall_gravity *= boost_multiplier
+			
 		else:
 			print("could not find player")
 		

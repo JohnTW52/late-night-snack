@@ -1,7 +1,7 @@
 @tool
 extends Node3D
 
-@export var move_duration: int = 4:
+@export var move_duration := 4.0:
 	set(value):
 		move_duration = value
 		$MoveComponent.move_duration = value

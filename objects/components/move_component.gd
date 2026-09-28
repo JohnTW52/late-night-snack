@@ -1,6 +1,7 @@
 class_name MoveComponent extends Node3D
 
 @export var move_duration := 2.0
+
 var _root: Node3D
 var markers: Array[Marker3D] = []
 

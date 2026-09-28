@@ -44,6 +44,11 @@ func _process(delta: float) -> void:
 		_stop_firing()
 		$hum.stop()
 		return
+		
+	if global_position.x < 1:
+		speed *= -1
+	elif global_position.x > 340:
+		speed *= -1
 
 	if timer > 0.01:
 		tick_timer(delta)
@@ -140,23 +145,23 @@ func _set_firing_stats() -> void:
 		_firing_timer = randf_range(2.5, 4.0)
 
 func _calc_new_speed() -> void:
-	if health.value > 100.0:
+	if health.value >= 100.0:
 			speed = 0.5
-	elif health.value > 90.0:
+	elif health.value >= 90.0:
 			speed = 0.5
-	elif health.value > 80.0:
-			speed = 1.0
-	elif health.value > 70.0:
-			speed = 2.0
-	elif health.value > 60.0:
-			speed = 2.0
-	elif health.value > 50.0:
-			speed = 2.0
-	elif health.value > 40.0:
-			speed = 4.0
-	elif health.value > 30.0:
-			speed = 4.0
-	elif health.value > 20.0:
-			speed = 5.0
-	elif health.value > 10.0:
-			speed = 6.0
+	elif health.value >= 80.0:
+			speed = 1
+	elif health.value >= 70.0:
+			speed = 2
+	elif health.value >= 60.0:
+			speed = 3
+	elif health.value >= 50.0:
+			speed = 3.5
+	elif health.value >= 40.0:
+			speed = 4
+	elif health.value >= 30.0:
+			speed = 6
+	elif health.value >= 20.0:
+			speed = 8
+	elif health.value >= 10.0:
+			speed = 10
