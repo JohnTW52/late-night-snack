@@ -1,5 +1,7 @@
 extends Node
 
+var debug_mode = false
+
 var cheer_audio: AudioStreamPlayer
 var main_track: AudioStreamPlayer
 
@@ -64,7 +66,8 @@ func _process(_delta: float) -> void:
 		game_over = false
 		main_track.stream_paused = false
 	
-	# temp for debugging
+	if (!debug_mode):
+		return
 	if Input.is_action_just_pressed("1"):
 		get_tree().change_scene_to_file(levels[0])
 		sync_level_index()
@@ -91,9 +94,6 @@ func _process(_delta: float) -> void:
 		sync_level_index()
 	if Input.is_action_just_pressed("9"):
 		get_tree().change_scene_to_file(levels[8])
-		sync_level_index()
-	if Input.is_action_just_pressed("0"):
-		get_tree().change_scene_to_file(levels[9])
 		sync_level_index()
 
 # This function will be useful if we add save and quit later
