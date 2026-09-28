@@ -1,10 +1,12 @@
 class_name JumpBoost extends Node3D
 
 @export var _boost_mult := 3.0 ## Higher number means higher jump
+
+
 var _player: PlayerCharacter
 var _default_fall_time: float
 var _default_peak_time: float
-var _boost_time := 10.0
+@export var _boost_time := 10.0
 var _boost_timer := 0.0
 var _time := 0.0
 var _amplitude := 0.005

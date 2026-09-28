@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://b1o87l13y36j6" path="res://objects/fridge/fridge.tscn" id="19_lq1do"]
 [ext_resource type="PackedScene" uid="uid://dmul1g066660u" path="res://objects/food/pancake_big.tscn" id="20_oocia"]
 [ext_resource type="PackedScene" uid="uid://bj44e51awv2c" path="res://objects/food/meat.tscn" id="20_whs0g"]
+[ext_resource type="PackedScene" uid="uid://b7kqemnl54kfi" path="res://objects/fridge/moving_fridge.tscn" id="24_rbcsq"]
+[ext_resource type="PackedScene" uid="uid://62a0p7cmfmlk" path="res://objects/laser/laser.tscn" id="25_mtqab"]
 
 [sub_resource type="Environment" id="Environment_gw2yi"]
 glow_intensity = 4.32
@@ -436,7 +438,7 @@ transform = Transform3D(0.012407997, -0.19961473, -8.725436e-09, 0, -8.742278e-0
 transform = Transform3D(0.13517858, -0.21030161, -9.192576e-09, 4.6388876e-16, -1.0927848e-08, 0.25, -0.21030161, -0.13517858, -5.908843e-09, -4.664667, -0.40023136, 33.175816)
 
 [node name="Microwave" parent="." unique_id=431850308 instance=ExtResource("2_xe3su")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 6.051302, 8.428633, 0.25987506)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 6, 8.429, 0.26)
 
 [node name="Structure" type="Node3D" parent="." unique_id=1294595117]
 
@@ -709,6 +711,16 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
 
+[node name="Ground20" type="CSGBox3D" parent="Structure" unique_id=2062105807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.57826, 5.0349073, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = ExtResource("3_lmcsa")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="Structure" unique_id=655706796]
+
+[node name="MoveComponent" parent="Structure/AnimatableBody3D" unique_id=1775925302 instance=ExtResource("16_bo6aj")]
+
 [node name="Wall19" type="CSGBox3D" parent="Structure" unique_id=6374352]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 160, 10, -10)
 use_collision = true
@@ -758,7 +770,7 @@ size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_kh1lg")
 
 [node name="Ground12" type="CSGBox3D" parent="Structure" unique_id=847665846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220, 4.7683716e-07, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
@@ -781,6 +793,12 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
 
+[node name="Ground21" type="CSGBox3D" parent="Structure" unique_id=231492748]
+transform = Transform3D(0.9628365, -0.2700849, 0, 0.2700849, 0.9628365, 0, 0, 0, 1, 240, 1.867979, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = ExtResource("3_lmcsa")
+
 [node name="Wall27" type="CSGBox3D" parent="Structure" unique_id=470876966]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 240, 10, -10)
 use_collision = true
@@ -795,6 +813,12 @@ material = SubResource("StandardMaterial3D_kh1lg")
 
 [node name="Ground14" type="CSGBox3D" parent="Structure" unique_id=218447165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260, 0, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = ExtResource("3_lmcsa")
+
+[node name="Ground22" type="CSGBox3D" parent="Structure" unique_id=1181372315]
+transform = Transform3D(1.0569243, 0, 0, 0, 1, 0, 0, 0, 1, 260, 4.5784073, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
@@ -835,6 +859,12 @@ use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
 
+[node name="Ground23" type="CSGBox3D" parent="Structure" unique_id=1574598070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 300, 2.7191248, 0)
+use_collision = true
+size = Vector3(20, 0.1, 20)
+material = ExtResource("3_lmcsa")
+
 [node name="Wall33" type="CSGBox3D" parent="Structure" unique_id=957862119]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 300, 10, -10)
 use_collision = true
@@ -848,7 +878,7 @@ size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_kh1lg")
 
 [node name="Ground17" type="CSGBox3D" parent="Structure" unique_id=487285229]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320, 2.7191248, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
@@ -866,7 +896,7 @@ size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_kh1lg")
 
 [node name="Ground18" type="CSGBox3D" parent="Structure" unique_id=332663454]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 340, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 340, 2.7191248, 0)
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = ExtResource("3_lmcsa")
@@ -888,6 +918,23 @@ transform = Transform3D(-5.7320566e-15, 1.3113416e-07, -1, -1, -4.371139e-08, 0,
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_kh1lg")
+
+[node name="AddTime" parent="Structure" unique_id=1548117864 instance=ExtResource("18_oocia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.50512, 1.0177343, 1.9485598)
+_time_to_add = 40.0
+
+[node name="SpeedBoost" parent="Structure" unique_id=775746707 instance=ExtResource("16_gw2yi")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 161.48897, 7.926423, -0.18898743)
+_boost_time = 999.0
+boost_multiplier = 3.5
+
+[node name="AddTime2" parent="Structure" unique_id=686834961 instance=ExtResource("18_oocia")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 129.47171, 7.168671, -2.7081122)
+_time_to_add = 30.0
+
+[node name="AddTime3" parent="Structure" unique_id=1338347909 instance=ExtResource("18_oocia")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 131.3823, 9.234263, 2.1628847)
+_time_to_add = 30.0
 
 [node name="LightingLeft" type="Node3D" parent="." unique_id=1763713960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
@@ -1607,21 +1654,826 @@ visible = false
 
 [node name="JumpBoost" parent="." unique_id=120868238 instance=ExtResource("15_uu2w3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14, 5.1094384, 5.7141404)
-_boost_mult = 5.0
+_boost_mult = 4.0
 
 [node name="JumpBoost2" parent="." unique_id=1641369979 instance=ExtResource("15_uu2w3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 67.75634, 0.90446544, -0.35375786)
 _boost_mult = 5.0
+_boost_time = 999.0
 
-[node name="AddTime" parent="." unique_id=1548117864 instance=ExtResource("18_oocia")]
+[node name="AddTime" parent="." unique_id=1800928030 instance=ExtResource("18_oocia")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.677303, 2.6784475, -4.6700935)
-_time_to_add = 15.0
+_time_to_add = 60.0
 
 [node name="Pancake_Big" parent="." unique_id=287193136 instance=ExtResource("20_oocia")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 28.046371, 1.1434058, 4.1751323)
 
-[node name="SpeedBoost" parent="." unique_id=775746707 instance=ExtResource("16_gw2yi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91, 0.47564507, 0)
+[node name="SpeedBoost" parent="." unique_id=224063414 instance=ExtResource("16_gw2yi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.718994, 0.47564507, 2.0484104)
+_boost_time = 120.0
+boost_multiplier = 2.5
+
+[node name="Laser" parent="." unique_id=1459055399 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 96.71749, 0.05785209, -0.3070264)
+
+[node name="Laser2" parent="." unique_id=2097534655 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 100.009544, 0.05785209, -0.3070264)
+
+[node name="Laser3" parent="." unique_id=410348074 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 103.18918, 0.05785209, -0.3070264)
+
+[node name="Laser4" parent="." unique_id=1328912880 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 106.462494, 0.05785209, -0.3070264)
+
+[node name="Laser5" parent="." unique_id=339517005 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 109.75455, 0.05785209, -0.3070264)
+
+[node name="Laser6" parent="." unique_id=2037970537 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 112.93418, 0.05785209, -0.3070264)
+
+[node name="Laser7" parent="." unique_id=2061346895 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 116.21742, 0.05785209, -0.3070264)
+
+[node name="Laser8" parent="." unique_id=1834740343 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 119.509476, 0.05785209, -0.3070264)
+
+[node name="Laser9" parent="." unique_id=1475180582 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 122.68911, 0.05785209, -0.3070264)
+
+[node name="Laser10" parent="." unique_id=158957912 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 125.962425, 0.05785209, -0.3070264)
+
+[node name="Laser11" parent="." unique_id=355200645 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 129.25449, 0.05785209, -0.3070264)
+
+[node name="Laser12" parent="." unique_id=1020935952 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 132.43411, 0.05785209, -0.3070264)
+
+[node name="Laser13" parent="." unique_id=1526297619 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 135.7175, 0.05785209, -0.3070264)
+
+[node name="Laser14" parent="." unique_id=1778595680 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 139.00955, 0.05785209, -0.3070264)
+
+[node name="Laser15" parent="." unique_id=427045034 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 142.18918, 0.05785209, -0.3070264)
+
+[node name="Laser16" parent="." unique_id=1885033859 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 145.4625, 0.05785209, -0.3070264)
+
+[node name="Laser17" parent="." unique_id=853657303 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 148.75455, 0.05785209, -0.3070264)
+
+[node name="Laser18" parent="." unique_id=584720841 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 151.93417, 0.05785209, -0.3070264)
+
+[node name="Laser19" parent="." unique_id=829009475 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 155.21742, 0.05785209, -0.3070264)
+
+[node name="Laser20" parent="." unique_id=37157405 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 158.50948, 0.05785209, -0.3070264)
+
+[node name="Laser21" parent="." unique_id=965461140 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 161.68912, 0.05785209, -0.3070264)
+
+[node name="Laser22" parent="." unique_id=1200743588 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 164.96243, 0.05785209, -0.3070264)
+
+[node name="Laser23" parent="." unique_id=1631915432 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 168.25449, 0.05785209, -0.3070264)
+
+[node name="Laser24" parent="." unique_id=631196104 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 171.43411, 0.05785209, -0.3070264)
+
+[node name="Laser25" parent="." unique_id=1575168150 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 174.91452, 0.05785209, -0.3070264)
+
+[node name="Laser26" parent="." unique_id=2030380178 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 178.20657, 0.05785209, -0.3070264)
+
+[node name="Laser27" parent="." unique_id=1240428329 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 181.3862, 0.05785209, -0.3070264)
+
+[node name="Laser28" parent="." unique_id=1706858941 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 184.65952, 0.05785209, -0.3070264)
+
+[node name="Laser29" parent="." unique_id=1740542305 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 187.95157, 0.05785209, -0.3070264)
+
+[node name="Laser30" parent="." unique_id=1645447901 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 191.1312, 0.05785209, -0.3070264)
+
+[node name="Laser31" parent="." unique_id=1707639140 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 194.41444, 0.05785209, -0.3070264)
+
+[node name="Laser32" parent="." unique_id=1493838988 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 197.7065, 0.05785209, -0.3070264)
+
+[node name="Laser33" parent="." unique_id=1525262144 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 200.88614, 0.05785209, -0.3070264)
+
+[node name="Laser34" parent="." unique_id=1406021684 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 204.15945, 0.05785209, -0.3070264)
+
+[node name="Laser35" parent="." unique_id=694714261 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 207.4515, 0.05785209, -0.3070264)
+
+[node name="Laser36" parent="." unique_id=2058526688 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 210.63113, 0.05785209, -0.3070264)
+
+[node name="Laser37" parent="." unique_id=937146306 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 213.91452, 0.05785209, -0.3070264)
+
+[node name="Laser38" parent="." unique_id=113102032 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 217.20657, 0.05785209, -0.3070264)
+
+[node name="Laser39" parent="." unique_id=1834608311 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 220.3862, 0.05785209, -0.3070264)
+
+[node name="Laser40" parent="." unique_id=203343078 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 223.65952, 0.05785209, -0.3070264)
+
+[node name="Laser41" parent="." unique_id=94384614 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 226.95157, 0.05785209, -0.3070264)
+
+[node name="Laser42" parent="." unique_id=192339613 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 230.1312, 0.05785209, -0.3070264)
+
+[node name="Laser43" parent="." unique_id=1195151228 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 233.41444, 0.05785209, -0.3070264)
+
+[node name="Laser44" parent="." unique_id=331228552 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 236.7065, 0.05785209, -0.3070264)
+
+[node name="Laser45" parent="." unique_id=695271139 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 239.88614, 0.05785209, -0.3070264)
+
+[node name="Laser46" parent="." unique_id=318403222 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 243.15945, 0.05785209, -0.3070264)
+
+[node name="Laser47" parent="." unique_id=96958666 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 246.4515, 0.05785209, -0.3070264)
+
+[node name="Laser48" parent="." unique_id=1750145196 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 249.63113, 0.05785209, -0.3070264)
+
+[node name="Laser49" parent="." unique_id=127824858 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 252.70813, 0.05785209, -0.3070264)
+
+[node name="Laser50" parent="." unique_id=1541003267 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 256.00018, 0.05785209, -0.3070264)
+
+[node name="Laser51" parent="." unique_id=1408741966 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 259.1798, 0.05785209, -0.3070264)
+
+[node name="Laser52" parent="." unique_id=1999936589 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 262.45313, 0.05785209, -0.3070264)
+
+[node name="Laser53" parent="." unique_id=964173344 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 265.74518, 0.05785209, -0.3070264)
+
+[node name="Laser54" parent="." unique_id=2014601021 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 268.9248, 0.05785209, -0.3070264)
+
+[node name="Laser55" parent="." unique_id=512562240 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 272.20807, 0.05785209, -0.3070264)
+
+[node name="Laser56" parent="." unique_id=1664172069 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 275.50012, 0.05785209, -0.3070264)
+
+[node name="Laser57" parent="." unique_id=1812287388 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 278.67975, 0.05785209, -0.3070264)
+
+[node name="Laser58" parent="." unique_id=530356303 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 281.95306, 0.05785209, -0.3070264)
+
+[node name="Laser59" parent="." unique_id=2096691889 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 285.24512, 0.05785209, -0.3070264)
+
+[node name="Laser60" parent="." unique_id=1395371387 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 288.42474, 0.05785209, -0.3070264)
+
+[node name="Laser61" parent="." unique_id=1370551342 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 291.70813, 0.05785209, -0.3070264)
+
+[node name="Laser62" parent="." unique_id=1963181613 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 295.00018, 0.05785209, -0.3070264)
+
+[node name="Laser63" parent="." unique_id=235549193 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 298.1798, 0.05785209, -0.3070264)
+
+[node name="Laser64" parent="." unique_id=1846839326 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 301.45313, 0.05785209, -0.3070264)
+
+[node name="Laser65" parent="." unique_id=19722999 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 304.74518, 0.05785209, -0.3070264)
+
+[node name="Laser66" parent="." unique_id=1832080023 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 307.9248, 0.05785209, -0.3070264)
+
+[node name="Laser67" parent="." unique_id=365055438 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 311.20807, 0.05785209, -0.3070264)
+
+[node name="Laser68" parent="." unique_id=446971655 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 314.50012, 0.05785209, -0.3070264)
+
+[node name="Laser69" parent="." unique_id=1121906412 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 317.67975, 0.05785209, -0.3070264)
+
+[node name="Laser70" parent="." unique_id=1398801022 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 320.95306, 0.05785209, -0.3070264)
+
+[node name="Laser71" parent="." unique_id=26137831 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 324.24512, 0.05785209, -0.3070264)
+
+[node name="Laser72" parent="." unique_id=1434505552 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 327.42474, 0.05785209, -0.3070264)
+
+[node name="Laser73" parent="." unique_id=1309215666 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 330.90515, 0.05785209, -0.3070264)
+
+[node name="Laser74" parent="." unique_id=1148537541 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 334.1972, 0.05785209, -0.3070264)
+
+[node name="Laser75" parent="." unique_id=1010425260 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 337.37683, 0.05785209, -0.3070264)
+
+[node name="Laser76" parent="." unique_id=351884306 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 340.65015, 0.05785209, -0.3070264)
+
+[node name="Laser77" parent="." unique_id=1088102420 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 343.9422, 0.05785209, -0.3070264)
+
+[node name="Laser78" parent="." unique_id=399905890 instance=ExtResource("25_mtqab")]
+transform = Transform3D(-2.6680254e-07, 2.5065176, 4.3711392e-08, 0, -1.0956337e-07, 1.0000001, 6.10373, 1.0956337e-07, 1.9106857e-15, 347.12183, 0.05785209, -0.3070264)
+
+[node name="MovingFridge" parent="." unique_id=346364558 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.29793578, -0.6334307, -7.1113595e-09, -0.63343054, -0.29793587, -3.7158465e-08, 3.0597967e-08, 2.2250559e-08, -0.7, 96.94736, 0.71286225, -3.6011171)
+move_duration = 1.0
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(-5, -5, 0)
+
+[node name="MovingFridge2" parent="." unique_id=1068312080 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.29793578, -0.6334307, -7.1113595e-09, -0.63343054, -0.29793587, -3.7158465e-08, 3.0597967e-08, 2.2250559e-08, -0.7, 96.94736, 0.71286225, 3.3988829)
+move_duration = 1.0
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(-5, -5, 0)
+
+[node name="MovingFridge5" parent="." unique_id=907521599 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 106.27508, 2.3380008, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge6" parent="." unique_id=1545295005 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 106.27508, 2.3380008, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge11" parent="." unique_id=593273057 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 104.9316, 1.5623469, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge12" parent="." unique_id=459666197 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 104.9316, 1.5623469, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge13" parent="." unique_id=17765887 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 108.91122, 3.8599772, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge14" parent="." unique_id=289657531 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 108.91122, 3.8599772, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge15" parent="." unique_id=362544026 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 107.56774, 3.0843234, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge16" parent="." unique_id=1666992773 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.35, 7.229078e-09, 0.6062178, -0.6062178, 4.17371e-09, 0.35, -2.717646e-23, -0.7000002, 8.347418e-09, 107.56774, 3.0843234, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge7" parent="." unique_id=1305899667 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 117.43045, 2.711161, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge8" parent="." unique_id=493665333 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 117.43045, 2.711161, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge39" parent="." unique_id=1057094830 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 115.87914, 2.7111626, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge40" parent="." unique_id=20730522 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 115.87914, 2.7111626, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge41" parent="." unique_id=952784263 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 120.4744, 2.7111616, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge42" parent="." unique_id=1430357271 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 120.4744, 2.7111616, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge43" parent="." unique_id=331052099 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 118.923096, 2.7111635, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge44" parent="." unique_id=1115257488 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 118.923096, 2.7111635, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge45" parent="." unique_id=983799273 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 128.38521, 2.9092782, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge46" parent="." unique_id=1041614292 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 128.91544, 3.5001166, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge47" parent="." unique_id=516158759 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 127.28827, 1.8123391, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge48" parent="." unique_id=340788459 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 127.32037, 1.8123391, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge49" parent="." unique_id=1866625135 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 130.5376, 5.0616784, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge50" parent="." unique_id=62580398 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 130.5376, 5.0616784, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge60" parent="." unique_id=1210082445 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 133.79282, 8.316888, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge51" parent="." unique_id=552168904 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 129.44067, 3.9647398, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge53" parent="." unique_id=1272239127 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 132.78522, 7.3092957, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge54" parent="." unique_id=1801542720 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 132.78522, 7.3092957, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge55" parent="." unique_id=1879592142 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 131.6883, 6.2123566, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge56" parent="." unique_id=1472078202 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 131.6883, 6.2123566, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge57" parent="." unique_id=1540617210 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 134.93762, 9.461697, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge58" parent="." unique_id=15172776 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 134.93762, 9.461697, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge59" parent="." unique_id=771102153 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.49497467, 5.9025167e-09, 0.49497473, -0.49497473, 5.9025167e-09, 0.49497467, -3.5251013e-16, -0.70000017, 8.347417e-09, 133.84068, 8.364758, -1.1382467)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge61" parent="." unique_id=35538379 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 111.58255, 2.9092782, 4.188613)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge62" parent="." unique_id=1019448053 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 111.05232, 3.5001166, -8.105516)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge63" parent="." unique_id=725376851 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 112.67949, 1.8123391, 4.188613)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge64" parent="." unique_id=956753416 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 112.647385, 1.8123391, -8.105516)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge65" parent="." unique_id=460002154 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 109.43016, 5.0616784, 4.188613)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge66" parent="." unique_id=1653686810 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 109.43016, 5.0616784, -8.105516)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge67" parent="." unique_id=2091123071 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 106.17494, 8.316888, -8.1055155)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge68" parent="." unique_id=1504780550 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 110.527084, 3.9647398, 4.188613)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge69" parent="." unique_id=755236261 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 107.18254, 7.3092957, 4.1886134)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge70" parent="." unique_id=1646014417 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 107.18254, 7.3092957, -8.1055155)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge71" parent="." unique_id=2050663566 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 108.279465, 6.2123566, 4.188613)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge72" parent="." unique_id=2105580435 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 108.279465, 6.2123566, -8.105516)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge73" parent="." unique_id=1796210609 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 105.030136, 9.461697, 4.1886134)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge74" parent="." unique_id=1414847546 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 105.030136, 9.461697, -8.1055155)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge75" parent="." unique_id=1106263574 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-0.49497467, 5.5293437e-08, -0.49497473, -0.49497473, 5.902517e-09, 0.49497467, 4.327206e-08, 0.70000017, 3.492465e-08, 106.127075, 8.364758, 4.1886134)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 20)
+
+[node name="MovingFridge52" parent="." unique_id=18935943 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 118.923096, 2.7111635, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge21" parent="." unique_id=589290415 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 137.03177, 2.711161, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge22" parent="." unique_id=1213224310 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 137.03177, 2.711161, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge76" parent="." unique_id=1297809424 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 135.48045, 2.7111626, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge77" parent="." unique_id=1220705488 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 135.48045, 2.7111626, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge78" parent="." unique_id=1372722490 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 140.07571, 2.7111616, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge79" parent="." unique_id=615684505 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 140.07571, 2.7111616, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge80" parent="." unique_id=459891790 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 138.52441, 2.7111635, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge81" parent="." unique_id=664790671 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 138.52441, 2.7111635, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge82" parent="." unique_id=540591851 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 144.60858, 2.711161, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge83" parent="." unique_id=384906093 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 144.60858, 2.711161, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge84" parent="." unique_id=531414452 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 143.05727, 2.7111626, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge85" parent="." unique_id=1818106385 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 143.05727, 2.7111626, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge86" parent="." unique_id=1744259146 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 147.65253, 2.7111616, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge87" parent="." unique_id=703661319 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 147.65253, 2.7111616, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge88" parent="." unique_id=1862599144 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 146.10123, 2.7111635, -1.1382465)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge89" parent="." unique_id=1940432052 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-2.9802322e-08, 8.34742e-09, 0.7, -0.7, -9.157906e-17, -2.9802322e-08, -3.5251013e-16, -0.7000002, 8.347417e-09, 146.10123, 2.7111635, 3.5182009)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(0, 0, 10)
+
+[node name="MovingFridge3" parent="." unique_id=1124184141 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 95.492424, 4.062715, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge4" parent="." unique_id=2004910526 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 95.492424, 4.062715, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge17" parent="." unique_id=252504613 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 100.47039, 2.0938544, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge18" parent="." unique_id=301760776 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 100.47039, 2.0938544, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge19" parent="." unique_id=6921269 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 103.3282, 7.6310163, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge20" parent="." unique_id=459578159 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 103.3282, 7.6310163, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge23" parent="." unique_id=990659900 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 121.3297, 4.062715, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge24" parent="." unique_id=383088552 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 121.3297, 4.062715, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge25" parent="." unique_id=1726949418 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 126.30766, 2.0938544, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge26" parent="." unique_id=1686241811 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 126.30766, 2.0938544, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge27" parent="." unique_id=1670407382 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 129.16547, 7.6310163, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge28" parent="." unique_id=1393159570 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 129.16547, 7.6310163, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge29" parent="." unique_id=1674763312 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 134.14343, 5.6621556, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge30" parent="." unique_id=1040873540 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 134.14343, 5.6621556, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge31" parent="." unique_id=517759390 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 139.66084, 8.604324, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge32" parent="." unique_id=153649636 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 139.66084, 8.604324, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge33" parent="." unique_id=229782647 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 144.63881, 6.635464, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge34" parent="." unique_id=957924645 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 144.63881, 6.635464, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge35" parent="." unique_id=1757065781 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 147.49661, 12.1726265, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge36" parent="." unique_id=341201265 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 147.49661, 12.1726265, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge37" parent="." unique_id=561849068 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 152.47458, 10.203766, -6.1689377)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge38" parent="." unique_id=109555789 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7000002, -3.894539e-08, 0, 3.89454e-08, 0.70000005, 152.47458, 10.203766, 5.8310623)
+move_duration = 0.5
+point_1_location = Vector3(0, 10, 0)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge9" parent="." unique_id=23912266 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(-3.0597974e-08, -0.7000002, 8.347417e-09, 0, 8.34742e-09, 0.70000005, -0.70000005, 3.059798e-08, -3.6487718e-16, 115.91615, 4.932693, 7.5028477)
+move_duration = 1.0
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(10, 0, 0)
+
+[node name="MovingFridge10" parent="." unique_id=1801750032 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(9.179392e-08, 0.70000017, -8.347417e-09, 2.717646e-23, 8.34742e-09, 0.7, 0.7, -9.1793936e-08, 1.0946316e-15, 112.91615, 4.932693, -8.30891)
+move_duration = 1.0
+point_1_location = Vector3(0, 0, 0)
+point_2_location = Vector3(10, 0, 0)
+
+[node name="MovingFridge90" parent="." unique_id=1867355743 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(6.2317715, 0, 0, 0, 4.329738e-08, 0.45811456, 0, -3.6308439, 5.462961e-09, 187.21115, 4.1372747, 8.277664)
+move_duration = 1.0
+point_1_location = Vector3(0, 0, 10)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge91" parent="." unique_id=1299876381 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(6.2317715, 0, 0, 0, 3.6308436, -2.5487783e-08, 0, 2.020066e-07, 0.45811456, 201.38013, 3.0958157, -8.615206)
+move_duration = 1.0
+point_1_location = Vector3(0, 0, 40)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="MovingFridge92" parent="." unique_id=1958045289 instance=ExtResource("24_rbcsq")]
+transform = Transform3D(5.1204224, 2.4678307e-08, 0.26111257, -3.5519369, 3.557591e-08, 0.37641627, 0, -3.6308434, 5.4629576e-09, 214.17801, 4.257333, 7.986252)
+move_duration = 0.5
+point_1_location = Vector3(0, 0, 40)
+point_2_location = Vector3(0, 0, 0)
+
+[node name="AddTime2" parent="." unique_id=234613018 instance=ExtResource("18_oocia")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 184.95747, 11.610179, 0.119988345)
+_time_to_add = 60.0
+
+[node name="AddTime3" parent="." unique_id=967762251 instance=ExtResource("18_oocia")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 260.43744, 8.880963, 0.119988345)
+_time_to_add = 20.0
+
+[node name="AddTime4" parent="." unique_id=93347195 instance=ExtResource("18_oocia")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 313.68152, 6.372364, 0.119988345)
+_time_to_add = 20.0
+
+[node name="AddTime5" parent="." unique_id=1863009436 instance=ExtResource("18_oocia")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 343.12677, 6.372364, 0.119988345)
+_time_to_add = 20.0
 
 [connection signal="body_entered" from="Obstacles/Laser/AnimatableBody3D/Area3D" to="Obstacles/Laser" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Obstacles/Laser2/AnimatableBody3D/Area3D" to="Obstacles/Laser2" method="_on_area_3d_body_entered"]
